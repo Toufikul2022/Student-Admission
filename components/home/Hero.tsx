@@ -17,7 +17,7 @@ export function Hero() {
             <HeroSlides />
           </div>
           {/* To change this photo, replace public/images/home/hero.webp */}
-          <HomePhoto slot="hero" priority className="mx-auto hidden w-full max-w-lg md:block" />
+          <HomePhoto slot="hero" priority className="mx-auto -mb-36 hidden w-full max-w-sm self-end sm:-mb-44 md:block lg:max-w-md" />
         </Container>
       </div>
 
