@@ -11,28 +11,28 @@ export function StudentArt({ variant = "hero", className }: { variant?: "hero" |
   const shapes = {
     hero: (
       <>
-        <path d="M70 0 h230 v300 h-80 a150 150 0 0 1 -150 -150Z" fill="#0B6BDB" />
-        <rect x="300" y="290" width="100" height="210" fill="#F27B0F" />
-        <path d="M300 290 h100 v0 a100 100 0 0 0 -100 -100Z" fill="#F27B0F" opacity=".35" />
+        <path d="M70 0 h230 v300 h-80 a150 150 0 0 1 -150 -150Z" fill="#C8102E" />
+        <rect x="300" y="290" width="100" height="210" fill="#111111" />
+        <path d="M300 290 h100 v0 a100 100 0 0 0 -100 -100Z" fill="#111111" opacity=".35" />
       </>
     ),
     steps: (
       <>
-        <path d="M20 60 h170 v170 a170 170 0 0 1 -170 -170Z" fill="#F27B0F" />
-        <path d="M380 40 v190 h-190 a190 190 0 0 1 190 -190Z" fill="#0B6BDB" />
-        <path d="M80 250 h120 v170 a120 120 0 0 1 -120 -120Z" fill="#9FCBF0" />
+        <path d="M20 60 h170 v170 a170 170 0 0 1 -170 -170Z" fill="#111111" />
+        <path d="M380 40 v190 h-190 a190 190 0 0 1 190 -190Z" fill="#C8102E" />
+        <path d="M80 250 h120 v170 a120 120 0 0 1 -120 -120Z" fill="#F0A3AE" />
       </>
     ),
     banner: (
       <>
-        <path d="M60 40 h200 v220 h-60 a140 140 0 0 1 -140 -140Z" fill="#0B6BDB" />
-        <path d="M250 260 h90 a90 90 0 0 0 -90 -90Z" fill="#F27B0F" />
+        <path d="M60 40 h200 v220 h-60 a140 140 0 0 1 -140 -140Z" fill="#C8102E" />
+        <path d="M250 260 h90 a90 90 0 0 0 -90 -90Z" fill="#111111" />
       </>
     ),
     form: (
       <>
-        <circle cx="210" cy="230" r="180" fill="#D3ECFA" />
-        <path d="M330 80 a70 70 0 0 1 70 70 h-70Z" fill="#F27B0F" />
+        <circle cx="210" cy="230" r="180" fill="#F9D3D8" />
+        <path d="M330 80 a70 70 0 0 1 70 70 h-70Z" fill="#111111" />
       </>
     ),
   }[variant];
@@ -51,7 +51,7 @@ export function StudentArt({ variant = "hero", className }: { variant?: "hero" |
         <circle cx="185" cy="242" r="5" fill="#333333" />
         <circle cx="226" cy="242" r="5" fill="#333333" />
         {/* books */}
-        <rect x="150" y="400" width="80" height="95" rx="6" fill="#F27B0F" transform="rotate(-8 190 447)" />
+        <rect x="150" y="400" width="80" height="95" rx="6" fill="#111111" transform="rotate(-8 190 447)" />
         <rect x="160" y="395" width="80" height="95" rx="6" fill="#FFFFFF" transform="rotate(-4 200 442)" />
         <path d="M230 430 C250 420 268 430 270 450 L240 470Z" fill="#C68B62" />
       </g>

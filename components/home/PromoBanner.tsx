@@ -7,7 +7,7 @@ export function PromoBanner() {
   return (
     <section aria-labelledby="promo-title" className="py-14 sm:py-16">
       <Container>
-        <div className="relative flex flex-col overflow-hidden rounded-3xl bg-primary-50 sm:flex-row sm:items-center">
+        <div className="relative flex flex-col overflow-hidden rounded-3xl bg-mist sm:flex-row sm:items-center">
           <div className="flex-1 p-8 sm:p-10 lg:p-12">
             <h2 id="promo-title" className="text-2xl font-bold tracking-tight text-ink sm:text-3xl">
               Not sure if you&apos;re ready to apply?

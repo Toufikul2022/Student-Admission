@@ -17,20 +17,20 @@ export default function OpengraphImage() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: 72,
-          background: "linear-gradient(135deg, #0A57B0 0%, #0B6BDB 60%, #2A86E8 100%)",
+          background: "linear-gradient(135deg, #A00D25 0%, #C8102E 60%, #E0283F 100%)",
           color: "white",
           fontFamily: "sans-serif",
         }}
       >
         <div style={{ display: "flex", alignItems: "center", gap: 20 }}>
           <div style={{ width: 72, height: 72, borderRadius: 18, background: "white", display: "flex", alignItems: "center", justifyContent: "center" }}>
-            <div style={{ width: 26, height: 26, borderRadius: 13, background: "#F27B0F" }} />
+            <div style={{ width: 26, height: 26, borderRadius: 13, background: "#111111" }} />
           </div>
           <div style={{ fontSize: 40, fontWeight: 800 }}>{siteConfig.name}</div>
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 72, fontWeight: 800, lineHeight: 1.05 }}>Your path to studying in Canada starts here</div>
-          <div style={{ fontSize: 30, marginTop: 24, color: "#D3ECFA" }}>Admission guidance · Study permits · Licensed professionals</div>
+          <div style={{ fontSize: 30, marginTop: 24, color: "#F9D3D8" }}>Admission guidance · Study permits · Licensed professionals</div>
         </div>
       </div>
     ),

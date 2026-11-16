@@ -18,7 +18,7 @@ export function LeadFormSection({
   id?: string;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="bg-primary-50 py-16 sm:py-20">
+    <section id={id} aria-labelledby={`${id}-title`} className="bg-mist py-16 sm:py-20">
       <Container className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <SectionHeading id={`${id}-title`} title={title} description={description} underline className="mb-8" />

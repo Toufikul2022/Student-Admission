@@ -1,27 +1,27 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. Palette: bright blue (primary), orange (accent), green (header CTA), greys.
+ * Design tokens. Brand palette: red (primary), black (accent), white, with neutral greys.
  * Contrast notes (WCAG 2.1 AA): see README design section.
  */
 @theme {
-  /* Primary: bright blue (buttons, links, icons) */
-  --color-primary-50: #eaf7fd;
-  --color-primary-100: #d3ecfa;
-  --color-primary-200: #9fcbf0;
-  --color-primary-500: #2a86e8;
-  --color-primary-600: #0b6bdb;
-  --color-primary-700: #0a57b0;
-  --color-primary-800: #08458a;
-  --color-primary-900: #062f5e;
+  /* Primary: brand red (buttons, links, icons) */
+  --color-primary-50: #fdecee;
+  --color-primary-100: #f9d3d8;
+  --color-primary-200: #f0a3ae;
+  --color-primary-500: #e0283f;
+  --color-primary-600: #c8102e;
+  --color-primary-700: #a00d25;
+  --color-primary-800: #7e0a1d;
+  --color-primary-900: #5a0715;
 
-  /* Accent: orange (underline bars, highlights) */
-  --color-accent-50: #fff1e5;
-  --color-accent-100: #ffddbe;
-  --color-accent-400: #f59a45;
-  --color-accent-500: #f27b0f;
-  --color-accent-700: #a84b00;
-  --color-accent-800: #8a3d00;
+  /* Accent: black (underline bars, highlights, secondary buttons) */
+  --color-accent-50: #f2f2f2;
+  --color-accent-100: #dddddd;
+  --color-accent-400: #333333;
+  --color-accent-500: #111111;
+  --color-accent-700: #333333;
+  --color-accent-800: #111111;
 
   /* Green: header call-to-action */
   --color-green-600: #0a7a4a;

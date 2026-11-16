@@ -53,7 +53,7 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <Link href="/contact" className={buttonClasses("green", "sm", "sm:h-11 sm:px-6 sm:text-base")}>
+          <Link href="/contact" className={buttonClasses("accent", "sm", "sm:h-11 sm:px-6 sm:text-base")}>
             Contact Us
           </Link>
           <button

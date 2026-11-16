@@ -9,10 +9,10 @@ import { cn } from "@/lib/cn";
 export function LogoMark({ className }: { className?: string }) {
   return (
     <svg viewBox="0 0 64 64" aria-hidden="true" className={cn("size-9 shrink-0", className)}>
-      <rect width="64" height="64" rx="16" fill="#0B6BDB" />
+      <rect width="64" height="64" rx="16" fill="#C8102E" />
       <path d="M14 46c8 0 10-10 18-10s9-12 18-14" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
-      <path d="M12 52h40" stroke="#9FCBF0" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="50" cy="20" r="6" fill="#F27B0F" />
+      <path d="M12 52h40" stroke="#F0A3AE" strokeWidth="3" strokeLinecap="round" />
+      <circle cx="50" cy="20" r="6" fill="#111111" />
     </svg>
   );
 }

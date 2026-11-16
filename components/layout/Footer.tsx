@@ -28,7 +28,7 @@ function FooterList({ title, links }: { title: string; links: { label: string; h
 export function Footer() {
   const c = siteConfig.contact;
   return (
-    <footer className="bg-[#333333] text-[#e5e5e5]">
+    <footer className="bg-[#111111] text-[#e5e5e5]">
       <div className="mx-auto w-full max-w-7xl px-4 pt-16 pb-10 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
