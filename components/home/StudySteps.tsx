@@ -12,7 +12,7 @@ export function StudySteps() {
       <Container>
         <SectionHeading id="steps-title" title="Your study steps" underline />
         <div className="grid items-center gap-14 pb-16 sm:pb-20 lg:grid-cols-2">
-          <div className="order-2 mx-auto -mb-16 w-full max-w-sm self-end px-6 pt-8 sm:-mb-20 lg:order-1">
+          <div className="order-2 mx-auto w-full max-w-sm self-center px-6 lg:order-1">
             {/* To change this photo, replace public/images/home/steps.webp */}
             <HomePhoto slot="steps" />
           </div>
