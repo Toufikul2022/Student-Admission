@@ -13,7 +13,7 @@ import {
   LEVEL_OPTIONS,
   flattenErrors,
   formDataToObject,
-  leadSchema,
+  schemaFor,
   type LeadFieldErrors,
   type LeadState,
 } from "@/lib/lead-schema";
@@ -35,7 +35,10 @@ export function LeadForm({
   institution,
   idPrefix = "lead",
   className,
+  variant = "full",
 }: {
+  /** "compact": short form (name, email, mobile, level, start date). "full": every field (Contact page). */
+  variant?: "full" | "compact";
   /** Pre-fills the hidden "selected institution" field */
   institution?: string;
   /** Keeps field ids unique if two forms are ever on one page */
@@ -53,6 +56,7 @@ export function LeadForm({
   const errors: LeadFieldErrors = clientErrors ?? state.fieldErrors ?? {};
   const v = state.status === "error" ? (state.values ?? {}) : {};
   const id = (name: string) => `${idPrefix}-${name}`;
+  const compact = variant === "compact";
 
   useEffect(() => {
     if (state.status === "success") successRef.current?.focus();
@@ -60,7 +64,7 @@ export function LeadForm({
   }, [state]);
 
   function onSubmit(e: FormEvent<HTMLFormElement>) {
-    const parsed = leadSchema.safeParse(formDataToObject(new FormData(e.currentTarget)));
+    const parsed = schemaFor(variant).safeParse(formDataToObject(new FormData(e.currentTarget)));
     if (!parsed.success) {
       e.preventDefault();
       const errs = flattenErrors(parsed.error);
@@ -98,7 +102,7 @@ export function LeadForm({
       // Re-mount with the submitted values after a server-side error so nothing is lost
       key={state.status === "error" ? JSON.stringify(v) : "fresh"}
     >
-      <p id={`${idPrefix}-required-note`} className="text-sm text-slate">
+      <p id={`${idPrefix}-required-note`} className={compact ? "sr-only" : "text-sm text-slate"}>
         Fields marked <span className="text-danger-700">*</span> are required.
       </p>
 
@@ -124,6 +128,7 @@ export function LeadForm({
       {/* Hidden context fields */}
       <input type="hidden" name="sourcePage" value={pathname ?? ""} />
       <input type="hidden" name="institution" value={institution ?? ""} />
+      <input type="hidden" name="formVariant" value={variant} />
       {/* Honeypot — hidden from people and assistive tech; bots tend to fill it */}
       <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
         <label htmlFor={id("website")}>Leave this field empty</label>
@@ -133,11 +138,11 @@ export function LeadForm({
       <div className="grid gap-5 sm:grid-cols-2">
         <Input id={id("firstName")} name="firstName" label="First name" autoComplete="given-name" required defaultValue={v.firstName} error={errors.firstName} />
         <Input id={id("lastName")} name="lastName" label="Last name" autoComplete="family-name" required defaultValue={v.lastName} error={errors.lastName} />
-        <Input id={id("email")} name="email" type="email" label="Email" autoComplete="email" required defaultValue={v.email} error={errors.email} wrapperClassName="sm:col-span-2" />
+        <Input id={id("email")} name="email" type="email" label={compact ? "Email address" : "Email"} autoComplete="email" required defaultValue={v.email} error={errors.email} wrapperClassName="sm:col-span-2" />
 
         <fieldset className="sm:col-span-2">
           <legend className="mb-1.5 text-sm font-semibold text-ink">
-            Phone (with country code)<span className="text-danger-700" aria-hidden="true"> *</span>
+            {compact ? "Mobile number" : "Phone (with country code)"}<span className="text-danger-700" aria-hidden="true"> *</span>
           </legend>
           <div className="grid grid-cols-[minmax(0,9rem)_1fr] gap-3">
             <Select
@@ -167,10 +172,16 @@ export function LeadForm({
           </div>
         </fieldset>
 
+        {!compact && (
         <Select id={id("country")} name="country" label="Country of residence" options={COUNTRIES.map((c) => ({ value: c.name, label: c.name }))} placeholder="Select a country" required defaultValue={v.country ?? ""} error={errors.country} autoComplete="country-name" />
+        )}
+        {!compact && (
         <Select id={id("education")} name="education" label="Highest education completed" options={EDUCATION_OPTIONS} placeholder="Select one" required defaultValue={v.education ?? ""} error={errors.education} />
-        <Select id={id("studyLevel")} name="studyLevel" label="Preferred study level" options={LEVEL_OPTIONS} placeholder="Select a level" required defaultValue={v.studyLevel ?? ""} error={errors.studyLevel} />
-        <Select id={id("intake")} name="intake" label="Preferred intake" options={INTAKE_OPTIONS} placeholder="Select an intake" required defaultValue={v.intake ?? ""} error={errors.intake} />
+        )}
+        <Select id={id("studyLevel")} name="studyLevel" label="Preferred study level" options={LEVEL_OPTIONS} placeholder={compact ? "Select" : "Select a level"} required defaultValue={v.studyLevel ?? ""} error={errors.studyLevel} />
+        <Select id={id("intake")} name="intake" label={compact ? "When would you like to start?" : "Preferred intake"} options={INTAKE_OPTIONS} placeholder={compact ? "Select" : "Select an intake"} required defaultValue={v.intake ?? ""} error={errors.intake} />
+        {!compact && (
+        <>
         <Select id={id("field")} name="field" label="Field of interest" options={FIELD_OPTIONS} placeholder="Select a field" required defaultValue={v.field ?? ""} error={errors.field} wrapperClassName="sm:col-span-2" />
 
         <fieldset className="sm:col-span-2" aria-describedby={errors.englishTest ? id("englishTest-error") : undefined}>
@@ -213,9 +224,31 @@ export function LeadForm({
         )}
 
         <Textarea id={id("message")} name="message" label="Message" hint="Tell us about your plans, questions or any previous refusals." defaultValue={v.message} error={errors.message} wrapperClassName="sm:col-span-2" maxLength={2000} />
+        </>
+        )}
       </div>
 
-      <div className="space-y-4 rounded-xl bg-mist p-4">
+      <div className={cn("space-y-4", !compact && "rounded-xl bg-mist p-4")}>
+        <Checkbox
+          id={id("consentTerms")}
+          name="consentTerms"
+          required
+          defaultChecked={v.consentTerms === "on"}
+          error={errors.consentTerms}
+          label={
+            <>
+              I agree to the{" "}
+              <Link href="/terms" className="font-semibold text-primary-700 underline">
+                Terms of Use
+              </Link>{" "}
+              and{" "}
+              <Link href="/privacy-policy" className="font-semibold text-primary-700 underline">
+                Privacy Policy
+              </Link>
+              <span className="text-danger-700" aria-hidden="true"> *</span>
+            </>
+          }
+        />
         <Checkbox
           id={id("consentContact")}
           name="consentContact"
@@ -224,11 +257,8 @@ export function LeadForm({
           error={errors.consentContact}
           label={
             <>
-              I agree that {siteConfig.name} may contact me by email, phone or WhatsApp about this enquiry, and I have read the{" "}
-              <Link href="/privacy-policy" className="font-semibold text-primary-700 underline">
-                Privacy Policy
-              </Link>
-              .<span className="text-danger-700" aria-hidden="true"> *</span>
+              Please contact me by phone, email or WhatsApp to help with my enquiry
+              <span className="text-danger-700" aria-hidden="true"> *</span>
             </>
           }
         />
@@ -236,7 +266,7 @@ export function LeadForm({
           id={id("consentMarketing")}
           name="consentMarketing"
           defaultChecked={v.consentMarketing === "on"}
-          label="Optional: send me occasional updates about study and immigration news. I can unsubscribe at any time."
+          label={`I would like to receive updates and news from ${siteConfig.name}`}
         />
       </div>
 
@@ -251,7 +281,7 @@ export function LeadForm({
 
       <Button type="submit" size="lg" disabled={pending} className="w-full">
         {pending ? <Loader2 aria-hidden="true" className="size-5 animate-spin" /> : <Send aria-hidden="true" className="size-5" />}
-        {pending ? "Sending…" : "Send my enquiry"}
+        {pending ? "Sending…" : compact ? "Get Started Free" : "Send my enquiry"}
       </Button>
     </form>
   );

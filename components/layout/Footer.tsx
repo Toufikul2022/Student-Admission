@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { Mail, MapPin, MessageCircle, Phone } from "lucide-react";
-import { siteConfig, whatsappLink } from "@/config/site";
+import { Mail, MapPin, Phone } from "lucide-react";
+import { siteConfig } from "@/config/site";
 import { STUDY_LEVELS, provinces } from "@/lib/data";
 import { Logo } from "./Logo";
 import { SocialIcon } from "./SocialIcon";
@@ -103,9 +103,9 @@ export function Footer() {
                 </a>
               </li>
               <li className="flex gap-3">
-                <MessageCircle aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
-                <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline">
-                  WhatsApp us<span className="sr-only"> (opens in a new tab)</span>
+                <SocialIcon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-white" />
+                <a href={siteConfig.contact.whatsappChannel} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline">
+                  Immigration news on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </li>
             </ul>

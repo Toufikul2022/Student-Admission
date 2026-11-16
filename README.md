@@ -61,7 +61,7 @@ Both commands must finish without errors. `npm run build` also tells you which p
 
 | What you want to change | File |
 |---|---|
-| Brand name, domain, phone, email, WhatsApp, address, hours, social links, **operator disclosure** | `config/site.ts` |
+| Brand name, domain, phone, email, WhatsApp channel, address, hours, social links, **operator disclosure** | `config/site.ts` |
 | Home page stats, services, study steps, FAQ | `content/home.ts` |
 | "Last reviewed" dates on guide and legal pages | `content/review-dates.ts` |
 | Institutions and programs | `data/institutions.json`, `data/programs.json` (see **`DATA_GUIDE.md`**) |

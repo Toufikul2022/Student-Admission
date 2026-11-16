@@ -1,18 +1,18 @@
 import { Suspense } from "react";
-import { Clock, Mail, MapPin, MessageCircle, Phone, Scale } from "lucide-react";
+import { Clock, Mail, MapPin, Phone, Scale } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { Card } from "@/components/ui/Card";
-import { Button } from "@/components/ui/Button";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
-import { siteConfig, whatsappLink } from "@/config/site";
+import { siteConfig } from "@/config/site";
+import { WhatsAppChannelCard } from "@/components/ui/WhatsAppChannel";
 import { institutions } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
   title: "Contact Us — Book a Free Consultation",
-  description: `Talk to ${siteConfig.name} about studying in Canada. Book a free consultation by form, phone, email or WhatsApp.`,
+  description: `Talk to ${siteConfig.name} about studying in Canada. Book a free consultation by form, phone or email.`,
   path: "/contact",
 });
 
@@ -94,11 +94,7 @@ export default function ContactPage() {
                 </div>
               </li>
             </ul>
-            <Button href={whatsappLink()} className="mt-6 w-full bg-green-600 hover:bg-green-700" size="lg">
-              <MessageCircle aria-hidden="true" className="size-5" />
-              Chat with us on WhatsApp
-              <span className="sr-only">(opens in a new tab)</span>
-            </Button>
+            <WhatsAppChannelCard className="mt-6 flex-wrap" />
           </Card>
 
           {/* TODO: replace with a map embed (iframe with a descriptive title) of the office location */}

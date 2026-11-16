@@ -10,13 +10,13 @@ import {
   LEVEL_OPTIONS,
   flattenErrors,
   formDataToObject,
-  leadSchema,
+  schemaFor,
   type LeadInput,
   type LeadState,
 } from "@/lib/lead-schema";
 import { rateLimit } from "@/lib/rate-limit";
 
-const label = (opts: { value: string; label: string }[], v: string) => opts.find((o) => o.value === v)?.label ?? v;
+const label = (opts: { value: string; label: string }[], v: string) => (v ? (opts.find((o) => o.value === v)?.label ?? v) : "—");
 
 const esc = (s: string) =>
   s.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] as string);
@@ -26,14 +26,16 @@ function buildEmail(d: LeadInput) {
     ["Name", `${d.firstName} ${d.lastName}`],
     ["Email", d.email],
     ["Phone", `${d.phoneCode} ${d.phone}`],
-    ["Country of residence", d.country],
+    ["Form", d.formVariant === "compact" ? "Quick enquiry" : "Full enquiry (Contact page)"],
+    ["Country of residence", d.country || "—"],
     ["Preferred study level", label(LEVEL_OPTIONS, d.studyLevel)],
     ["Preferred intake", label(INTAKE_OPTIONS, d.intake)],
     ["Field of interest", label(FIELD_OPTIONS, d.field)],
     ["Highest education completed", label(EDUCATION_OPTIONS, d.education)],
-    ["English test taken", d.englishTest === "yes" ? `Yes — ${d.englishScore}` : "No"],
+    ["English test taken", d.englishTest === "yes" ? `Yes — ${d.englishScore}` : d.englishTest === "no" ? "No" : "—"],
     ["Institution of interest", d.institution || "—"],
     ["Message", d.message || "—"],
+    ["Agreed to Terms & Privacy Policy", "Yes"],
     ["Consent to be contacted", "Yes"],
     ["Marketing consent", d.consentMarketing === "on" ? "Yes" : "No"],
     ["Submitted from page", d.sourcePage || "—"],
@@ -64,13 +66,13 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
   if (!rateLimit(ip).ok) {
     return {
       status: "error",
-      message: "You've sent several enquiries in a short time. Please wait a few minutes and try again, or contact us by phone or WhatsApp.",
+      message: "You've sent several enquiries in a short time. Please wait a few minutes and try again, or contact us by phone or email.",
       values: raw,
     };
   }
 
   // 3. Validate
-  const parsed = leadSchema.safeParse(raw);
+  const parsed = schemaFor(raw.formVariant).safeParse(raw);
   if (!parsed.success) {
     return { status: "error", message: "Please correct the highlighted fields.", fieldErrors: flattenErrors(parsed.error), values: raw };
   }
@@ -112,7 +114,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
     console.error("[lead form] Email send failed", err);
     return {
       status: "error",
-      message: "Sorry, something went wrong sending your enquiry. Please try again, or contact us by phone or WhatsApp.",
+      message: "Sorry, something went wrong sending your enquiry. Please try again, or contact us by phone or email.",
       values: raw,
     };
   }

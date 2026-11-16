@@ -26,9 +26,8 @@ export const siteConfig = {
     phoneDisplay: "[PHONE]",
     // TODO: replace with the same number in international format, digits only with +, e.g. "+12045550100"
     phoneHref: "+10000000000",
-    // TODO: WhatsApp number in international format, digits only, no + or spaces, e.g. "12045550100"
-    whatsappNumber: "10000000000",
-    whatsappMessage: "Hello, I would like to ask about studying in Canada.",
+    /** WhatsApp channel with Canadian immigration news updates */
+    whatsappChannel: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j",
     // TODO: replace with the real office address
     address: {
       line1: "[ADDRESS LINE 1]",
@@ -66,6 +65,7 @@ export const siteConfig = {
     { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
     { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
     { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
+    { label: "WhatsApp channel", href: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j", icon: "whatsapp" },
   ] as const,
 
   nav: [
@@ -77,10 +77,6 @@ export const siteConfig = {
 } as const;
 
 export type SiteConfig = typeof siteConfig;
-
-export function whatsappLink(message: string = siteConfig.contact.whatsappMessage) {
-  return `https://wa.me/${siteConfig.contact.whatsappNumber}?text=${encodeURIComponent(message)}`;
-}
 
 export function absoluteUrl(path = "/") {
   return `${siteConfig.url}${path.startsWith("/") ? path : `/${path}`}`;

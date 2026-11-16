@@ -1,7 +1,8 @@
-import { CalendarCheck, MessageCircle } from "lucide-react";
+import { CalendarCheck } from "lucide-react";
 import { Button } from "./Button";
 import { Container } from "./Container";
-import { whatsappLink } from "@/config/site";
+import { siteConfig } from "@/config/site";
+import { SocialIcon } from "@/components/layout/SocialIcon";
 
 /** Full-width call-to-action band used at the bottom of most pages. */
 export function CtaBand({
@@ -36,9 +37,9 @@ export function CtaBand({
                 {primaryLabel}
               </Button>
               {showWhatsapp && (
-                <Button href={whatsappLink()} variant="white" size="lg">
-                  <MessageCircle aria-hidden="true" className="size-5" />
-                  Chat on WhatsApp
+                <Button href={siteConfig.contact.whatsappChannel} variant="white" size="lg">
+                  <SocialIcon name="whatsapp" className="size-5" />
+                  WhatsApp news channel
                   <span className="sr-only"> (opens in a new tab)</span>
                 </Button>
               )}
