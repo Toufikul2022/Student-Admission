@@ -12,7 +12,7 @@ export function organizationSchema() {
     "@id": absoluteUrl("/#organization"),
     name: siteConfig.name,
     url: siteConfig.url,
-    logo: absoluteUrl("/icon.svg"),
+    logo: absoluteUrl("/images/brand/canedu-logo.webp"),
     description: siteConfig.description,
     email: siteConfig.contact.email,
     telephone: siteConfig.contact.phoneHref,

@@ -1,27 +1,26 @@
+import Image from "next/image";
 import Link from "next/link";
 import { siteConfig } from "@/config/site";
 import { cn } from "@/lib/cn";
 
-/**
- * Placeholder wordmark: an original "route to destination" mark + brand name.
- * TODO: replace with the final logo (SVG preferred) once the brand is designed.
- */
-export function LogoMark({ className }: { className?: string }) {
-  return (
-    <svg viewBox="0 0 64 64" aria-hidden="true" className={cn("size-9 shrink-0", className)}>
-      <rect width="64" height="64" rx="16" fill="#C8102E" />
-      <path d="M14 46c8 0 10-10 18-10s9-12 18-14" fill="none" stroke="#fff" strokeWidth="5" strokeLinecap="round" />
-      <path d="M12 52h40" stroke="#F0A3AE" strokeWidth="3" strokeLinecap="round" />
-      <circle cx="50" cy="20" r="6" fill="#111111" />
-    </svg>
-  );
-}
-
+/** CanEdu Pathway logo: maple leaf / graduation cap / book mark + two-tone wordmark. */
 export function Logo({ invert }: { invert?: boolean }) {
   return (
     <Link href="/" className="flex items-center gap-2.5 rounded-lg" aria-label={`${siteConfig.name} — home`}>
-      <LogoMark />
-      <span className={cn("text-lg font-bold tracking-tight", invert ? "text-white" : "text-ink")}>{siteConfig.name}</span>
+      <span className={cn("flex shrink-0 items-center justify-center", invert && "rounded-lg bg-white p-1")}>
+        <Image
+          src="/images/brand/canedu-mark.webp"
+          alt=""
+          width={256}
+          height={242}
+          priority
+          className={invert ? "h-9 w-auto" : "h-9 w-auto sm:h-11 lg:h-12"}
+        />
+      </span>
+      <span className="text-base leading-none font-extrabold tracking-tight whitespace-nowrap min-[400px]:text-lg sm:text-[1.4rem]">
+        <span className={invert ? "text-white" : "text-primary-600"}>CanEdu</span>{" "}
+        <span className={invert ? "text-white" : "text-ink"}>Pathway</span>
+      </span>
     </Link>
   );
 }
