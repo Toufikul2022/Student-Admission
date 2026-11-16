@@ -1,7 +1,7 @@
 "use client";
 
 import { useId, useState, type ReactNode } from "react";
-import { ChevronDown } from "lucide-react";
+import { ChevronDown, ChevronRight } from "lucide-react";
 import { cn } from "@/lib/cn";
 
 export type AccordionItem = { id: string; title: ReactNode; content: ReactNode; badge?: ReactNode };
@@ -17,7 +17,10 @@ export function Accordion({
   defaultOpen = [],
   allowMultiple = true,
   className,
+  variant = "boxed",
 }: {
+  /** "boxed": one bordered panel with dividers. "separated": each item is its own bordered row. */
+  variant?: "boxed" | "separated";
   items: AccordionItem[];
   headingLevel?: 2 | 3 | 4;
   defaultOpen?: string[];
@@ -32,13 +35,18 @@ export function Accordion({
     setOpen((cur) => (cur.includes(id) ? cur.filter((x) => x !== id) : allowMultiple ? [...cur, id] : [id]));
 
   return (
-    <div className={cn("divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white", className)}>
+    <div
+      className={cn(
+        variant === "boxed" ? "divide-y divide-line overflow-hidden rounded-2xl border border-line bg-white" : "space-y-3",
+        className,
+      )}
+    >
       {items.map((item) => {
         const isOpen = open.includes(item.id);
         const btnId = `${uid}-${item.id}-button`;
         const panelId = `${uid}-${item.id}-panel`;
         return (
-          <div key={item.id}>
+          <div key={item.id} className={cn(variant === "separated" && "overflow-hidden rounded-xl border border-slate/40 bg-white")}>
             <H className="m-0">
               <button
                 id={btnId}
@@ -50,10 +58,11 @@ export function Accordion({
               >
                 {item.badge}
                 <span className="flex-1">{item.title}</span>
-                <ChevronDown
-                  aria-hidden="true"
-                  className={cn("size-5 shrink-0 text-primary-600 transition-transform", isOpen && "rotate-180")}
-                />
+                {variant === "separated" ? (
+                  <ChevronRight aria-hidden="true" className={cn("size-5 shrink-0 text-ink transition-transform", isOpen && "rotate-90")} />
+                ) : (
+                  <ChevronDown aria-hidden="true" className={cn("size-5 shrink-0 text-primary-600 transition-transform", isOpen && "rotate-180")} />
+                )}
               </button>
             </H>
             <div

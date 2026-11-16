@@ -1,11 +1,29 @@
 /** Home page copy that is reused (FAQ also feeds FAQPage JSON-LD). */
 
+export const quickLinks = [
+  { label: "Universities", href: "/find-university" },
+  { label: "Programs", href: "/find-university/programs" },
+  { label: "Scholarships", href: "/study-in-canada/scholarships" },
+  { label: "Intakes", href: "/study-in-canada/intakes" },
+  { label: "Study permit", href: "/visa-immigration/study-permit" },
+  { label: "Guide me", href: "/contact" },
+];
+
+export const popularFields = [
+  { label: "Business & Management", href: "/find-university?field=business" },
+  { label: "Computer Science & IT", href: "/find-university?field=computing" },
+  { label: "Engineering & Technology", href: "/find-university?field=engineering" },
+  { label: "Health & Nursing", href: "/find-university?field=health" },
+  { label: "Hospitality & Tourism", href: "/find-university?field=hospitality" },
+  { label: "Skilled Trades", href: "/find-university?field=trades" },
+];
+
 export const homeStats = [
   // TODO: replace every "[#]" value with real, verifiable numbers before launch — or remove the tile.
-  { value: "[#]", label: "Partner institutions", note: "TODO: real number" },
-  { value: "[#]", label: "Students advised", note: "TODO: real number" },
-  { value: "[#]", label: "Provinces covered", note: "TODO: real number" },
-  { value: "Free", label: "First consultation", note: "TODO: confirm offer" },
+  { icon: "school", value: "[#]", label: "Partner institutions", note: "TODO: real number" },
+  { icon: "users", value: "[#]", label: "Students advised", note: "TODO: real number" },
+  { icon: "map", value: "[#]", label: "Provinces covered", note: "TODO: real number" },
+  { icon: "badge", value: "Free", label: "First consultation for students and parents", note: "TODO: confirm offer" },
 ];
 
 export const services = [
