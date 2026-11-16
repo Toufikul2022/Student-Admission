@@ -12,10 +12,10 @@ function FooterList({ title, links }: { title: string; links: { label: string; h
   return (
     <div>
       <h2 className="text-sm font-bold tracking-wider text-white uppercase">{title}</h2>
-      <ul className="mt-4 space-y-2.5">
+      <ul className="mt-3 sm:mt-4 sm:space-y-2.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="text-sm text-[#e5e5e5] underline-offset-4 hover:text-white hover:underline">
+            <Link href={l.href} className="block py-2 text-[0.95rem] text-[#e5e5e5] underline-offset-4 hover:text-white hover:underline sm:inline sm:py-0 sm:text-sm">
               {l.label}
             </Link>
           </li>
@@ -44,7 +44,7 @@ export function Footer() {
                     href={s.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex size-10 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
+                    className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
                   >
                     <SocialIcon name={s.icon} className="size-5" />
                     <span className="sr-only">{s.label} (opens in a new tab)</span>
@@ -54,7 +54,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="grid gap-8 sm:grid-cols-2 lg:col-span-5 lg:grid-cols-3">
+          <div className="grid grid-cols-2 gap-x-6 gap-y-8 lg:col-span-5 lg:grid-cols-3">
             <FooterList
               title="Quick links"
               links={[
@@ -81,8 +81,8 @@ export function Footer() {
 
           <div className="lg:col-span-3">
             <h2 className="text-sm font-bold tracking-wider text-white uppercase">Contact</h2>
-            <ul className="mt-4 space-y-3 text-sm">
-              <li className="flex gap-3">
+            <ul className="mt-4 space-y-1 text-[0.95rem] sm:space-y-3 sm:text-sm">
+              <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
                 <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <address className="not-italic">
                   {c.address.line1}
@@ -90,21 +90,21 @@ export function Footer() {
                   {c.address.city}, {c.address.province} {c.address.postalCode}
                 </address>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
                 <Phone aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={`tel:${c.phoneHref}`} className="hover:text-white hover:underline">
                   {c.phoneDisplay}
                 </a>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
                 <Mail aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={`mailto:${c.email}`} className="break-all hover:text-white hover:underline">
                   {c.email}
                 </a>
               </li>
-              <li className="flex gap-3">
+              <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
                 <SocialIcon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-white" />
-                <a href={siteConfig.contact.whatsappChannel} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline">
+                <a href={siteConfig.contact.whatsappChannel} target="_blank" rel="noopener noreferrer" className="inline-block py-2 hover:text-white hover:underline sm:py-0">
                   Immigration news on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </li>
@@ -122,11 +122,11 @@ export function Footer() {
             <p>
               © <CurrentYear /> {siteConfig.name}. All rights reserved.
             </p>
-            <ul className="flex flex-wrap gap-x-5 gap-y-2">
-              <li><Link href="/privacy-policy" className="hover:text-white hover:underline">Privacy Policy</Link></li>
-              <li><Link href="/terms" className="hover:text-white hover:underline">Terms of Use</Link></li>
-              <li><Link href="/disclaimer" className="hover:text-white hover:underline">Disclaimer</Link></li>
-              <li><Link href="/sitemap.xml" className="hover:text-white hover:underline">Sitemap</Link></li>
+            <ul className="flex flex-wrap gap-x-5 gap-y-1">
+              <li><Link href="/privacy-policy" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Privacy Policy</Link></li>
+              <li><Link href="/terms" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Terms of Use</Link></li>
+              <li><Link href="/disclaimer" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Disclaimer</Link></li>
+              <li><Link href="/sitemap.xml" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Sitemap</Link></li>
             </ul>
           </div>
         </div>

@@ -19,10 +19,10 @@ export function Checkbox({ id, label, description, error, className, wrapperClas
           type="checkbox"
           aria-invalid={error ? true : undefined}
           aria-describedby={describedBy}
-          className={cn("mt-0.5 size-5 shrink-0 cursor-pointer rounded border-line accent-primary-600", className)}
+          className={cn("mt-0.5 size-6 shrink-0 cursor-pointer rounded border-line accent-primary-600 sm:size-5", className)}
           {...props}
         />
-        <label htmlFor={id} className="cursor-pointer text-sm leading-snug text-ink">
+        <label htmlFor={id} className="cursor-pointer py-0.5 text-[0.95rem] leading-snug text-ink sm:text-sm">
           {label}
           {description && (
             <span id={`${id}-desc`} className="mt-0.5 block text-xs text-slate">

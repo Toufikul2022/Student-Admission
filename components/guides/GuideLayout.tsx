@@ -122,7 +122,7 @@ export function GuideLayout({
                       href={l.href}
                       aria-current={l.href === path ? "page" : undefined}
                       className={cn(
-                        "block rounded-lg px-3 py-2 text-sm font-semibold",
+                        "block rounded-lg px-3 py-3 text-sm font-semibold sm:py-2",
                         l.href === path ? "bg-primary-50 text-primary-700" : "text-ink hover:bg-mist",
                       )}
                     >

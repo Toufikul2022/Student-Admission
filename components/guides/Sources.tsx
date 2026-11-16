@@ -18,7 +18,7 @@ export function OfficialSources({ keys, title = "Official sources" }: { keys: st
           const l = link(k);
           return (
             <li key={k}>
-              <a href={l.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-2 text-sm font-semibold text-primary-700 underline">
+              <a href={l.url} target="_blank" rel="noopener noreferrer" className="inline-flex items-start gap-2 py-1.5 text-sm font-semibold text-primary-700 underline sm:py-0">
                 <ExternalLink aria-hidden="true" className="mt-0.5 size-4 shrink-0" />
                 {l.label}
                 <span className="sr-only">(opens in a new tab)</span>

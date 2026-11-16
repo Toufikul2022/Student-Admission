@@ -61,7 +61,7 @@ export function ResultsToolbar({
             id="sort"
             value={filters.sort}
             onChange={(e) => update({ sort: e.target.value as SortKey })}
-            className={cn(controlClasses, "h-11 w-auto rounded-full py-0 pr-8")}
+            className={cn(controlClasses, "h-11 min-h-11 w-auto rounded-full py-0 pr-8")}
           >
             <option value="popularity">Sort: Popularity</option>
             <option value="name">Sort: Name (A–Z)</option>

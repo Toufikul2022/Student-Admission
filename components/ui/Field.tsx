@@ -53,7 +53,7 @@ export function Field({
 }
 
 export const controlClasses =
-  "w-full rounded-xl border border-line bg-white px-3.5 py-2.5 text-[0.95rem] text-ink placeholder:text-slate/70 transition-colors hover:border-primary-200 focus:border-primary-600 focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 aria-[invalid=true]:border-danger-700";
+  "w-full rounded-xl border border-line bg-white min-h-12 px-3.5 py-2.5 text-base text-ink sm:min-h-0 sm:text-[0.95rem] placeholder:text-slate/70 transition-colors hover:border-primary-200 focus:border-primary-600 focus:outline-none focus-visible:outline-3 focus-visible:outline-offset-1 aria-[invalid=true]:border-danger-700";
 
 export function describedBy(id: string, hint?: unknown, error?: string) {
   return error ? `${id}-error` : hint ? `${id}-hint` : undefined;

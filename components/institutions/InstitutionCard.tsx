@@ -16,7 +16,7 @@ export function InstitutionCard({ inst, headingLevel = 3 }: { inst: Institution;
         <InstitutionLogo inst={inst} />
         <div className="min-w-0">
           <H className="text-lg leading-snug font-bold text-ink">
-            <Link href={`/find-university/${inst.slug}`} className="hover:text-primary-700 hover:underline">
+            <Link href={`/find-university/${inst.slug}`} className="inline-block py-1 hover:text-primary-700 hover:underline">
               {inst.name}
             </Link>
           </H>

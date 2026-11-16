@@ -190,14 +190,14 @@ export function LeadForm({
           </legend>
           <div className="flex gap-6">
             {(["yes", "no"] as const).map((opt) => (
-              <label key={opt} className="flex cursor-pointer items-center gap-2 text-sm">
+              <label key={opt} className="flex min-h-11 cursor-pointer items-center gap-2 text-base sm:text-sm">
                 <input
                   type="radio"
                   name="englishTest"
                   value={opt}
                   defaultChecked={v.englishTest === opt}
                   onChange={(e) => setEnglishTest(e.target.value)}
-                  className="size-5 accent-primary-600"
+                  className="size-6 accent-primary-600 sm:size-5"
                 />
                 {opt === "yes" ? "Yes" : "No"}
               </label>

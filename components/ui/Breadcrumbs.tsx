@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ChevronRight } from "lucide-react";
+import { cn } from "@/lib/cn";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { breadcrumbSchema, type Crumb } from "@/lib/schema";
 
@@ -22,7 +23,7 @@ export function Breadcrumbs({ items, invert }: { items: Crumb[]; invert?: boolea
                   <>
                     <Link
                       href={c.href}
-                      className={invert ? "text-primary-100 underline-offset-4 hover:text-white hover:underline" : "text-slate underline-offset-4 hover:text-primary-700 hover:underline"}
+                      className={cn("inline-block py-2.5 underline-offset-4 hover:underline sm:py-0", invert ? "text-primary-100 hover:text-white" : "text-slate hover:text-primary-700")}
                     >
                       {c.name}
                     </Link>

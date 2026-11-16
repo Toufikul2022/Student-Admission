@@ -26,14 +26,14 @@ export function HeroSlides() {
             <Heading id={i === 0 ? "hero-title" : undefined} className="text-4xl font-bold tracking-tight text-ink text-balance sm:text-5xl">
               {slide.title}
             </Heading>
-            <p className="mt-6 text-lg leading-relaxed text-ink/80 sm:text-2xl sm:leading-snug">{slide.body}</p>
-            <Button href={slide.cta.href} size="lg" className="mt-8">
+            <p className="mt-4 text-lg leading-relaxed text-ink/80 sm:mt-6 sm:text-2xl sm:leading-snug">{slide.body}</p>
+            <Button href={slide.cta.href} size="lg" className="mt-6 w-full sm:mt-8 sm:w-auto">
               {slide.cta.label}
             </Button>
           </div>
         );
       })}
-      <div className="mt-8 flex gap-2">
+      <div className="mt-6 -ml-3 flex">
         {heroSlides.map((slide, i) => (
           <button
             key={slide.title}
@@ -41,7 +41,7 @@ export function HeroSlides() {
             onClick={() => setActive(i)}
             aria-label={`Show slide ${i + 1}: ${slide.title}`}
             aria-current={i === active ? "true" : undefined}
-            className="flex size-6 items-center justify-center rounded-full"
+            className="-ml-2 flex size-11 items-center justify-center rounded-full first:ml-0"
           >
             <span className={cn("block size-3.5 rounded-full transition-colors", i === active ? "bg-ink" : "bg-slate/40")} />
           </button>

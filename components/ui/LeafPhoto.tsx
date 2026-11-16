@@ -28,7 +28,7 @@ export function LeafPhoto({ image, priority, className }: { image: PageImageKey;
   }
   return (
     <div className={cn("relative isolate", className)}>
-      <MapleLeaf className="absolute -top-[15%] -right-[9%] -z-10 w-[38%] rotate-12 text-primary-600" />
+      <MapleLeaf className="absolute -top-[15%] -right-[4%] -z-10 w-[34%] rotate-12 text-primary-600 sm:-right-[9%] sm:w-[38%]" />
       <Image
         src={img.src}
         alt={img.alt}

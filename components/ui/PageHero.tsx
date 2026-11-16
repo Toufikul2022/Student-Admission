@@ -33,12 +33,12 @@ export function PageHero({
       )}
       <Container
         className={cn(
-          "relative grid gap-10 md:items-center",
+          "relative grid gap-6 md:items-center md:gap-10",
           image ? "md:grid-cols-[1.1fr_1fr]" : "",
           cutout ? "pt-8 sm:pt-10" : "py-8 sm:py-12",
         )}
       >
-        <div className={cn(cutout && "pb-10 sm:pb-14")}>
+        <div className={cn(cutout && "md:pb-14")}>
           <Breadcrumbs items={crumbs} />
           <h1 className="mt-6 max-w-3xl text-4xl font-bold text-ink text-balance sm:text-5xl">{title}</h1>
           {intro && <div className="mt-5 max-w-2xl text-lg leading-relaxed text-ink/80 sm:text-xl">{intro}</div>}
@@ -49,8 +49,8 @@ export function PageHero({
             image={image}
             priority
             className={cn(
-              "mx-auto hidden w-full md:block",
-              cutout ? "max-w-md self-end pt-6" : "max-w-xl pt-20 pb-6",
+              "mx-auto w-full",
+              cutout ? "max-w-[15rem] self-end sm:max-w-xs md:max-w-md md:pt-6" : "max-w-md pt-10 pb-2 md:max-w-xl md:pt-20 md:pb-6",
             )}
           />
         )}

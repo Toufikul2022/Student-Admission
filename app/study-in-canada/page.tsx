@@ -129,7 +129,7 @@ export default function StudyInCanadaPage() {
       <ul className="grid! list-none! grid-cols-2 gap-2 pl-0! sm:grid-cols-3">
         {provinces.map((p) => (
           <li key={p.slug} className="m-0!">
-            <Link href={`/study-in-canada/provinces/${p.slug}`}>{p.name}</Link>
+            <Link href={`/study-in-canada/provinces/${p.slug}`} className="inline-block py-2">{p.name}</Link>
           </li>
         ))}
       </ul>

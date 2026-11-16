@@ -58,7 +58,7 @@ function CheckGroup({
           const checked = selected.includes(o.value);
           return (
             <li key={o.value}>
-              <label htmlFor={id} className="flex cursor-pointer items-center gap-3 rounded-lg px-1 py-1.5 text-sm hover:bg-mist">
+              <label htmlFor={id} className="flex min-h-11 cursor-pointer items-center gap-3 rounded-lg px-1 py-1.5 text-[0.95rem] hover:bg-mist sm:min-h-0 sm:text-sm">
                 <input
                   id={id}
                   type="checkbox"
