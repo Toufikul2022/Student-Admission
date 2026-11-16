@@ -11,9 +11,9 @@ export function StudentArt({ variant = "hero", className }: { variant?: "hero" |
   const shapes = {
     hero: (
       <>
-        <rect x="150" y="0" width="250" height="250" rx="0" fill="#0F5E6E" />
-        <path d="M400 230 h0 v270 h-250 a250 250 0 0 1 250 -270Z" fill="#E59A2F" />
-        <path d="M150 0 a150 150 0 0 0 -150 150 v0 h150Z" fill="#A3CBD1" />
+        <path d="M70 0 h230 v300 h-80 a150 150 0 0 1 -150 -150Z" fill="#0F5E6E" />
+        <rect x="300" y="290" width="100" height="210" fill="#E59A2F" />
+        <path d="M300 290 h100 v0 a100 100 0 0 0 -100 -100Z" fill="#E59A2F" opacity=".35" />
       </>
     ),
     steps: (
@@ -38,7 +38,7 @@ export function StudentArt({ variant = "hero", className }: { variant?: "hero" |
   }[variant];
 
   return (
-    <svg viewBox="0 0 400 500" aria-hidden="true" className={cn("h-auto w-full", className)} preserveAspectRatio="xMidYMax meet">
+    <svg viewBox="0 0 400 500" aria-hidden="true" className={cn("h-auto w-full", className)} preserveAspectRatio={variant === "hero" ? "xMaxYMax meet" : "xMidYMax meet"}>
       {shapes}
       {/* Student figure */}
       <g>

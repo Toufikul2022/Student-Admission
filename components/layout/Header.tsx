@@ -27,10 +27,10 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-line bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/85">
-      <div className="mx-auto flex h-16 w-full max-w-7xl items-center gap-4 px-4 sm:px-6 lg:h-[4.5rem] lg:px-8">
+      <div className="flex h-16 w-full items-center gap-4 px-4 sm:px-6 lg:h-[5.5rem] lg:px-8">
         <Logo />
 
-        <nav aria-label="Main" className="ml-auto hidden lg:block">
+        <nav aria-label="Main" className="ml-10 hidden lg:block">
           <ul className="flex items-center gap-1">
             {siteConfig.nav.map((item) => {
               const active = isActive(pathname, item.href);
@@ -52,8 +52,8 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="ml-auto flex items-center gap-2 lg:ml-4">
-          <Link href="/contact" className={buttonClasses("primary", "sm", "sm:h-10 sm:px-5")}>
+        <div className="ml-auto flex items-center gap-2">
+          <Link href="/contact" className={buttonClasses("primary", "sm", "sm:h-11 sm:px-6 sm:text-base")}>
             Contact Us
           </Link>
           <button

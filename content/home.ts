@@ -18,12 +18,26 @@ export const popularFields = [
   { label: "Skilled Trades", href: "/find-university?field=trades" },
 ];
 
+/** Highlights in the hero card. No figures — text only. */
 export const homeStats = [
-  // TODO: replace every "[#]" value with real, verifiable numbers before launch — or remove the tile.
-  { icon: "school", value: "[#]", label: "Partner institutions", note: "TODO: real number" },
-  { icon: "users", value: "[#]", label: "Students advised", note: "TODO: real number" },
-  { icon: "map", value: "[#]", label: "Provinces covered", note: "TODO: real number" },
-  { icon: "badge", value: "Free", label: "First consultation for students and parents", note: "TODO: confirm offer" },
+  { icon: "badge", value: "Licensed", label: "immigration advice from licensed legal professionals" },
+  { icon: "school", value: "Every step", label: "support from your shortlist to your first day on campus" },
+  { icon: "map", value: "Canada-wide", label: "guidance on universities and colleges across Canada" },
+  // TODO: confirm the free-consultation offer
+  { icon: "users", value: "FREE", label: "first consultation for students & parents" },
+];
+
+export const heroSlides = [
+  {
+    title: "Your path to studying in Canada starts here",
+    body: "Choose the right university or college, apply with confidence, and prepare your study permit with licensed professionals by your side.",
+    cta: { label: "Book a Free Consultation", href: "/contact" },
+  },
+  {
+    title: "Study permit refused? You may still have options",
+    body: "Our licensed legal professionals can review your refusal letter and explain whether to reapply or challenge the decision. Deadlines are short.",
+    cta: { label: "Get your refusal reviewed", href: "/visa-immigration/study-permit-refusal" },
+  },
 ];
 
 export const services = [
