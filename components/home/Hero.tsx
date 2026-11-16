@@ -12,14 +12,12 @@ export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative pb-16 sm:pb-20">
       <div className="relative overflow-hidden bg-cloud">
-        {/* Photo slot: add public/images/home/hero.png (see README.txt there) */}
-        <div className="pointer-events-none absolute inset-y-0 right-0 hidden w-[38%] md:block">
-          <HomePhoto slot="hero" priority className="absolute right-0 bottom-0 h-full w-auto" />
-        </div>
-        <Container className="relative pt-16 pb-40 sm:pt-24 sm:pb-48 lg:pt-28">
-          <div className="max-w-xl lg:max-w-[44rem] lg:pl-28">
+        <Container className="relative grid items-center gap-12 pt-14 pb-36 sm:pt-20 sm:pb-44 md:grid-cols-[1.15fr_1fr] lg:pt-24">
+          <div className="lg:pl-16">
             <HeroSlides />
           </div>
+          {/* To change this photo, replace public/images/home/hero.webp */}
+          <HomePhoto slot="hero" priority className="mx-auto hidden w-full max-w-lg md:block" />
         </Container>
       </div>
 

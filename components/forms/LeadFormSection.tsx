@@ -26,9 +26,9 @@ export function LeadFormSection({
         </div>
         <div className="hidden lg:col-span-5 lg:block">
           <div className="sticky top-24">
-            {/* Photo slot: add public/images/home/form.png (see README.txt there) */}
-            <HomePhoto slot="form" className="mx-auto max-w-sm" />
-            <ul className="mt-8 space-y-4">
+            {/* To change this photo, replace public/images/home/form.webp */}
+            <HomePhoto slot="form" className="mx-auto mt-16 max-w-md px-6" />
+            <ul className="mt-12 space-y-4">
               <li className="flex gap-3">
                 <ShieldCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />
                 <p className="text-sm text-ink">

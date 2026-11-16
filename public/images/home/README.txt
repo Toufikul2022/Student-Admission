@@ -1,10 +1,11 @@
-Put your own licensed photos here. Each one replaces a placeholder drawing on the home page:
+Home page photos. Each file shows on a red maple-leaf background:
 
-  hero.png    – top banner, right side (tall portrait works best)
-  steps.png   – "Your study steps" section, left side
-  banner.png  – the light-blue promo banner, right side
-  form.png    – next to the "Speak to an advisor today" form
+  hero.webp    – top banner, right side
+  steps.webp   – "Your study steps" section, left side
+  banner.webp  – the promo banner, right side
+  form.webp    – next to the "Speak to an advisor today" form
 
-.webp, .png, .jpg and .jpeg all work. Cut-out photos with a transparent
-background look best. Only use photos you have the rights to use
-(e.g. purchased stock or your own photo shoot with signed model releases).
+To change a photo, replace the file with the same name (.webp, .png, .jpg or
+.jpeg all work — delete the old file if you change the extension). Landscape
+photos (about 3:2) fit best, at least 1200px wide for sharp results.
+Only use photos you have the rights to use.

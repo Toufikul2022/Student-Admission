@@ -11,12 +11,12 @@ export function StudySteps() {
     <section aria-labelledby="steps-title" className="overflow-hidden bg-mist pt-16 sm:pt-20">
       <Container>
         <SectionHeading id="steps-title" title="Your study steps" underline />
-        <div className="grid items-end gap-10 lg:grid-cols-2">
-          <div className="order-2 mx-auto w-full max-w-md lg:order-1">
-            {/* Photo slot: add public/images/home/steps.png (see README.txt there) */}
+        <div className="grid items-center gap-14 pb-16 sm:pb-20 lg:grid-cols-2">
+          <div className="order-2 mx-auto w-full max-w-lg px-6 pt-8 lg:order-1">
+            {/* To change this photo, replace public/images/home/steps.webp */}
             <HomePhoto slot="steps" />
           </div>
-          <div className="order-1 pb-0 lg:order-2 lg:self-start lg:pb-16">
+          <div className="order-1 lg:order-2">
             <Accordion
               variant="separated"
               items={studySteps.map((s, i) => ({
