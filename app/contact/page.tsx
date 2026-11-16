@@ -3,6 +3,7 @@ import { Clock, Mail, MapPin, Phone, Scale } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
+import { Card } from "@/components/ui/Card";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
 import { siteConfig } from "@/config/site";
@@ -55,59 +56,76 @@ export default function ContactPage() {
           </div>
 
           <div className="space-y-6 lg:col-span-6 lg:pl-8">
-            <h2 className="text-2xl font-bold text-ink">Other ways to reach us</h2>
-            <ul className="space-y-5">
-              <li className="flex gap-4">
-                <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
-                <div>
-                  <p className="font-semibold">Office</p>
-                  <address className="text-slate not-italic">
-                    {c.address.line1}
-                    {c.address.line2 && <>, {c.address.line2}</>}
-                    <br />
-                    {c.address.city}, {c.address.province} {c.address.postalCode}, {c.address.country}
-                  </address>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <Phone aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
-                <div>
-                  <p className="font-semibold">Phone</p>
-                  <a href={`tel:${c.phoneHref}`} className="text-primary-700 underline">{c.phoneDisplay}</a>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <Mail aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
-                <div>
-                  <p className="font-semibold">Email</p>
-                  <a href={`mailto:${c.email}`} className="break-all text-primary-700 underline">{c.email}</a>
-                </div>
-              </li>
-              <li className="flex gap-4">
-                <Clock aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
-                <div className="flex-1">
-                  <p className="font-semibold">Business hours</p>
-                  <dl className="mt-1 max-w-sm space-y-1 text-sm">
-                    {c.hours.map((h) => (
-                      <div key={h.days} className="flex justify-between gap-4">
-                        <dt className="text-slate">{h.days}</dt>
-                        <dd className="text-right font-medium text-ink">{h.time}</dd>
-                      </div>
-                    ))}
-                  </dl>
-                  <p className="mt-1 text-xs text-slate">{c.timeZoneNote}</p>
-                </div>
-              </li>
-            </ul>
-            <WhatsAppChannelCard />
-            {/* TODO: add an office map embed (iframe with a descriptive title) here if wanted */}
-            <p className="flex gap-3 text-sm text-slate">
+            <Card className="p-6 sm:p-8">
+              <h2 className="text-xl font-bold">Other ways to reach us</h2>
+              <ul className="mt-5 space-y-5">
+                <li className="flex gap-4">
+                  <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
+                  <div>
+                    <p className="font-semibold">Office</p>
+                    <address className="text-slate not-italic">
+                      {c.address.line1}
+                      <br />
+                      {c.address.line2 && (
+                        <>
+                          {c.address.line2}
+                          <br />
+                        </>
+                      )}
+                      {c.address.city}, {c.address.province} {c.address.postalCode}
+                      <br />
+                      {c.address.country}
+                    </address>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <Phone aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
+                  <div>
+                    <p className="font-semibold">Phone</p>
+                    <a href={`tel:${c.phoneHref}`} className="text-primary-700 underline">{c.phoneDisplay}</a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <Mail aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
+                  <div>
+                    <p className="font-semibold">Email</p>
+                    <a href={`mailto:${c.email}`} className="break-all text-primary-700 underline">{c.email}</a>
+                  </div>
+                </li>
+                <li className="flex gap-4">
+                  <Clock aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
+                  <div className="flex-1">
+                    <p className="font-semibold">Business hours</p>
+                    <dl className="mt-1 space-y-1 text-sm">
+                      {c.hours.map((h) => (
+                        <div key={h.days} className="flex justify-between gap-4">
+                          <dt className="text-slate">{h.days}</dt>
+                          <dd className="text-right font-medium text-ink">{h.time}</dd>
+                        </div>
+                      ))}
+                    </dl>
+                    <p className="mt-1 text-xs text-slate">{c.timeZoneNote}</p>
+                  </div>
+                </li>
+              </ul>
+              <WhatsAppChannelCard className="mt-6 flex-wrap" />
+            </Card>
+
+            {/* TODO: replace with a map embed (iframe with a descriptive title) of the office location */}
+            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-line bg-white text-slate">
+              <p className="text-center">
+                <MapPin aria-hidden="true" className="mx-auto mb-2 size-8 text-primary-200" />
+                Office map placeholder
+              </p>
+            </div>
+
+            <div className="flex gap-3 rounded-2xl border border-line bg-white p-5 text-sm">
               <Scale aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />
-              <span>
+              <p className="text-slate">
                 <strong className="text-ink">{siteConfig.operatorDisclosure}</strong> Contacting us does not by itself
                 create a lawyer-client relationship.
-              </span>
-            </p>
+              </p>
+            </div>
           </div>
         </Container>
       </section>
