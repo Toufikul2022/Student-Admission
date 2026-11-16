@@ -6,8 +6,7 @@
  */
 
 export const siteConfig = {
-  // TODO: replace with the real brand name
-  name: "[BRAND NAME]",
+  name: "CanEdu Pathway",
   // TODO: replace with the real domain, e.g. "examplebrand.ca"
   domain: "[DOMAIN.ca]",
   /**
@@ -59,7 +58,7 @@ export const siteConfig = {
    * TODO: confirm exact wording with the law firm / regulator before launch.
    */
   operatorDisclosure:
-    "[BRAND NAME] is operated by [LAW FIRM LEGAL NAME], [CITY], Canada. Immigration advice is provided by licensed legal professionals.",
+    "CanEdu Pathway is operated by [LAW FIRM LEGAL NAME], [CITY], Canada. Immigration advice is provided by licensed legal professionals.",
 
   // TODO: replace with real profile URLs, or delete any you don't use
   social: [

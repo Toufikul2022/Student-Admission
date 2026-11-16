@@ -1,4 +1,4 @@
-# [BRAND NAME] — Study in Canada website
+# CanEdu Pathway — Study in Canada website
 
 A fast, search-friendly marketing and lead-generation website for international students who want to study in
 Canada. Built with **Next.js 16 (App Router)**, **TypeScript** and **Tailwind CSS 4**. Almost every page is

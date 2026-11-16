@@ -3,7 +3,7 @@
 Search the code for `TODO` to find each one in context.
 
 ## A. Brand and contact details — `config/site.ts`
-- [ ] Brand name (`name`) — also update the `operatorDisclosure` wording
+- [x] Brand name: CanEdu Pathway
 - [ ] Domain (`domain`) and `NEXT_PUBLIC_SITE_URL` in your hosting settings
 - [ ] Public email, phone (display format + international `phoneHref`)
 - [ ] WhatsApp number (digits only, international format)
