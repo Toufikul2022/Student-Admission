@@ -54,7 +54,7 @@ Verify each against the official source, then set `value` and `last_verified`:
 - [ ] Hero image — replace the placeholder illustration (`public/images/hero-illustration.svg`, `components/home/Hero.tsx`)
 - [ ] Logo — replace the placeholder mark (`components/layout/Logo.tsx`, `app/icon.svg`)
 - [ ] Social share image — refresh with the final logo (`app/opengraph-image.tsx`)
-- [ ] Office map embed on the Contact page (`app/contact/page.tsx`)
+- [ ] Optional: office map embed on the Contact page (`app/contact/page.tsx`)
 - [ ] Campus map embeds on institution pages (`app/find-university/[slug]/page.tsx`)
 
 ## F. Technical setup (see `README.md`)

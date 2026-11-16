@@ -2,7 +2,7 @@ import { Suspense } from "react";
 import { Clock, Mail, MapPin, Phone, Scale } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
-import { Card } from "@/components/ui/Card";
+import { SectionHeading } from "@/components/ui/SectionHeading";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
 import { siteConfig } from "@/config/site";
@@ -34,34 +34,38 @@ export default function ContactPage() {
         image="contact"
       />
 
-      <Container className="grid gap-10 pt-12 pb-20 lg:grid-cols-12">
-        <Card className="p-6 sm:p-8 lg:col-span-7" id="lead-form">
-          <h2 className="mb-6 text-2xl font-bold">Send us your enquiry</h2>
-          <Suspense fallback={<LeadForm idPrefix="contact" />}>
-            <LeadFormFromUrl institutionNames={institutionNames} idPrefix="contact" />
-          </Suspense>
-        </Card>
+      <section aria-labelledby="contact-form-title" className="bg-mist py-16 sm:py-20">
+        <Container className="grid gap-12 lg:grid-cols-12">
+          <div className="lg:col-span-6" id="lead-form">
+            <SectionHeading
+              id="contact-form-title"
+              title="Speak to an advisor today"
+              description={
+                <span className="text-base sm:text-lg">
+                  Thinking about studying at a Canadian college or university? Book a free consultation. We&apos;ll help
+                  at every stage, from choosing a program to preparing your study permit.
+                </span>
+              }
+              underline
+              className="mb-8"
+            />
+            <Suspense fallback={<LeadForm idPrefix="contact" variant="compact" />}>
+              <LeadFormFromUrl institutionNames={institutionNames} idPrefix="contact" variant="compact" />
+            </Suspense>
+          </div>
 
-        <div className="space-y-6 lg:col-span-5">
-          <Card className="p-6 sm:p-8">
-            <h2 className="text-xl font-bold">Other ways to reach us</h2>
-            <ul className="mt-5 space-y-5">
+          <div className="space-y-6 lg:col-span-6 lg:pl-8">
+            <h2 className="text-2xl font-bold text-ink">Other ways to reach us</h2>
+            <ul className="space-y-5">
               <li className="flex gap-4">
                 <MapPin aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
                 <div>
                   <p className="font-semibold">Office</p>
                   <address className="text-slate not-italic">
                     {c.address.line1}
+                    {c.address.line2 && <>, {c.address.line2}</>}
                     <br />
-                    {c.address.line2 && (
-                      <>
-                        {c.address.line2}
-                        <br />
-                      </>
-                    )}
-                    {c.address.city}, {c.address.province} {c.address.postalCode}
-                    <br />
-                    {c.address.country}
+                    {c.address.city}, {c.address.province} {c.address.postalCode}, {c.address.country}
                   </address>
                 </div>
               </li>
@@ -83,7 +87,7 @@ export default function ContactPage() {
                 <Clock aria-hidden="true" className="mt-1 size-5 shrink-0 text-primary-600" />
                 <div className="flex-1">
                   <p className="font-semibold">Business hours</p>
-                  <dl className="mt-1 space-y-1 text-sm">
+                  <dl className="mt-1 max-w-sm space-y-1 text-sm">
                     {c.hours.map((h) => (
                       <div key={h.days} className="flex justify-between gap-4">
                         <dt className="text-slate">{h.days}</dt>
@@ -95,26 +99,18 @@ export default function ContactPage() {
                 </div>
               </li>
             </ul>
-            <WhatsAppChannelCard className="mt-6 flex-wrap" />
-          </Card>
-
-          {/* TODO: replace with a map embed (iframe with a descriptive title) of the office location */}
-          <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-line bg-mist text-slate">
-            <p className="text-center">
-              <MapPin aria-hidden="true" className="mx-auto mb-2 size-8 text-primary-200" />
-              Office map placeholder
+            <WhatsAppChannelCard />
+            {/* TODO: add an office map embed (iframe with a descriptive title) here if wanted */}
+            <p className="flex gap-3 text-sm text-slate">
+              <Scale aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />
+              <span>
+                <strong className="text-ink">{siteConfig.operatorDisclosure}</strong> Contacting us does not by itself
+                create a lawyer-client relationship.
+              </span>
             </p>
           </div>
-
-          <div className="flex gap-3 rounded-2xl border border-line bg-white p-5 text-sm">
-            <Scale aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />
-            <p className="text-slate">
-              <strong className="text-ink">{siteConfig.operatorDisclosure}</strong> Contacting us does not by itself create
-              a lawyer-client relationship.
-            </p>
-          </div>
-        </div>
-      </Container>
+        </Container>
+      </section>
     </>
   );
 }

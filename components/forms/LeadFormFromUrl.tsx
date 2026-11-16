@@ -8,7 +8,7 @@ import { LeadForm } from "./LeadForm";
  * so "Get help applying" buttons can pre-fill the institution.
  * Must be rendered inside <Suspense>.
  */
-export function LeadFormFromUrl({ institutionNames, idPrefix }: { institutionNames: Record<string, string>; idPrefix?: string }) {
+export function LeadFormFromUrl({ institutionNames, idPrefix, variant }: { institutionNames: Record<string, string>; idPrefix?: string; variant?: "full" | "compact" }) {
   const slug = useSearchParams().get("institution") ?? "";
-  return <LeadForm institution={institutionNames[slug]} idPrefix={idPrefix} />;
+  return <LeadForm institution={institutionNames[slug]} idPrefix={idPrefix} variant={variant} />;
 }
