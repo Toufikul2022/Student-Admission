@@ -23,7 +23,7 @@ export function HeroSlides() {
             aria-label={`${i + 1} of ${heroSlides.length}`}
             hidden={i !== active}
           >
-            <Heading id={i === 0 ? "hero-title" : undefined} className="text-4xl font-extrabold tracking-tight text-ink text-balance sm:text-5xl">
+            <Heading id={i === 0 ? "hero-title" : undefined} className="text-4xl font-bold tracking-tight text-ink text-balance sm:text-5xl">
               {slide.title}
             </Heading>
             <p className="mt-6 text-lg leading-relaxed text-ink/80 sm:text-2xl sm:leading-snug">{slide.body}</p>

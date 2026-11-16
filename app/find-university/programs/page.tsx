@@ -18,7 +18,7 @@ export const metadata = pageMetadata({
 function StaticList() {
   return (
     <div>
-      <h1 className="mb-6 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">{programs.length} programs in Canada</h1>
+      <h1 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{programs.length} programs in Canada</h1>
       <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {programs.map((p) => (
           <li key={p.id}>

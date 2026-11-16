@@ -66,7 +66,7 @@ export default async function InstitutionPage({ params }: Props) {
           <div className="mt-6 flex flex-col gap-6 sm:flex-row sm:items-center">
             <InstitutionLogo inst={inst} size="lg" />
             <div className="flex-1">
-              <h1 className="text-3xl font-extrabold tracking-tight text-ink text-balance sm:text-4xl">{inst.name}</h1>
+              <h1 className="text-3xl font-bold tracking-tight text-ink text-balance sm:text-4xl">{inst.name}</h1>
               <p className="mt-2 flex items-center gap-1.5 text-slate">
                 <MapPin aria-hidden="true" className="size-4" />
                 {inst.city}, {provinceName(inst.province)}

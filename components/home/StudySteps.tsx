@@ -4,7 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Accordion } from "@/components/ui/Accordion";
 import { studySteps } from "@/content/home";
-import { StudentArt } from "./StudentArt";
+import { HomePhoto } from "./HomePhoto";
 
 export function StudySteps() {
   return (
@@ -13,8 +13,8 @@ export function StudySteps() {
         <SectionHeading id="steps-title" title="Your study steps" underline />
         <div className="grid items-end gap-10 lg:grid-cols-2">
           <div className="order-2 mx-auto w-full max-w-md lg:order-1">
-            {/* TODO: replace with a licensed student photo */}
-            <StudentArt variant="steps" />
+            {/* Photo slot: add public/images/home/steps.png (see README.txt there) */}
+            <HomePhoto slot="steps" />
           </div>
           <div className="order-1 pb-0 lg:order-2 lg:self-start lg:pb-16">
             <Accordion

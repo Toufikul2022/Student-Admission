@@ -40,8 +40,8 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "relative rounded-full px-4 py-2 text-[0.95rem] font-semibold transition-colors",
-                      active ? "bg-primary-50 text-primary-700" : "text-ink hover:bg-mist hover:text-primary-700",
+                      "relative rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors",
+                      active ? "text-primary-700 underline decoration-2 underline-offset-8" : "text-ink hover:text-primary-700",
                     )}
                   >
                     {item.label}
@@ -53,7 +53,7 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2">
-          <Link href="/contact" className={buttonClasses("primary", "sm", "sm:h-11 sm:px-6 sm:text-base")}>
+          <Link href="/contact" className={buttonClasses("green", "sm", "sm:h-11 sm:px-6 sm:text-base")}>
             Contact Us
           </Link>
           <button

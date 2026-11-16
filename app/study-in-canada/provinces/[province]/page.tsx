@@ -47,7 +47,7 @@ export default async function ProvincePage({ params }: Props) {
         here.length > 0 ? (
           <section aria-labelledby="province-institutions" className="bg-mist py-16">
             <Container>
-              <h2 id="province-institutions" className="text-3xl font-extrabold tracking-tight">
+              <h2 id="province-institutions" className="text-3xl font-bold tracking-tight">
                 Institutions in {p.name}
               </h2>
               <ul className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

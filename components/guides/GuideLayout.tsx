@@ -94,7 +94,7 @@ export function GuideLayout({
       <section className="border-b border-line bg-gradient-to-b from-primary-50 to-white pt-8 pb-10">
         <Container>
           <Breadcrumbs items={crumbs} />
-          <h1 className="mt-6 max-w-4xl text-4xl font-extrabold tracking-tight text-ink text-balance sm:text-5xl">{title}</h1>
+          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-ink text-balance sm:text-5xl">{title}</h1>
           <div className="mt-4">
             <ReviewLine path={path} />
           </div>

@@ -1,7 +1,7 @@
 import { Clock, MessageCircle, ShieldCheck } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { StudentArt } from "@/components/home/StudentArt";
+import { HomePhoto } from "@/components/home/HomePhoto";
 import { whatsappLink } from "@/config/site";
 import { LeadForm } from "./LeadForm";
 
@@ -18,7 +18,7 @@ export function LeadFormSection({
   id?: string;
 }) {
   return (
-    <section id={id} aria-labelledby={`${id}-title`} className="bg-primary-50/60 py-16 sm:py-20">
+    <section id={id} aria-labelledby={`${id}-title`} className="bg-primary-50 py-16 sm:py-20">
       <Container className="grid gap-12 lg:grid-cols-12">
         <div className="lg:col-span-7">
           <SectionHeading id={`${id}-title`} title={title} description={description} underline className="mb-8" />
@@ -26,8 +26,8 @@ export function LeadFormSection({
         </div>
         <div className="hidden lg:col-span-5 lg:block">
           <div className="sticky top-24">
-            {/* TODO: replace with a licensed student photo */}
-            <StudentArt variant="form" className="mx-auto max-w-sm" />
+            {/* Photo slot: add public/images/home/form.png (see README.txt there) */}
+            <HomePhoto slot="form" className="mx-auto max-w-sm" />
             <ul className="mt-8 space-y-4">
               <li className="flex gap-3">
                 <ShieldCheck aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />

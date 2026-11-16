@@ -30,10 +30,10 @@ export function SectionHeading({
           {eyebrow}
         </p>
       )}
-      <Tag id={id} className={cn("text-3xl font-extrabold tracking-tight text-balance sm:text-4xl", invert ? "text-white" : "text-ink")}>
+      <Tag id={id} className={cn("text-3xl font-bold text-balance sm:text-[2.6rem] sm:leading-tight", invert ? "text-white" : "text-ink")}>
         {title}
       </Tag>
-      {underline && <span aria-hidden="true" className={cn("mt-3 block h-1.5 w-8 rounded-full bg-accent-500", align === "center" && "mx-auto")} />}
+      {underline && <span aria-hidden="true" className={cn("mt-2 block h-1.5 w-7 rounded-full bg-accent-500", align === "center" && "mx-auto")} />}
       {description && (
         <p className={cn("mt-4 text-lg leading-relaxed text-pretty", invert ? "text-primary-100" : "text-slate")}>{description}</p>
       )}

@@ -1,42 +1,47 @@
 @import "tailwindcss";
 
 /*
- * Design tokens. Palette approved: Boreal Teal (primary) + Maple Gold (accent).
- * Contrast notes (WCAG 2.1 AA):
- *  - white on primary-600 7.4:1 · white on primary-700 9.9:1
- *  - ink on accent-500 6.9:1 (never put white text on accent-500: 2.3:1)
- *  - accent-700 on white 5.4:1 · slate on white 6.9:1
+ * Design tokens. Palette: bright blue (primary), orange (accent), green (header CTA), greys.
+ * Contrast notes (WCAG 2.1 AA): see README design section.
  */
 @theme {
-  --color-primary-50: #e7f1f2;
-  --color-primary-100: #cfe3e6;
-  --color-primary-200: #a3cbd1;
-  --color-primary-500: #1f7a8c;
-  --color-primary-600: #0f5e6e;
-  --color-primary-700: #0b4a57;
-  --color-primary-800: #083843;
-  --color-primary-900: #062a32;
+  /* Primary: bright blue (buttons, links, icons) */
+  --color-primary-50: #eaf7fd;
+  --color-primary-100: #d3ecfa;
+  --color-primary-200: #9fcbf0;
+  --color-primary-500: #2a86e8;
+  --color-primary-600: #0b6bdb;
+  --color-primary-700: #0a57b0;
+  --color-primary-800: #08458a;
+  --color-primary-900: #062f5e;
 
-  --color-accent-50: #fdf1de;
-  --color-accent-100: #fae0b8;
-  --color-accent-400: #eeac4f;
-  --color-accent-500: #e59a2f;
-  --color-accent-700: #9a5b00;
-  --color-accent-800: #7a4700;
+  /* Accent: orange (underline bars, highlights) */
+  --color-accent-50: #fff1e5;
+  --color-accent-100: #ffddbe;
+  --color-accent-400: #f59a45;
+  --color-accent-500: #f27b0f;
+  --color-accent-700: #a84b00;
+  --color-accent-800: #8a3d00;
 
-  --color-ink: #14232b;
-  --color-slate: #4b5d68;
-  --color-mist: #f5f7f8;
-  --color-line: #dde4e8;
+  /* Green: header call-to-action */
+  --color-green-600: #0a7a4a;
+  --color-green-700: #08603a;
+
+  --color-ink: #333333;
+  --color-slate: #555b61;
+  --color-mist: #f2f2f2;
+  --color-cloud: #e5e5e5;
+  --color-line: #d4d4d4;
   --color-success-50: #e6f4ec;
   --color-success-700: #1d6b40;
   --color-danger-50: #fdecec;
   --color-danger-700: #a4262c;
 
-  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, sans-serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-display-face), var(--font-inter), ui-sans-serif, sans-serif;
 
-  --shadow-card: 0 1px 2px rgb(20 35 43 / 0.04), 0 4px 16px rgb(20 35 43 / 0.06);
-  --shadow-card-hover: 0 2px 4px rgb(20 35 43 / 0.06), 0 12px 32px rgb(20 35 43 / 0.1);
+  --shadow-card: 0 1px 2px rgb(0 0 0 / 0.04), 0 4px 16px rgb(0 0 0 / 0.06);
+  --shadow-card-hover: 0 2px 6px rgb(0 0 0 / 0.06), 0 12px 32px rgb(0 0 0 / 0.1);
 }
 
 html {
@@ -61,6 +66,14 @@ body {
   color: var(--color-ink);
   font-family: var(--font-sans);
   -webkit-font-smoothing: antialiased;
+}
+
+/* Condensed display face for headings */
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  letter-spacing: -0.01em;
 }
 
 /* Visible, consistent focus ring for keyboard users */

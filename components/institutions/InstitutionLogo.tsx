@@ -24,7 +24,7 @@ export function InstitutionLogo({ inst, size = "md" }: { inst: Pick<Institution,
     .join("");
   // TODO: add official logos (with permission) to /public/logos and set "logo" in institutions.json
   return (
-    <div aria-hidden="true" className={cn(dims, "flex shrink-0 items-center justify-center rounded-xl bg-primary-50 font-extrabold text-primary-700")}>
+    <div aria-hidden="true" className={cn(dims, "flex shrink-0 items-center justify-center rounded-xl bg-primary-50 font-bold text-primary-700")}>
       {initials}
     </div>
   );

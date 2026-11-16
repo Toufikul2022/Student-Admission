@@ -8,7 +8,7 @@ const icons = { school: GraduationCap, file: FileCheck2, pen: NotebookPen, passp
 
 export function ServiceGrid() {
   return (
-    <section aria-labelledby="services-title" className="bg-[#e9edef] py-16 sm:py-20">
+    <section aria-labelledby="services-title" className="bg-cloud py-16 sm:py-20">
       <Container>
         <SectionHeading id="services-title" title="How we can help you" underline />
         <ul className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">

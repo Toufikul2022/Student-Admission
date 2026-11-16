@@ -15,7 +15,7 @@ function FooterList({ title, links }: { title: string; links: { label: string; h
       <ul className="mt-4 space-y-2.5">
         {links.map((l) => (
           <li key={l.href}>
-            <Link href={l.href} className="text-sm text-primary-100 underline-offset-4 hover:text-white hover:underline">
+            <Link href={l.href} className="text-sm text-[#e5e5e5] underline-offset-4 hover:text-white hover:underline">
               {l.label}
             </Link>
           </li>
@@ -28,7 +28,7 @@ function FooterList({ title, links }: { title: string; links: { label: string; h
 export function Footer() {
   const c = siteConfig.contact;
   return (
-    <footer className="bg-primary-900 text-primary-100">
+    <footer className="bg-[#333333] text-[#e5e5e5]">
       <div className="mx-auto w-full max-w-7xl px-4 pt-16 pb-10 sm:px-6 lg:px-8">
         <div className="grid gap-10 lg:grid-cols-12">
           <div className="lg:col-span-4">
@@ -83,7 +83,7 @@ export function Footer() {
             <h2 className="text-sm font-bold tracking-wider text-white uppercase">Contact</h2>
             <ul className="mt-4 space-y-3 text-sm">
               <li className="flex gap-3">
-                <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                <MapPin aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <address className="not-italic">
                   {c.address.line1}
                   <br />
@@ -91,19 +91,19 @@ export function Footer() {
                 </address>
               </li>
               <li className="flex gap-3">
-                <Phone aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                <Phone aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={`tel:${c.phoneHref}`} className="hover:text-white hover:underline">
                   {c.phoneDisplay}
                 </a>
               </li>
               <li className="flex gap-3">
-                <Mail aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                <Mail aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={`mailto:${c.email}`} className="break-all hover:text-white hover:underline">
                   {c.email}
                 </a>
               </li>
               <li className="flex gap-3">
-                <MessageCircle aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-accent-400" />
+                <MessageCircle aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="hover:text-white hover:underline">
                   WhatsApp us<span className="sr-only"> (opens in a new tab)</span>
                 </a>

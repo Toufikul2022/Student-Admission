@@ -25,7 +25,7 @@ export function CtaBand({
           <div aria-hidden="true" className="absolute -bottom-32 left-1/3 size-72 rounded-full bg-accent-500/15" />
           <div className="relative flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
             <div className="max-w-2xl">
-              <h2 id="cta-band-title" className="text-3xl font-extrabold tracking-tight text-white text-balance sm:text-4xl">
+              <h2 id="cta-band-title" className="text-3xl font-bold tracking-tight text-white text-balance sm:text-4xl">
                 {title}
               </h2>
               <p className="mt-3 text-lg text-primary-100">{description}</p>

@@ -249,7 +249,7 @@ export function LeadForm({
         .
       </p>
 
-      <Button type="submit" size="lg" disabled={pending} className="w-full sm:w-auto">
+      <Button type="submit" size="lg" disabled={pending} className="w-full">
         {pending ? <Loader2 aria-hidden="true" className="size-5 animate-spin" /> : <Send aria-hidden="true" className="size-5" />}
         {pending ? "Sending…" : "Send my enquiry"}
       </Button>

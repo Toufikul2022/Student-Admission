@@ -2,16 +2,17 @@ import Link from "next/link";
 import type { ComponentProps, ReactNode } from "react";
 import { cn } from "@/lib/cn";
 
-type Variant = "primary" | "accent" | "outline" | "ghost" | "white";
+type Variant = "primary" | "green" | "accent" | "outline" | "ghost" | "white";
 type Size = "sm" | "md" | "lg";
 
 const base =
-  "inline-flex items-center justify-center gap-2 rounded-full font-semibold transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60 whitespace-nowrap";
+  "inline-flex items-center justify-center gap-2 rounded-full font-medium transition-colors duration-150 disabled:cursor-not-allowed disabled:opacity-60 whitespace-nowrap";
 
 const variants: Record<Variant, string> = {
   primary: "bg-primary-600 text-white hover:bg-primary-700 active:bg-primary-800",
+  green: "bg-green-600 text-white hover:bg-green-700",
   accent: "bg-accent-500 text-ink hover:bg-accent-400",
-  outline: "border-2 border-primary-600 text-primary-700 bg-white hover:bg-primary-50",
+  outline: "border border-ink text-ink bg-white hover:bg-mist",
   ghost: "text-primary-700 hover:bg-primary-50",
   white: "bg-white text-primary-700 hover:bg-primary-50",
 };

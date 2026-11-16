@@ -25,7 +25,7 @@ export default function ContactPage() {
       <section className="bg-gradient-to-b from-primary-50 to-white pt-8 pb-10">
         <Container>
           <Breadcrumbs items={[{ name: "Contact Us", href: "/contact" }]} />
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">Talk to an advisor</h1>
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">Talk to an advisor</h1>
           <p className="mt-4 max-w-2xl text-lg text-slate">
             Tell us about your study plans and we&apos;ll get back to you with clear next steps. The first consultation is
             free. {/* TODO: confirm free-consultation offer */}
@@ -94,7 +94,7 @@ export default function ContactPage() {
                 </div>
               </li>
             </ul>
-            <Button href={whatsappLink()} className="mt-6 w-full bg-[#1d6b40] hover:bg-[#155231]" size="lg">
+            <Button href={whatsappLink()} className="mt-6 w-full bg-green-600 hover:bg-green-700" size="lg">
               <MessageCircle aria-hidden="true" className="size-5" />
               Chat with us on WhatsApp
               <span className="sr-only">(opens in a new tab)</span>

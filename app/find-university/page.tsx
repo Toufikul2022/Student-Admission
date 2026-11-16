@@ -21,7 +21,7 @@ function StaticList() {
   const sorted = [...institutions].sort((a, b) => b.popularity - a.popularity);
   return (
     <div>
-      <h1 className="mb-6 text-3xl font-extrabold tracking-tight text-ink sm:text-4xl">
+      <h1 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
         {sorted.length} institutions in Canada
       </h1>
       <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">

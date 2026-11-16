@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { Barlow_Semi_Condensed, Inter } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import { Header } from "@/components/layout/Header";
@@ -8,9 +8,11 @@ import { Analytics } from "@/components/layout/Analytics";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { organizationSchema, websiteSchema } from "@/lib/schema";
 
-const jakarta = Plus_Jakarta_Sans({
+const inter = Inter({ subsets: ["latin"], variable: "--font-inter", display: "swap" });
+const display = Barlow_Semi_Condensed({
   subsets: ["latin"],
-  variable: "--font-jakarta",
+  weight: ["600", "700"],
+  variable: "--font-display-face",
   display: "swap",
 });
 
@@ -32,12 +34,12 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0F5E6E",
+  themeColor: "#0B6BDB",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html lang="en-CA" className={jakarta.variable}>
+    <html lang="en-CA" className={`${inter.variable} ${display.variable}`}>
       <body className="flex min-h-dvh flex-col">
         <a
           href="#main"

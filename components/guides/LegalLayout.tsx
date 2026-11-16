@@ -10,7 +10,7 @@ export function LegalLayout({ title, path, draft = true, children }: { title: st
       <section className="border-b border-line bg-mist pt-8 pb-10">
         <Container className="max-w-4xl">
           <Breadcrumbs items={[{ name: title, href: path }]} />
-          <h1 className="mt-6 text-4xl font-extrabold tracking-tight text-ink">{title}</h1>
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink">{title}</h1>
           <div className="mt-4">
             <ReviewLine path={path} />
           </div>
