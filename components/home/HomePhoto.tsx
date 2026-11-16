@@ -9,7 +9,7 @@ type Slot = "hero" | "steps" | "banner" | "form";
 const ALT: Record<Slot, string> = {
   hero: "Smiling graduate in cap and gown holding a small Canadian flag",
   steps: "Smiling student with a backpack and a book giving a thumbs up",
-  banner: "Student with a backpack waving a Canadian flag",
+  banner: "Smiling student with headphones and a backpack waving a small Canadian flag",
   form: "Books and a graduation cap in front of the Canadian flag",
 };
 
@@ -25,7 +25,7 @@ const LEAF: Record<Slot, string> = {
  * Slots that use a transparent cut-out photo (person only, no background).
  * These are shown without a frame, standing in front of a large maple leaf.
  */
-const CUTOUT: Partial<Record<Slot, true>> = { hero: true, steps: true };
+const CUTOUT: Partial<Record<Slot, true>> = { hero: true, steps: true, banner: true };
 
 /**
  * Finds public/images/home/<slot>.<ext> or <slot>-<anything>.<ext> at build time.
@@ -48,6 +48,8 @@ function findPhoto(slot: Slot) {
 
 /**
  * Home page photo on a red maple-leaf background.
+ * Files are served as-is (unoptimized) because they're already prepared at high
+ * quality; Next's default re-compression made small photos look soft.
  * To change a photo, replace public/images/home/<slot>.webp (see README.txt there).
  * Larger originals (at least 1200px wide) will look sharper.
  */
@@ -58,7 +60,7 @@ export function HomePhoto({ slot, className, priority }: { slot: Slot; className
       <div className={cn("relative isolate", className)}>
         <MapleLeaf className="absolute top-0 left-1/2 -z-10 w-[92%] -translate-x-1/2 text-primary-600" />
         <div className="relative aspect-[4/5]">
-          <Image src={src} alt={ALT[slot]} fill priority={priority} sizes="(min-width: 1024px) 30vw, 70vw" className="object-contain object-bottom" />
+          <Image src={src} alt={ALT[slot]} fill unoptimized priority={priority} className="object-contain object-bottom" />
         </div>
       </div>
     );
@@ -68,7 +70,7 @@ export function HomePhoto({ slot, className, priority }: { slot: Slot; className
       <MapleLeaf className={cn("absolute -z-10 text-primary-600", LEAF[slot])} />
       {src ? (
         <div className="relative aspect-[3/2] overflow-hidden rounded-2xl shadow-card-hover ring-4 ring-white">
-          <Image src={src} alt={ALT[slot]} fill priority={priority} sizes="(min-width: 1024px) 40vw, 90vw" className="object-cover" />
+          <Image src={src} alt={ALT[slot]} fill unoptimized priority={priority} className="object-cover" />
         </div>
       ) : (
         <div className="relative aspect-[3/2]" />

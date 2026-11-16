@@ -18,7 +18,7 @@ export function PromoBanner() {
             </p>
             <Button href="/contact" className="mt-6">Check my readiness</Button>
           </div>
-          <div className="mx-auto w-72 shrink-0 px-8 pb-10 sm:mr-6 sm:w-80 sm:pt-14 sm:pb-10 sm:pr-10 sm:pl-0">
+          <div className="mx-auto w-64 shrink-0 self-end px-4 pt-10 sm:mr-12 sm:w-72">
             {/* To change this photo, replace public/images/home/banner.webp */}
             <HomePhoto slot="banner" />
           </div>
