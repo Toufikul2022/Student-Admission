@@ -34,6 +34,7 @@ export default function StudyInCanadaPage() {
       path={PATH}
       crumbs={[{ name: "Study in Canada", href: PATH }]}
       nav={STUDY_NAV}
+      image="study-in-canada"
       faqs={faqs}
       answer={
         <p>

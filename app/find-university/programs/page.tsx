@@ -18,7 +18,7 @@ export const metadata = pageMetadata({
 function StaticList() {
   return (
     <div>
-      <h1 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{programs.length} programs in Canada</h1>
+      <h2 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">{programs.length} programs in Canada</h2>
       <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {programs.map((p) => (
           <li key={p.id}>
@@ -33,23 +33,24 @@ function StaticList() {
 export default function ProgramsPage() {
   return (
     <>
-      <section className="pt-8 pb-4 sm:pt-10">
+      <ListingIntro
+        title="Search programs in Canada"
+        crumbs={[
+          { name: "Find University", href: "/find-university" },
+          { name: "Programs", href: "/find-university/programs" },
+        ]}
+        lede={
+          <>
+            Search individual programs across Canadian institutions. Prefer to browse by school?{" "}
+            <Link href="/find-university" className="font-semibold text-primary-700 underline">
+              Search institutions
+            </Link>
+            .
+          </>
+        }
+      />
+      <section className="pt-6 pb-4">
         <Container>
-          <ListingIntro
-            crumbs={[
-              { name: "Find University", href: "/find-university" },
-              { name: "Programs", href: "/find-university/programs" },
-            ]}
-            lede={
-              <>
-                Search individual programs across Canadian institutions. Prefer to browse by school?{" "}
-                <Link href="/find-university" className="font-semibold text-primary-700 underline">
-                  Search institutions
-                </Link>
-                .
-              </>
-            }
-          />
           <Suspense fallback={<StaticList />}>
             <ProgramExplorer />
           </Suspense>

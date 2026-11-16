@@ -1,21 +1,15 @@
 import type { ReactNode } from "react";
 import { FileWarning } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PageHero } from "@/components/ui/PageHero";
 import { ReviewLine } from "./GuideLayout";
 
 export function LegalLayout({ title, path, draft = true, children }: { title: string; path: string; draft?: boolean; children: ReactNode }) {
   return (
     <>
-      <section className="border-b border-line bg-mist pt-8 pb-10">
-        <Container className="max-w-4xl">
-          <Breadcrumbs items={[{ name: title, href: path }]} />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink">{title}</h1>
-          <div className="mt-4">
-            <ReviewLine path={path} />
-          </div>
-        </Container>
-      </section>
+      <PageHero crumbs={[{ name: title, href: path }]} title={title}>
+        <ReviewLine path={path} />
+      </PageHero>
       <Container className="max-w-4xl py-12">
         {/* TODO: remove this banner (draft={false}) only after legal review */}
         {draft && (

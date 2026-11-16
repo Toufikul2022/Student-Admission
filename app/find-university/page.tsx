@@ -21,9 +21,9 @@ function StaticList() {
   const sorted = [...institutions].sort((a, b) => b.popularity - a.popularity);
   return (
     <div>
-      <h1 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
+      <h2 className="mb-6 text-3xl font-bold tracking-tight text-ink sm:text-4xl">
         {sorted.length} institutions in Canada
-      </h1>
+      </h2>
       <ul className="grid gap-5 sm:grid-cols-2 xl:grid-cols-3">
         {sorted.map((inst) => (
           <li key={inst.slug}>
@@ -38,21 +38,22 @@ function StaticList() {
 export default function FindUniversityPage() {
   return (
     <>
-      <section className="pt-8 pb-4 sm:pt-10">
+      <ListingIntro
+        title="Find a university or college in Canada"
+        crumbs={[{ name: "Find University", href: "/find-university" }]}
+        lede={
+          <>
+            Compare Canadian universities, colleges and polytechnics. Filter by location, level, field of study and
+            budget — or{" "}
+            <Link href="/find-university/programs" className="font-semibold text-primary-700 underline">
+              search individual programs
+            </Link>
+            .
+          </>
+        }
+      />
+      <section className="pt-6 pb-4">
         <Container>
-          <ListingIntro
-            crumbs={[{ name: "Find University", href: "/find-university" }]}
-            lede={
-              <>
-                Compare Canadian universities, colleges and polytechnics. Use the filters to narrow by location, level,
-                field of study and budget — or{" "}
-                <Link href="/find-university/programs" className="font-semibold text-primary-700 underline">
-                  search individual programs
-                </Link>
-                .
-              </>
-            }
-          />
           <Suspense fallback={<StaticList />}>
             <InstitutionExplorer />
           </Suspense>

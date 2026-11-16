@@ -2,7 +2,8 @@ import Link from "next/link";
 import { CalendarClock, Lightbulb, MessageSquareText } from "lucide-react";
 import type { ReactNode } from "react";
 import { Container } from "@/components/ui/Container";
-import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PageHero } from "@/components/ui/PageHero";
+import type { PageImageKey } from "@/content/page-images";
 import { buttonClasses } from "@/components/ui/Button";
 import { CtaBand } from "@/components/ui/CtaBand";
 import { Faq } from "@/components/home/Faq";
@@ -68,7 +69,10 @@ export function GuideLayout({
   faqs,
   children,
   beforeCta,
+  image,
 }: {
+  /** Hero photo; defaults to the section's photo */
+  image?: PageImageKey;
   title: string;
   description: string;
   path: string;
@@ -91,15 +95,9 @@ export function GuideLayout({
           dateModified: r.reviewed ?? r.drafted,
         })}
       />
-      <section className="border-b border-line bg-gradient-to-b from-primary-50 to-white pt-8 pb-10">
-        <Container>
-          <Breadcrumbs items={crumbs} />
-          <h1 className="mt-6 max-w-4xl text-4xl font-bold tracking-tight text-ink text-balance sm:text-5xl">{title}</h1>
-          <div className="mt-4">
-            <ReviewLine path={path} />
-          </div>
-        </Container>
-      </section>
+      <PageHero crumbs={crumbs} title={title} intro={description} image={image ?? (nav === VISA_NAV ? "visa" : "study-guides")}>
+        <ReviewLine path={path} />
+      </PageHero>
 
       <Container className="grid gap-10 py-12 lg:grid-cols-[1fr_19rem]">
         <article className="min-w-0">

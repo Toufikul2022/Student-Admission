@@ -42,9 +42,9 @@ export function ResultsToolbar({
   return (
     <div className="mb-6">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <h1 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl" aria-live="polite">
+        <h2 className="text-3xl font-bold tracking-tight text-ink sm:text-4xl" aria-live="polite">
           {heading}
-        </h1>
+        </h2>
         <div className="flex items-center gap-3">
           <button
             type="button"

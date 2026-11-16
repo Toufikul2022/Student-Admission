@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import { Clock, Mail, MapPin, Phone, Scale } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { PageHero } from "@/components/ui/PageHero";
 import { Card } from "@/components/ui/Card";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
@@ -22,18 +22,19 @@ export default function ContactPage() {
   const c = siteConfig.contact;
   return (
     <>
-      <section className="bg-gradient-to-b from-primary-50 to-white pt-8 pb-10">
-        <Container>
-          <Breadcrumbs items={[{ name: "Contact Us", href: "/contact" }]} />
-          <h1 className="mt-6 text-4xl font-bold tracking-tight text-ink sm:text-5xl">Talk to an advisor</h1>
-          <p className="mt-4 max-w-2xl text-lg text-slate">
-            Tell us about your study plans and we&apos;ll get back to you with clear next steps. The first consultation is
-            free. {/* TODO: confirm free-consultation offer */}
-          </p>
-        </Container>
-      </section>
+      <PageHero
+        crumbs={[{ name: "Contact Us", href: "/contact" }]}
+        title="Talk to an advisor"
+        intro={
+          <>
+            Tell us about your study plans and we&apos;ll get back to you with clear next steps. The first consultation
+            is free. {/* TODO: confirm free-consultation offer */}
+          </>
+        }
+        image="contact"
+      />
 
-      <Container className="grid gap-10 pb-20 lg:grid-cols-12">
+      <Container className="grid gap-10 pt-12 pb-20 lg:grid-cols-12">
         <Card className="p-6 sm:p-8 lg:col-span-7" id="lead-form">
           <h2 className="mb-6 text-2xl font-bold">Send us your enquiry</h2>
           <Suspense fallback={<LeadForm idPrefix="contact" />}>

@@ -12,6 +12,7 @@ import { PgwpBadge } from "@/components/institutions/PgwpBadge";
 import { LastVerified } from "@/components/institutions/LastVerified";
 import { LeadFormSection } from "@/components/forms/LeadFormSection";
 import { JsonLd } from "@/components/seo/JsonLd";
+import { MapleLeaf } from "@/components/home/MapleLeaf";
 import {
   fieldLabel,
   formatCad,
@@ -55,8 +56,9 @@ export default async function InstitutionPage({ params }: Props) {
     <>
       <JsonLd data={institutionSchema(inst)} />
 
-      <section className="border-b border-line bg-gradient-to-b from-primary-50 to-white pt-8 pb-10">
-        <Container>
+      <section className="relative overflow-hidden bg-cloud pt-8 pb-10">
+        <MapleLeaf className="pointer-events-none absolute -top-16 -right-16 w-[22rem] rotate-12 text-primary-600/10 sm:w-[30rem]" />
+        <Container className="relative">
           <Breadcrumbs
             items={[
               { name: "Find University", href: "/find-university" },

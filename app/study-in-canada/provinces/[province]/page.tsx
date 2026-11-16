@@ -35,13 +35,14 @@ export default async function ProvincePage({ params }: Props) {
   return (
     <GuideLayout
       title={`Study in ${p.name}`}
-      description={p.overview}
+      description={`Studying and living in ${p.name}: main cities, what to know before you apply, and institutions you can choose from.`}
       path={path}
       crumbs={[
         { name: "Study in Canada", href: "/study-in-canada" },
         { name: p.name, href: path },
       ]}
       nav={STUDY_NAV}
+      image="study-in-canada"
       answer={<p>{p.overview}</p>}
       beforeCta={
         here.length > 0 ? (
