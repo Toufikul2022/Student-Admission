@@ -1,0 +1,353 @@
+[
+  {
+    "id": "um-bsc-computer-science",
+    "institutionSlug": "university-of-manitoba",
+    "name": "Computer Science (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "computing",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://umanitoba.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "um-bcomm",
+    "institutionSlug": "university-of-manitoba",
+    "name": "Commerce (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "business",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://umanitoba.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "um-msc-engineering",
+    "institutionSlug": "university-of-manitoba",
+    "name": "Engineering (Master's) — sample",
+    "level": "masters",
+    "field": "engineering",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://umanitoba.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "uw-ba-economics",
+    "institutionSlug": "university-of-winnipeg",
+    "name": "Economics (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "social-sciences",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.uwinnipeg.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "uw-bsc-applied-computer-science",
+    "institutionSlug": "university-of-winnipeg",
+    "name": "Applied Computer Science (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "computing",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.uwinnipeg.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "bu-bmus",
+    "institutionSlug": "brandon-university",
+    "name": "Music (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "music",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.brandonu.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "bu-bn",
+    "institutionSlug": "brandon-university",
+    "name": "Nursing (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "health",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.brandonu.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "rrc-business-admin-diploma",
+    "institutionSlug": "red-river-college-polytechnic",
+    "name": "Business Administration (Diploma) — sample",
+    "level": "diploma",
+    "field": "business",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.rrc.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "rrc-software-dev-diploma",
+    "institutionSlug": "red-river-college-polytechnic",
+    "name": "Software Development (Diploma) — sample",
+    "level": "diploma",
+    "field": "computing",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.rrc.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "rrc-pgc-supply-chain",
+    "institutionSlug": "red-river-college-polytechnic",
+    "name": "Supply Chain Management (Post-Graduate Certificate) — sample",
+    "level": "postgraduate-certificate",
+    "field": "business",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan",
+      "may"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.rrc.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "ac-hospitality-diploma",
+    "institutionSlug": "assiniboine-college",
+    "name": "Hospitality Management (Diploma) — sample",
+    "level": "diploma",
+    "field": "hospitality",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://assiniboine.net/",
+    "last_verified": null
+  },
+  {
+    "id": "ac-agribusiness-diploma",
+    "institutionSlug": "assiniboine-college",
+    "name": "Agribusiness (Diploma) — sample",
+    "level": "diploma",
+    "field": "agriculture-environment",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://assiniboine.net/",
+    "last_verified": null
+  },
+  {
+    "id": "usb-ba-education",
+    "institutionSlug": "universite-de-saint-boniface",
+    "name": "Education (Bachelor's, French-language) — sample",
+    "level": "bachelor",
+    "field": "education",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://ustboniface.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "usb-nursing",
+    "institutionSlug": "universite-de-saint-boniface",
+    "name": "Nursing (Bachelor's, French-language) — sample",
+    "level": "bachelor",
+    "field": "health",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://ustboniface.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "mitt-it-diploma",
+    "institutionSlug": "manitoba-institute-of-trades-and-technology",
+    "name": "Information Technology (Diploma) — sample",
+    "level": "diploma",
+    "field": "computing",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://mitt.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "mitt-healthcare-aide",
+    "institutionSlug": "manitoba-institute-of-trades-and-technology",
+    "name": "Health Care Aide (Certificate/Diploma) — sample",
+    "level": "diploma",
+    "field": "health",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan",
+      "may"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://mitt.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "cmu-ba-peace",
+    "institutionSlug": "canadian-mennonite-university",
+    "name": "Peace and Conflict Transformation Studies (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "social-sciences",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.cmu.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "booth-ba-social-work",
+    "institutionSlug": "booth-university-college",
+    "name": "Social Work (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "social-sciences",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.boothuc.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "prov-ba-business",
+    "institutionSlug": "providence-university-college",
+    "name": "Business Administration (Bachelor's) — sample",
+    "level": "bachelor",
+    "field": "business",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.prov.ca/",
+    "last_verified": null
+  },
+  {
+    "id": "prov-ma-counselling",
+    "institutionSlug": "providence-university-college",
+    "name": "Counselling (Master's) — sample",
+    "level": "masters",
+    "field": "social-sciences",
+    "durationMonths": null,
+    "tuitionPerYearCad": null,
+    "intakes": [
+      "sep"
+    ],
+    "languageRequirement": null,
+    "pgwpEligible": null,
+    "sample": true,
+    "source_url": "https://www.prov.ca/",
+    "last_verified": null
+  }
+]

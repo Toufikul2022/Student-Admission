@@ -1,0 +1,444 @@
+[
+  {
+    "slug": "university-of-manitoba",
+    "name": "University of Manitoba",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://umanitoba.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A large public research university based in Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "computing",
+      "engineering",
+      "health",
+      "sciences",
+      "social-sciences",
+      "arts-humanities",
+      "education",
+      "agriculture-environment",
+      "music"
+    ],
+    "levels": [
+      "bachelor",
+      "masters",
+      "phd"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 100,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://umanitoba.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "university-of-winnipeg",
+    "name": "University of Winnipeg",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://www.uwinnipeg.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A public university located in downtown Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "computing",
+      "sciences",
+      "social-sciences",
+      "arts-humanities",
+      "education",
+      "media-design"
+    ],
+    "levels": [
+      "bachelor",
+      "masters"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 90,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://www.uwinnipeg.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "brandon-university",
+    "name": "Brandon University",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Brandon",
+    "dliNumber": null,
+    "website": "https://www.brandonu.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A public university in the city of Brandon, in southwestern Manitoba.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "sciences",
+      "social-sciences",
+      "arts-humanities",
+      "education",
+      "music",
+      "health"
+    ],
+    "levels": [
+      "bachelor",
+      "masters"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 70,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://www.brandonu.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "red-river-college-polytechnic",
+    "name": "Red River College Polytechnic",
+    "type": "Polytechnic",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://www.rrc.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A public polytechnic offering applied programs, with its main campuses in Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan",
+      "may"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "computing",
+      "engineering",
+      "health",
+      "hospitality",
+      "trades",
+      "media-design"
+    ],
+    "levels": [
+      "diploma",
+      "postgraduate-certificate",
+      "bachelor"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school completion or equivalent (or post-secondary credentials for postgraduate certificates)",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites, portfolios or interviews where applicable"
+    ],
+    "popularity": 95,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://www.rrc.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "assiniboine-college",
+    "name": "Assiniboine College",
+    "type": "College",
+    "province": "manitoba",
+    "city": "Brandon",
+    "dliNumber": null,
+    "website": "https://assiniboine.net/",
+    "logo": null,
+    "overview": "Sample profile — TODO: confirm the institution's current official name and replace with a short description from its official website. A public college based in Brandon, Manitoba.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "health",
+      "hospitality",
+      "trades",
+      "agriculture-environment"
+    ],
+    "levels": [
+      "diploma",
+      "postgraduate-certificate"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school completion or equivalent (or post-secondary credentials for postgraduate certificates)",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites, portfolios or interviews where applicable"
+    ],
+    "popularity": 65,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://assiniboine.net/",
+    "last_verified": null
+  },
+  {
+    "slug": "universite-de-saint-boniface",
+    "name": "Université de Saint-Boniface",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://ustboniface.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A French-language post-secondary institution in Winnipeg's St. Boniface neighbourhood.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "health",
+      "social-sciences",
+      "arts-humanities",
+      "education"
+    ],
+    "levels": [
+      "diploma",
+      "bachelor",
+      "masters"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 60,
+    "featured": true,
+    "sample": true,
+    "source_url": "https://ustboniface.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "manitoba-institute-of-trades-and-technology",
+    "name": "Manitoba Institute of Trades and Technology",
+    "type": "College",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://mitt.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A Winnipeg-based institution focused on trades and technology training.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan",
+      "may"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "computing",
+      "health",
+      "trades"
+    ],
+    "levels": [
+      "diploma",
+      "postgraduate-certificate"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school completion or equivalent (or post-secondary credentials for postgraduate certificates)",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites, portfolios or interviews where applicable"
+    ],
+    "popularity": 55,
+    "featured": false,
+    "sample": true,
+    "source_url": "https://mitt.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "canadian-mennonite-university",
+    "name": "Canadian Mennonite University",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://www.cmu.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A Christian university in Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "social-sciences",
+      "arts-humanities",
+      "music",
+      "theology"
+    ],
+    "levels": [
+      "bachelor",
+      "masters"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 40,
+    "featured": false,
+    "sample": true,
+    "source_url": "https://www.cmu.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "booth-university-college",
+    "name": "Booth University College",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Winnipeg",
+    "dliNumber": null,
+    "website": "https://www.boothuc.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A Christian university college in downtown Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "social-sciences",
+      "arts-humanities",
+      "theology"
+    ],
+    "levels": [
+      "bachelor"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 35,
+    "featured": false,
+    "sample": true,
+    "source_url": "https://www.boothuc.ca/",
+    "last_verified": null
+  },
+  {
+    "slug": "providence-university-college",
+    "name": "Providence University College",
+    "type": "University",
+    "province": "manitoba",
+    "city": "Otterburne",
+    "dliNumber": null,
+    "website": "https://www.prov.ca/",
+    "logo": null,
+    "overview": "Sample profile — TODO: replace with a short description written from the institution's official website. A Christian university college located in Otterburne, south of Winnipeg.",
+    "campusAddress": null,
+    "tuitionRangeCad": {
+      "min": null,
+      "max": null
+    },
+    "intakes": [
+      "sep",
+      "jan"
+    ],
+    "hasPgwpEligiblePrograms": null,
+    "fields": [
+      "business",
+      "social-sciences",
+      "arts-humanities",
+      "education",
+      "theology"
+    ],
+    "levels": [
+      "bachelor",
+      "masters"
+    ],
+    "admissionRequirements": [
+      "TODO: confirm on the official website — the items below are typical examples only",
+      "Secondary school (high school) completion or equivalent, with official transcripts",
+      "Proof of English language proficiency (accepted tests and minimum scores vary by program)",
+      "Program-specific prerequisites where applicable"
+    ],
+    "popularity": 30,
+    "featured": false,
+    "sample": true,
+    "source_url": "https://www.prov.ca/",
+    "last_verified": null
+  }
+]

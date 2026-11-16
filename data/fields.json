@@ -1,0 +1,16 @@
+[
+  { "slug": "business", "label": "Business & Management" },
+  { "slug": "computing", "label": "Computer Science & IT" },
+  { "slug": "engineering", "label": "Engineering & Technology" },
+  { "slug": "health", "label": "Health & Nursing" },
+  { "slug": "sciences", "label": "Natural Sciences" },
+  { "slug": "social-sciences", "label": "Social Sciences & Psychology" },
+  { "slug": "arts-humanities", "label": "Arts & Humanities" },
+  { "slug": "education", "label": "Education" },
+  { "slug": "hospitality", "label": "Hospitality & Tourism" },
+  { "slug": "trades", "label": "Skilled Trades" },
+  { "slug": "agriculture-environment", "label": "Agriculture & Environment" },
+  { "slug": "media-design", "label": "Media, Design & Communication" },
+  { "slug": "music", "label": "Music & Performing Arts" },
+  { "slug": "theology", "label": "Theology & Ministry" }
+]

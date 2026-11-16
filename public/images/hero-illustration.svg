@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 480" role="img" aria-labelledby="t">
+  <title id="t">Illustration of a winding path leading across lakes and hills to a campus building</title>
+  <!-- TODO: placeholder illustration. Replace with final brand illustration or a licensed photo. -->
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#E7F1F2"/><stop offset="1" stop-color="#F5F7F8"/></linearGradient>
+    <linearGradient id="lake" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#A3CBD1"/><stop offset="1" stop-color="#CFE3E6"/></linearGradient>
+  </defs>
+  <rect x="0" y="0" width="560" height="480" rx="40" fill="url(#sky)"/>
+  <circle cx="430" cy="110" r="46" fill="#E59A2F"/>
+  <circle cx="430" cy="110" r="70" fill="#E59A2F" opacity=".15"/>
+  <path d="M0 250 L90 170 L150 215 L230 130 L320 220 L380 175 L470 240 L560 190 V480 H0Z" fill="#A3CBD1"/>
+  <path d="M0 290 Q120 240 220 285 T420 270 T560 280 V480 H0Z" fill="#1F7A8C"/>
+  <path d="M0 330 Q140 300 280 330 T560 320 V480 H0Z" fill="url(#lake)"/>
+  <path d="M40 350 h70 M160 365 h90 M330 352 h60 M420 370 h80" stroke="#fff" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <path d="M0 400 Q160 370 300 395 T560 390 V480 H0Z" fill="#0F5E6E"/>
+  <!-- trees -->
+  <g fill="#0B4A57">
+    <path d="M70 300 l14 -46 l14 46z"/><path d="M95 305 l11 -36 l11 36z"/>
+    <path d="M470 296 l13 -42 l13 42z"/><path d="M495 300 l10 -32 l10 32z"/>
+  </g>
+  <!-- campus building -->
+  <g transform="translate(300 182)">
+    <rect x="0" y="40" width="150" height="90" rx="4" fill="#fff"/>
+    <path d="M-10 44 L75 0 L160 44Z" fill="#0B4A57"/>
+    <circle cx="75" cy="26" r="9" fill="#E59A2F"/>
+    <g fill="#CFE3E6"><rect x="16" y="58" width="16" height="56" rx="3"/><rect x="46" y="58" width="16" height="56" rx="3"/><rect x="88" y="58" width="16" height="56" rx="3"/><rect x="118" y="58" width="16" height="56" rx="3"/></g>
+    <rect x="-6" y="126" width="162" height="8" rx="3" fill="#083843"/>
+  </g>
+  <!-- path -->
+  <path d="M60 470 C140 440 120 400 200 390 S300 360 330 318" fill="none" stroke="#FDF1DE" stroke-width="14" stroke-linecap="round"/>
+  <path d="M60 470 C140 440 120 400 200 390 S300 360 330 318" fill="none" stroke="#E59A2F" stroke-width="3" stroke-dasharray="10 12" stroke-linecap="round"/>
+  <!-- paper plane -->
+  <g transform="translate(150 80) rotate(-12)">
+    <path d="M0 20 L60 0 L36 40 L28 26Z" fill="#fff" stroke="#0F5E6E" stroke-width="3" stroke-linejoin="round"/>
+    <path d="M28 26 L60 0" stroke="#0F5E6E" stroke-width="3"/>
+  </g>
+  <path d="M60 140 q40 -30 80 -50" fill="none" stroke="#0F5E6E" stroke-width="2.5" stroke-dasharray="4 8" stroke-linecap="round" opacity=".5"/>
+</svg>
