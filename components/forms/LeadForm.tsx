@@ -257,7 +257,7 @@ export function LeadForm({
           error={errors.consentContact}
           label={
             <>
-              Please contact me by phone, email or WhatsApp to help with my enquiry
+              Please contact me by phone or email to help with my enquiry
               <span className="text-danger-700" aria-hidden="true"> *</span>
             </>
           }

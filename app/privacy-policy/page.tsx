@@ -28,7 +28,7 @@ export default function PrivacyPage() {
 
       <h2>What we collect</h2>
       <ul>
-        <li><strong>Enquiry information</strong> you give us through forms, email, phone or WhatsApp: name, email, phone number, country of residence, study preferences, education history, language test results and your message.</li>
+        <li><strong>Enquiry information</strong> you give us through forms, email or phone: name, email, phone number, country of residence, study preferences, education history, language test results and your message.</li>
         <li><strong>Context of your enquiry</strong>: the page you submitted from and any institution you selected.</li>
         <li><strong>Technical information</strong>: basic server logs (such as IP address and browser type) used for security and to prevent spam.</li>
         <li><strong>Analytics</strong>: only if enabled and, where cookies are used, only with your consent. See &quot;Cookies and analytics&quot; below.</li>
