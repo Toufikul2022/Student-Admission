@@ -19,13 +19,13 @@ export default function TermsPage() {
 
       <h2>1. Information only</h2>
       <p>
-        The website provides general information about studying and immigrating to Canada. It is not legal advice. Please
+        The website provides general information about studying in Canada. It is not professional advice. Please
         read our <Link href="/disclaimer">Disclaimer</Link>, which forms part of these terms.
       </p>
 
       <h2>2. Services are provided under a separate agreement</h2>
       <p>
-        Any admission or immigration services we provide are governed by a separate written retainer or service
+        Any admission services we provide are governed by a separate written service
         agreement. Nothing on this website is an offer to provide services, and no professional relationship exists
         until such an agreement is signed.
       </p>

@@ -2,10 +2,9 @@ import institutionsJson from "@/data/institutions.json";
 import programsJson from "@/data/programs.json";
 import provincesJson from "@/data/provinces.json";
 import fieldsJson from "@/data/fields.json";
-import factsJson from "@/data/immigration-facts.json";
+import linksJson from "@/data/official-links.json";
 import type {
   Field,
-  ImmigrationFact,
   Institution,
   IntakeMonth,
   InstitutionType,
@@ -19,8 +18,7 @@ export const institutions = institutionsJson as Institution[];
 export const programs = programsJson as Program[];
 export const provinces = provincesJson as Province[];
 export const fields = fieldsJson as Field[];
-export const immigrationFacts = factsJson.facts as ImmigrationFact[];
-export const officialLinks = factsJson.links as OfficialLink[];
+export const officialLinks = linksJson.links as OfficialLink[];
 
 export const STUDY_LEVELS: { value: StudyLevel; label: string }[] = [
   { value: "diploma", label: "Diploma / Certificate" },
@@ -60,7 +58,6 @@ export const provinceBySlug = (slug: string) => provinces.find((p) => p.slug ===
 export const provinceName = (slug: string) => provinceBySlug(slug)?.name ?? slug;
 export const institutionBySlug = (slug: string) => institutions.find((i) => i.slug === slug);
 export const programsFor = (slug: string) => programs.filter((p) => p.institutionSlug === slug);
-export const fact = (key: string) => immigrationFacts.find((f) => f.key === key);
 export function link(key: string): OfficialLink {
   const l = officialLinks.find((x) => x.key === key);
   if (!l) throw new Error(`Unknown official link key: ${key}`);

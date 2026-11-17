@@ -11,7 +11,7 @@ export const metadata = pageMetadata({ title: "Scholarships in Canada for Intern
 
 const faqs = [
   { q: "Can a scholarship cover my full costs?", a: "Full scholarships exist but are rare and very competitive. Most international students combine partial awards with savings, family support or other funding." },
-  { q: "Do scholarships count as proof of funds?", a: "A confirmed scholarship or funding letter can usually form part of your proof of funds for a study permit. Include the official award letter showing the amount and duration." },
+  { q: "Do I apply for scholarships separately?", a: "Sometimes. Many entrance awards are considered automatically when you apply for admission, but competitive and external scholarships usually need their own application, essay or references." },
 ];
 
 export default function ScholarshipsPage() {

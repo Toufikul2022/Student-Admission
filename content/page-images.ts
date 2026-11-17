@@ -14,8 +14,8 @@ export const pageImages = {
     "cutout": true,
     "alt": "Smiling student in glasses holding a Canadian flag and notebooks"
   },
-  "visa": {
-    "src": "/images/pages/visa-bfe727ff.webp",
+  "programs": {
+    "src": "/images/pages/programs-bfe727ff.webp",
     "width": 1100,
     "height": 693,
     "cutout": true,

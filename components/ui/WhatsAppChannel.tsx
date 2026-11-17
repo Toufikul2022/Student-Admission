@@ -2,7 +2,7 @@ import { siteConfig } from "@/config/site";
 import { SocialIcon } from "@/components/layout/SocialIcon";
 import { cn } from "@/lib/cn";
 
-/** "Follow our WhatsApp channel" card for Canadian immigration news updates. */
+/** "Follow our WhatsApp channel" card for news and updates. */
 export function WhatsAppChannelCard({ className }: { className?: string }) {
   return (
     <div className={cn("flex flex-wrap items-center gap-4 rounded-2xl border border-line bg-white p-5", className)}>
@@ -10,8 +10,8 @@ export function WhatsAppChannelCard({ className }: { className?: string }) {
         <SocialIcon name="whatsapp" className="size-6" />
       </span>
       <div className="min-w-0 flex-1 basis-48">
-        <p className="font-bold text-ink">Canadian immigration news on WhatsApp</p>
-        <p className="text-sm text-slate">Rule changes and updates, straight to your phone.</p>
+        <p className="font-bold text-ink">Follow us on WhatsApp</p>
+        <p className="text-sm text-slate">News and updates for students, straight to your phone.</p>
       </div>
       <WhatsAppChannelButton className="h-11 w-full shrink-0 sm:w-auto" />
     </div>

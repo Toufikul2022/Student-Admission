@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import { Clock, Mail, MapPin, Phone, Scale } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
@@ -44,7 +44,7 @@ export default function ContactPage() {
               description={
                 <span className="text-base sm:text-lg">
                   Thinking about studying at a Canadian college or university? Book a free consultation. We&apos;ll help
-                  at every stage, from choosing a program to preparing your study permit.
+                  at every stage, from choosing a program to accepting your offer.
                 </span>
               }
               underline
@@ -119,13 +119,6 @@ export default function ContactPage() {
               </p>
             </div>
 
-            <div className="flex gap-3 rounded-2xl border border-line bg-white p-5 text-sm">
-              <Scale aria-hidden="true" className="mt-0.5 size-5 shrink-0 text-primary-600" />
-              <p className="text-slate">
-                <strong className="text-ink">{siteConfig.operatorDisclosure}</strong> Contacting us does not by itself
-                create a lawyer-client relationship.
-              </p>
-            </div>
           </div>
         </Container>
       </section>

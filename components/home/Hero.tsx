@@ -1,11 +1,11 @@
 import Link from "next/link";
-import { BadgeCheck, ChevronRight, GraduationCap, MapPinned, Users } from "lucide-react";
+import { ChevronRight, GraduationCap, HeartHandshake, MapPinned, Users } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { homeStats, quickLinks } from "@/content/home";
 import { HomePhoto } from "./HomePhoto";
 import { HeroSlides } from "./HeroSlides";
 
-const statIcons = { school: GraduationCap, users: Users, map: MapPinned, badge: BadgeCheck };
+const statIcons = { school: GraduationCap, users: Users, map: MapPinned, badge: HeartHandshake };
 
 /** Hero banner with slides + overlapping highlights card and quick-links bar. */
 export function Hero() {

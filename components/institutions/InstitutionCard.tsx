@@ -6,7 +6,6 @@ import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { buttonClasses } from "@/components/ui/Button";
 import { InstitutionLogo } from "./InstitutionLogo";
-import { PgwpBadge } from "./PgwpBadge";
 
 export function InstitutionCard({ inst, headingLevel = 3 }: { inst: Institution; headingLevel?: 2 | 3 }) {
   const H = `h${headingLevel}` as "h2" | "h3";
@@ -29,7 +28,6 @@ export function InstitutionCard({ inst, headingLevel = 3 }: { inst: Institution;
 
       <div className="mt-4 flex flex-wrap gap-2">
         <Badge tone="primary">{inst.type}</Badge>
-        <PgwpBadge value={inst.hasPgwpEligiblePrograms} />
         {inst.sample && <Badge tone="accent">Sample data</Badge>}
       </div>
 

@@ -5,7 +5,6 @@ import { fieldLabel, formatCad, institutionBySlug, levelLabel, monthShort, provi
 import { Card } from "@/components/ui/Card";
 import { Badge } from "@/components/ui/Badge";
 import { buttonClasses } from "@/components/ui/Button";
-import { PgwpBadge } from "./PgwpBadge";
 
 export function ProgramCard({ program }: { program: Program }) {
   const inst = institutionBySlug(program.institutionSlug);
@@ -20,7 +19,6 @@ export function ProgramCard({ program }: { program: Program }) {
       </p>
       <div className="mt-3 flex flex-wrap gap-2">
         <Badge tone="primary">{fieldLabel(program.field)}</Badge>
-        <PgwpBadge value={program.pgwpEligible} />
         {program.sample && <Badge tone="accent">Sample data</Badge>}
       </div>
       <dl className="mt-4 space-y-2 border-t border-line pt-4 text-sm">

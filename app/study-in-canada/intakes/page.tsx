@@ -11,7 +11,7 @@ const DESCRIPTION =
 export const metadata = pageMetadata({ title: "Intakes in Canada — Fall, Winter, Summer", description: DESCRIPTION, path: PATH, type: "article" });
 
 const faqs = [
-  { q: "Can I switch to a later intake if my study permit is delayed?", a: "Many institutions allow you to defer your offer to a later intake, but policies differ. Contact the admissions office as early as possible, and get a new or updated letter of acceptance if needed." },
+  { q: "Can I switch to a later intake?", a: "Many institutions allow you to defer your offer to a later intake, but policies differ. Contact the admissions office as early as possible, and get a new or updated letter of acceptance if needed." },
   { q: "Is the January intake harder to get into?", a: "Not necessarily, but fewer programs start in January, so your choice may be narrower and some scholarships are only offered for fall." },
 ];
 
@@ -43,20 +43,20 @@ export default function IntakesPage() {
       </table>
 
       <h2 id="timeline">What should my timeline look like?</h2>
-      <p>Count backwards from your start date. Times are approximate — always check official deadlines and current processing times.</p>
+      <p>Count backwards from your start date. Times are approximate — always check each institution&apos;s official deadlines.</p>
       <ol>
         <li><strong>12–18 months before:</strong> research programs and institutions; check entry and language requirements; book a language test.</li>
         <li><strong>9–12 months before:</strong> prepare transcripts, a statement of purpose and references; submit applications.</li>
-        <li><strong>6–9 months before:</strong> receive offers, accept one and pay any deposit; ask about the provincial attestation letter if required.</li>
-        <li><strong>4–6 months before:</strong> gather proof of funds and documents; apply for your study permit; give biometrics.</li>
-        <li><strong>1–3 months before:</strong> after approval, book housing, insurance and flights; prepare for arrival.</li>
+        <li><strong>6–9 months before:</strong> receive offers, compare them, accept one and pay any deposit.</li>
+        <li><strong>4–6 months before:</strong> apply for scholarships and housing; send any final transcripts the institution asks for.</li>
+        <li><strong>1–3 months before:</strong> confirm housing, insurance and travel; register for courses and orientation.</li>
       </ol>
       <p>
-        Processing times change throughout the year, so check IRCC&apos;s current estimate before you plan your
-        application date. <Link href="/visa-immigration/study-permit">Read our study permit guide</Link>.
+        Popular programs can fill up well before the official deadline, so apply early.{" "}
+        <Link href="/contact">Get a personalised timeline</Link>.
       </p>
 
-      <OfficialSources keys={["processing_times", "study_permit"]} />
+      <OfficialSources keys={["educanada", "educanada_programs"]} />
     </GuideLayout>
   );
 }

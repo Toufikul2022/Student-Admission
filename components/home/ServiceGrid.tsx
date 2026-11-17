@@ -1,10 +1,10 @@
 import Link from "next/link";
-import { ChevronRight, FileCheck2, GraduationCap, NotebookPen, RefreshCcw, Route, Stamp } from "lucide-react";
+import { Award, ChevronRight, FileCheck2, GraduationCap, Languages, NotebookPen, Route } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { services } from "@/content/home";
 
-const icons = { school: GraduationCap, file: FileCheck2, pen: NotebookPen, passport: Stamp, refresh: RefreshCcw, route: Route };
+const icons = { school: GraduationCap, file: FileCheck2, pen: NotebookPen, award: Award, languages: Languages, route: Route };
 
 export function ServiceGrid() {
   return (

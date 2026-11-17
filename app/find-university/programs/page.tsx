@@ -35,6 +35,7 @@ export default function ProgramsPage() {
     <>
       <ListingIntro
         title="Search programs in Canada"
+        image="programs"
         crumbs={[
           { name: "Find University", href: "/find-university" },
           { name: "Programs", href: "/find-university/programs" },
@@ -56,7 +57,7 @@ export default function ProgramsPage() {
           </Suspense>
         </Container>
       </section>
-      <CtaBand title="Not sure which program fits?" description="We'll look at your background and goals and help you compare programs — including how each choice may affect work and immigration options later." />
+      <CtaBand title="Not sure which program fits?" description="We'll look at your background and goals and help you compare programs, costs and career outcomes." />
     </>
   );
 }

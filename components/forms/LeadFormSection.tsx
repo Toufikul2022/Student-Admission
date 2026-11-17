@@ -7,7 +7,7 @@ import { LeadForm } from "./LeadForm";
 /** "Speak to an advisor" band: short form on the left, photo on the right. */
 export function LeadFormSection({
   title = "Speak to an advisor today",
-  description = "Thinking about studying at a Canadian college or university? Book a free consultation. We'll help at every stage, from choosing a program to preparing your study permit, and everything in between.", // TODO: confirm free-consultation offer
+  description = "Thinking about studying at a Canadian college or university? Book a free consultation. We'll help at every stage, from choosing a program to accepting your offer, and everything in between.", // TODO: confirm free-consultation offer
   institution,
   id = "talk-to-an-advisor",
 }: {

@@ -14,7 +14,6 @@ import {
   provinces,
 } from "@/lib/data";
 import { RangeSlider } from "@/components/ui/RangeSlider";
-import { Toggle } from "@/components/ui/Toggle";
 import { controlClasses } from "@/components/ui/Field";
 import { cn } from "@/lib/cn";
 
@@ -90,7 +89,6 @@ export function FilterPanel({
   cityOptions,
   provinceCounts,
   searchLabel,
-  pgwpDescription,
   idPrefix = "",
 }: {
   filters: FilterState;
@@ -98,7 +96,6 @@ export function FilterPanel({
   cityOptions: Opt[];
   provinceCounts: Record<string, number>;
   searchLabel: string;
-  pgwpDescription: string;
   idPrefix?: string;
 }) {
   // Text search updates the URL after a short pause, so typing stays smooth
@@ -131,16 +128,6 @@ export function FilterPanel({
             className={cn(controlClasses, "pl-9")}
           />
         </div>
-      </div>
-
-      <div className="border-t border-line py-4">
-        <Toggle
-          id={`${idPrefix}filter-pgwp`}
-          label="PGWP-eligible programs only"
-          description={pgwpDescription}
-          checked={filters.pgwp}
-          onChange={(pgwp) => update({ pgwp })}
-        />
       </div>
 
       <div className="border-t border-line">

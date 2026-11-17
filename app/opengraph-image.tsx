@@ -30,7 +30,7 @@ export default function OpengraphImage() {
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontSize: 72, fontWeight: 800, lineHeight: 1.05 }}>Your path to studying in Canada starts here</div>
-          <div style={{ fontSize: 30, marginTop: 24, color: "#F9D3D8" }}>Admission guidance · Study permits · Licensed professionals</div>
+          <div style={{ fontSize: 30, marginTop: 24, color: "#F9D3D8" }}>Universities · Colleges · Programs · Admission guidance</div>
         </div>
       </div>
     ),

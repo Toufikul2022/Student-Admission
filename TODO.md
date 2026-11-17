@@ -13,7 +13,6 @@ Search the code for `TODO` to find each one in context.
 - [ ] Social media profile URLs (or remove unused ones)
 
 ## B. Legal and compliance review
-- [ ] **Disclosure wording** (`config/site.ts` → `operatorDisclosure`) — confirm with your regulator
 - [ ] **Disclaimer** page (`app/disclaimer/page.tsx`)
 - [ ] **Privacy Policy** (`app/privacy-policy/page.tsx`): applicable provincial privacy law and regulatory obligations; name a Privacy Officer and privacy email; list actual service providers and where they store data (e.g. Resend, Vercel); confirm retention periods (placeholder: 24 months)
 - [ ] **Terms of Use** (`app/terms/page.tsx`): governing province
@@ -23,25 +22,12 @@ Search the code for `TODO` to find each one in context.
 - [ ] Confirm the response-time promise "within one business day" (`app/actions/submit-lead.ts`, `components/forms/LeadFormSection.tsx`)
 - [ ] Consider adding an FAQ explaining your fee model and any commissions from institutions (`content/home.ts`)
 
-## C. Immigration figures — `data/immigration-facts.json`
-Verify each against the official source, then set `value` and `last_verified`:
-- [ ] Study permit application fee
-- [ ] Biometrics fee
-- [ ] Proof of funds — single student
-- [ ] Proof of funds — each additional family member
-- [ ] Off-campus work-hour limit
-- [ ] National study permit cap
-- [ ] PGWP fee
-- [ ] PGWP application time limit
-- [ ] PGWP language requirement
-- [ ] Open work permit holder fee
-- [ ] Judicial review deadline — decisions made inside Canada
-- [ ] Judicial review deadline — decisions made outside Canada
+## C. Official links — `data/official-links.json`
 - [ ] Check every official link in the `links` list still works and set `last_verified`
 - [ ] Language test official URLs and acceptance notes (`app/study-in-canada/language-tests/page.tsx`)
 
 ## D. Institution and program data — see `DATA_GUIDE.md`
-- [ ] For each of the 10 Manitoba sample institutions: verify DLI number, tuition, intakes, levels, fields, PGWP status and admission requirements; rewrite the overview (currently shows "Sample profile — TODO" on the site); set `sample: false` and `last_verified`
+- [ ] For each of the 10 Manitoba sample institutions: verify DLI number, tuition, intakes, levels, fields and admission requirements; rewrite the overview (currently shows "Sample profile — TODO" on the site); set `sample: false` and `last_verified`
 - [ ] Confirm Assiniboine College's current official name
 - [ ] Replace the 20 sample programs with verified programs
 - [ ] Add institution logos (only with permission) to `/public/logos`

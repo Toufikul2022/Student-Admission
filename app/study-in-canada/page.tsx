@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { GuideLayout, STUDY_NAV } from "@/components/guides/GuideLayout";
-import { FactValue, OfficialSources } from "@/components/guides/Sources";
+import { OfficialSources } from "@/components/guides/Sources";
 import { provinces } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 const PATH = "/study-in-canada";
 const TITLE = "Study in Canada: A Complete Guide for International Students";
 const DESCRIPTION =
-  "Why students choose Canada, how universities and colleges differ, intakes, typical costs, language tests, scholarships, working while you study and life in each province.";
+  "Why students choose Canada, how universities and colleges differ, intakes, typical costs, language tests, scholarships, applying and life in each province.";
 
 export const metadata = pageMetadata({ title: "Study in Canada — Guide for International Students", description: DESCRIPTION, path: PATH, type: "article" });
 
@@ -38,10 +38,10 @@ export default function StudyInCanadaPage() {
       faqs={faqs}
       answer={
         <p>
-          Canada offers internationally recognised qualifications, a safe and welcoming society, and options to work
-          during and after your studies. To study here for more than six months you&apos;ll usually need an offer from a{" "}
-          <strong>designated learning institution (DLI)</strong>, proof that you can pay for tuition and living costs, and a{" "}
-          <strong>study permit</strong>.
+          Canada offers internationally recognised qualifications, high-quality teaching and a safe, welcoming
+          society. To study here as an international student, you apply directly to a{" "}
+          <strong>designated learning institution (DLI)</strong> — a university or college approved to accept
+          international students — and meet its <strong>academic</strong> and <strong>language</strong> requirements.
         </p>
       }
     >
@@ -53,7 +53,7 @@ export default function StudyInCanadaPage() {
       </p>
       <ul>
         <li><strong>Recognised qualifications</strong> from public universities, colleges and polytechnics.</li>
-        <li><strong>Work experience</strong> — many students can work part time while studying, and eligible graduates may apply for a post-graduation work permit.</li>
+        <li><strong>Hands-on learning</strong> — many programs include co-op terms, internships or applied projects with industry partners.</li>
         <li><strong>Two official languages</strong> — study in English, French, or both.</li>
         <li><strong>Quality of life</strong> — safe cities, public services, and access to nature.</li>
       </ul>
@@ -75,9 +75,8 @@ export default function StudyInCanadaPage() {
       </table>
       <h3>What is a designated learning institution (DLI)?</h3>
       <p>
-        A DLI is a school approved by a provincial or territorial government to host international students. You
-        generally need a letter of acceptance from a DLI to apply for a study permit. Not every program at a DLI leads
-        to a post-graduation work permit, so check program eligibility separately.{" "}
+        A DLI is a school approved by a provincial or territorial government to accept international students. Make
+        sure every institution on your shortlist is a DLI before you apply.{" "}
         <Link href="/find-university">Search institutions</Link>.
       </p>
 
@@ -91,9 +90,8 @@ export default function StudyInCanadaPage() {
       <h2 id="costs">How much does it cost to study in Canada?</h2>
       <p>
         Your budget has three main parts: tuition (which varies widely by institution, program and level), living
-        costs (housing, food, transport, insurance), and one-time costs such as application fees, the study permit fee
-        and biometrics. For your study permit, IRCC also asks you to show a minimum amount of money for living expenses
-        in addition to tuition. The current amount for a single student is <FactValue k="proof_of_funds_single" />.{" "}
+        costs (housing, food, transport, insurance), and one-time costs such as application fees, deposits and
+        travel.{" "}
         <Link href="/study-in-canada/costs">See the full cost breakdown</Link>.
       </p>
 
@@ -102,7 +100,7 @@ export default function StudyInCanadaPage() {
         Institutions set their own language requirements. Commonly accepted English tests include <strong>IELTS</strong>,{" "}
         <strong>TOEFL iBT</strong>, <strong>PTE Academic</strong>, <strong>CELPIP</strong> and, at some institutions,{" "}
         <strong>Duolingo English Test</strong>. French-language institutions may accept tests such as{" "}
-        <strong>TEF</strong> or <strong>TCF</strong>. Requirements for admission and for immigration purposes can differ.{" "}
+        <strong>TEF</strong> or <strong>TCF</strong>. Minimum scores vary by institution and program.{" "}
         <Link href="/study-in-canada/language-tests">Compare language tests</Link>.
       </p>
 
@@ -113,12 +111,13 @@ export default function StudyInCanadaPage() {
         you the most options. <Link href="/study-in-canada/scholarships">Explore scholarship types</Link>.
       </p>
 
-      <h2 id="work">Can I work while I study?</h2>
+      <h2 id="apply">How do I apply to a Canadian university or college?</h2>
       <p>
-        Many full-time students at eligible institutions can work on campus, and off campus for up to{" "}
-        <FactValue k="off_campus_work_hours" /> during regular academic sessions, with full-time work allowed during
-        scheduled breaks. Your study permit conditions decide whether you can work, so read them carefully. Co-op and
-        internship placements that are part of your program may need a separate work permit.
+        You apply directly to each institution, usually online. Most ask for academic transcripts, proof of English or
+        French proficiency, and an application fee; some programs also want a statement of purpose, references or a
+        portfolio. In Ontario, many applications go through central application services. After you accept an offer,
+        the institution sends a <strong>letter of acceptance</strong> and next steps.{" "}
+        <Link href="/contact">Get help with your applications</Link>.
       </p>
 
       <h2 id="provinces">What is life like in each province?</h2>
@@ -134,7 +133,7 @@ export default function StudyInCanadaPage() {
         ))}
       </ul>
 
-      <OfficialSources keys={["study_permit", "dli_list", "work_off_campus", "educanada_scholarships"]} />
+      <OfficialSources keys={["educanada", "dli_list", "educanada_programs", "educanada_scholarships"]} />
     </GuideLayout>
   );
 }

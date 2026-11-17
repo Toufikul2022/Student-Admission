@@ -83,11 +83,11 @@ export default async function ProvincePage({ params }: Props) {
         </>
       )}
 
-      <h2 id="pal">Do I need an attestation letter for {p.name}?</h2>
+      <h2 id="apply">How do I apply to institutions in {p.name}?</h2>
       <p>
-        Many study permit applicants need a provincial or territorial attestation letter (PAL/TAL) from the province or
-        territory where they will study. Your institution usually requests it on your behalf. Check whether it applies
-        to you in our <Link href="/visa-immigration/study-permit">study permit guide</Link>.
+        You apply directly to each university or college, usually online. Check each program&apos;s academic and
+        language requirements, intakes and deadlines on the institution&apos;s official website.{" "}
+        <Link href="/contact">Get help with your applications</Link>.
       </p>
 
       <h2 id="explore">Find institutions in {p.name}</h2>
@@ -105,7 +105,7 @@ export default async function ProvincePage({ params }: Props) {
         )}
       </p>
 
-      <OfficialSources keys={isQuebec ? ["quebec_study", "pal", "dli_list"] : p.slug === "manitoba" ? ["pal", "dli_list", "manitoba_pnp"] : ["pal", "dli_list"]} />
+      <OfficialSources keys={isQuebec ? ["quebec_study", "educanada", "dli_list"] : ["educanada", "dli_list"]} />
       <p className="mt-6 text-sm">
         Provincial government website:{" "}
         <a href={p.officialSite} target="_blank" rel="noopener noreferrer">

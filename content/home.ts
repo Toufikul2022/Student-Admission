@@ -5,7 +5,7 @@ export const quickLinks = [
   { label: "Programs", href: "/find-university/programs" },
   { label: "Scholarships", href: "/study-in-canada/scholarships" },
   { label: "Intakes", href: "/study-in-canada/intakes" },
-  { label: "Study permit", href: "/visa-immigration/study-permit" },
+  { label: "Language tests", href: "/study-in-canada/language-tests" },
   { label: "Guide me", href: "/contact" },
 ];
 
@@ -20,7 +20,7 @@ export const popularFields = [
 
 /** Highlights in the hero card. No figures — text only. */
 export const homeStats = [
-  { icon: "badge", value: "Licensed", label: "immigration advice from licensed legal professionals" },
+  { icon: "badge", value: "Personal", label: "one-to-one guidance matched to your goals and budget" },
   { icon: "school", value: "Every step", label: "support from your shortlist to your first day on campus" },
   { icon: "map", value: "Canada-wide", label: "guidance on universities and colleges across Canada" },
   // TODO: confirm the free-consultation offer
@@ -30,13 +30,13 @@ export const homeStats = [
 export const heroSlides = [
   {
     title: "Your path to studying in Canada starts here",
-    body: "Choose the right university or college, apply with confidence, and prepare your study permit with licensed professionals by your side.",
+    body: "Find the right university, college and program for you, and apply with confidence — with expert admission guidance at every step.",
     cta: { label: "Book a Free Consultation", href: "/contact" },
   },
   {
-    title: "Study permit refused? You may still have options",
-    body: "Our licensed legal professionals can review your refusal letter and explain whether to reapply or challenge the decision. Deadlines are short.",
-    cta: { label: "Get your refusal reviewed", href: "/visa-immigration/study-permit-refusal" },
+    title: "Find the right program for your future",
+    body: "Compare universities, colleges and courses across Canada by field, level, intake and budget — then let us help you build a strong shortlist.",
+    cta: { label: "Search programs", href: "/find-university/programs" },
   },
 ];
 
@@ -56,26 +56,26 @@ export const services = [
   {
     icon: "pen",
     title: "SOP & document review",
-    body: "Get structured feedback on your statement of purpose, study plan and supporting documents so they are clear, honest and consistent.",
+    body: "Get structured feedback on your statement of purpose, references and supporting documents so they are clear, honest and consistent.",
     href: "/contact",
   },
   {
-    icon: "passport",
-    title: "Study permit application",
-    body: "Licensed professionals help you assemble your study permit application, including proof of funds and any required attestation letter.",
-    href: "/visa-immigration/study-permit",
+    icon: "award",
+    title: "Scholarship guidance",
+    body: "Find entrance and merit awards you may qualify for, plan around their deadlines, and make each scholarship application count.",
+    href: "/study-in-canada/scholarships",
   },
   {
-    icon: "refresh",
-    title: "Refusal help",
-    body: "Had a study permit refused? We review the reasons, explain your options, and help you decide whether to reapply or challenge the decision.",
-    href: "/visa-immigration/study-permit-refusal",
+    icon: "languages",
+    title: "Language test planning",
+    body: "Choose the right English or French test for your programs, understand the minimum scores, and plan your test date around deadlines.",
+    href: "/study-in-canada/language-tests",
   },
   {
     icon: "route",
-    title: "Post-graduation pathways",
-    body: "Plan ahead for work after graduation and possible routes to permanent residence, so your program choice supports your long-term goals.",
-    href: "/visa-immigration/pathways-to-pr",
+    title: "Offers & enrolment",
+    body: "Compare your offers, understand conditions and deposits, and get ready for orientation and your first term on campus.",
+    href: "/contact",
   },
 ] as const;
 
@@ -83,8 +83,14 @@ export const studySteps = [
   {
     id: "choose",
     title: "Choose your program",
-    body: "Compare institutions and programs by field, level, location, intake and cost. Check that the institution is a designated learning institution (DLI) and, if work after graduation matters to you, whether the program is likely to qualify for a Post-Graduation Work Permit.",
+    body: "Compare institutions and programs by field, level, location, intake and cost. Make sure each institution is a designated learning institution (DLI), approved to accept international students.",
     link: { label: "Find a university", href: "/find-university" },
+  },
+  {
+    id: "requirements",
+    title: "Check requirements and take a language test",
+    body: "Confirm the academic requirements for each program, and book an accepted English or French test early enough to get your results before the deadline.",
+    link: { label: "Compare language tests", href: "/study-in-canada/language-tests" },
   },
   {
     id: "apply",
@@ -95,37 +101,27 @@ export const studySteps = [
   {
     id: "offer",
     title: "Receive your offer and letter of acceptance (LOA)",
-    body: "Review the conditions in your offer, accept it, and pay any required deposit. The letter of acceptance from a DLI is a core document for your study permit.",
+    body: "Review the conditions in each offer and compare them carefully — program, cost, location and any scholarship included.",
     link: null,
   },
   {
-    id: "pal",
-    title: "Get a provincial or territorial attestation letter (PAL/TAL), if required",
-    body: "Many study permit applicants now need an attestation letter from the province or territory where they will study. Your institution usually requests it for you. Some applicants are exempt — check the current rules.",
-    link: { label: "Study permit guide", href: "/visa-immigration/study-permit" },
+    id: "accept",
+    title: "Accept your offer and secure your place",
+    body: "Accept the offer that suits you best, pay any required deposit, and apply for scholarships and on-campus housing if available.",
+    link: { label: "Explore scholarships", href: "/study-in-canada/scholarships" },
   },
   {
-    id: "permit",
-    title: "Apply for your study permit",
-    body: "Submit your application online with proof of funds, your LOA, any attestation letter and supporting documents. Give your biometrics when asked, and complete a medical exam if required.",
-    link: { label: "What you'll need", href: "/visa-immigration/study-permit" },
-  },
-  {
-    id: "travel",
-    title: "Prepare to travel",
-    body: "Once approved, arrange housing, health insurance, travel and winter clothing. Carry your approval letter, LOA and proof of funds — the officer at the port of entry issues the actual permit.",
+    id: "start",
+    title: "Prepare for your first term",
+    body: "Arrange housing, health insurance, travel and winter clothing, register for your courses, and sign up for orientation.",
     link: { label: "Typical costs", href: "/study-in-canada/costs" },
   },
 ];
 
 export const homeFaqs = [
   {
-    q: "Do you guarantee admission or a study permit?",
-    a: "No. Admission decisions are made by each institution and study permit decisions are made by Immigration, Refugees and Citizenship Canada (IRCC). Anyone who promises a guaranteed result should be treated with caution. What we offer is careful preparation and honest advice about your chances.",
-  },
-  {
-    q: "Who gives the immigration advice?",
-    a: "Immigration advice is provided by licensed legal professionals working with the law corporation that operates this service. Admission guidance is provided by our advising team.",
+    q: "Do you guarantee admission?",
+    a: "No. Admission decisions are made by each institution. Anyone who promises guaranteed admission should be treated with caution. What we offer is careful preparation and honest advice about your chances.",
   },
   {
     q: "Is the first consultation really free?",
@@ -133,20 +129,24 @@ export const homeFaqs = [
   },
   {
     q: "When should I start preparing to study in Canada?",
-    a: "Ideally 12 to 18 months before your intended start date. That leaves time for language tests, applications, an attestation letter if required, and study permit processing.",
+    a: "Ideally 12 to 18 months before your intended start date. That leaves time to research programs, take a language test, prepare documents and apply before deadlines.",
   },
   {
     q: "What is a designated learning institution (DLI)?",
-    a: "A DLI is a school approved by a provincial or territorial government to host international students. You generally need a letter of acceptance from a DLI to apply for a study permit. IRCC publishes the official DLI list.",
+    a: "A DLI is a school approved by a provincial or territorial government to accept international students. Check that every institution on your shortlist is a DLI before you apply.",
   },
   {
-    q: "Can I work while I study in Canada?",
-    a: "Many full-time students at eligible institutions can work off campus for a limited number of hours during academic sessions and full time during scheduled breaks. The limits change from time to time, so always check IRCC's current rules.",
+    q: "What's the difference between a university and a college in Canada?",
+    a: "Universities mainly offer academic degrees (bachelor's, master's and doctoral). Colleges and polytechnics focus on applied, career-oriented diplomas and certificates, and some also grant degrees.",
   },
   {
-    q: "My study permit was refused. Can I still study in Canada?",
-    a: "Often, yes. Depending on the reasons, you may be able to reapply with a stronger application or challenge the decision. Deadlines to challenge a decision are short, so speak to a licensed professional promptly.",
+    q: "Which English test do Canadian institutions accept?",
+    a: "Most accept several tests, such as IELTS Academic, TOEFL iBT and PTE Academic, and some accept CELPIP or Duolingo. Minimum scores vary by institution and program.",
+  },
+  {
+    q: "Can you help me find scholarships?",
+    a: "Yes. We help you identify entrance and merit awards you may qualify for and plan your applications around their deadlines. Most scholarships are competitive, so applying early helps.",
   },
   // TODO: consider adding an FAQ that explains your fee model (what is free, what is paid,
-  // and whether you receive commissions from institutions) once confirmed with legal.
+  // and whether you receive commissions from institutions).
 ];

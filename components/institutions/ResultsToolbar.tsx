@@ -20,7 +20,6 @@ function chipsFor(f: FilterState): Chip[] {
   f.intake.forEach((v) => chips.push({ key: `i-${v}`, label: `${monthLabel(v)} intake`, remove: { intake: f.intake.filter((x) => x !== v) } }));
   if (f.tuitionMin > TUITION_MIN || f.tuitionMax < TUITION_MAX)
     chips.push({ key: "tuition", label: "Tuition range", remove: { tuitionMin: TUITION_MIN, tuitionMax: TUITION_MAX } });
-  if (f.pgwp) chips.push({ key: "pgwp", label: "PGWP eligible", remove: { pgwp: false } });
   return chips;
 }
 

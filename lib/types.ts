@@ -24,7 +24,7 @@ export interface Institution {
   /** Province slug, must match a slug in provinces.json */
   province: string;
   city: string;
-  /** DLI number from the official IRCC list. null until verified. */
+  /** Designated learning institution (DLI) number from the official Government of Canada list. null until verified. */
   dliNumber: string | null;
   website: string;
   /** Path to a logo in /public, or null to show initials */
@@ -34,8 +34,6 @@ export interface Institution {
   /** Annual international tuition range in CAD. null = to be confirmed. */
   tuitionRangeCad: { min: number | null; max: number | null };
   intakes: IntakeMonth[];
-  /** true / false once confirmed; null = to be confirmed */
-  hasPgwpEligiblePrograms: boolean | null;
   /** Field-of-study slugs, must match fields.json */
   fields: string[];
   levels: StudyLevel[];
@@ -61,7 +59,6 @@ export interface Program {
   tuitionPerYearCad: number | null;
   intakes: IntakeMonth[];
   languageRequirement: string | null;
-  pgwpEligible: boolean | null;
   sample: boolean;
   source_url: string;
   last_verified: string | null;
@@ -76,23 +73,13 @@ export interface Province {
   overview: string;
   highlights: string[];
   officialSite: string;
-  /** Extra study-permit note specific to this province (e.g. Québec CAQ) */
+  /** Extra note specific to studying in this province (e.g. language of instruction) */
   specialNote: string | null;
 }
 
 export interface Field {
   slug: string;
   label: string;
-}
-
-export interface ImmigrationFact {
-  key: string;
-  label: string;
-  /** Display value, e.g. "$150 CAD". null shows as "To be confirmed". */
-  value: string | null;
-  note: string;
-  source_url: string;
-  last_verified: string | null;
 }
 
 export interface OfficialLink {

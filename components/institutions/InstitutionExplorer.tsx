@@ -35,7 +35,6 @@ export function InstitutionExplorer() {
       cityOptions={cityOptions}
       provinceCounts={provinceCounts}
       searchLabel="Search institutions"
-      pgwpDescription="Show institutions with programs confirmed as PGWP-eligible."
       page={current}
       totalPages={totalPages}
       emptyState={<EmptyResults onClear={clear} what="institutions" />}

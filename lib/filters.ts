@@ -19,7 +19,6 @@ export interface FilterState {
   intake: IntakeMonth[];
   tuitionMin: number;
   tuitionMax: number;
-  pgwp: boolean;
   sort: SortKey;
   page: number;
 }
@@ -34,7 +33,6 @@ export const DEFAULT_FILTERS: FilterState = {
   intake: [],
   tuitionMin: TUITION_MIN,
   tuitionMax: TUITION_MAX,
-  pgwp: false,
   sort: "popularity",
   page: 1,
 };
@@ -64,7 +62,6 @@ export function parseFilters(p: ParamsLike): FilterState {
     intake: list(p, "intake") as IntakeMonth[],
     tuitionMin: num(p.get("tmin"), TUITION_MIN),
     tuitionMax: num(p.get("tmax"), TUITION_MAX),
-    pgwp: p.get("pgwp") === "1",
     sort: sort === "name" || sort === "tuition" ? sort : "popularity",
     page: Math.max(1, Math.floor(num(p.get("page"), 1))),
   };
@@ -78,7 +75,6 @@ export function serializeFilters(f: FilterState): string {
   });
   if (f.tuitionMin > TUITION_MIN) p.set("tmin", String(f.tuitionMin));
   if (f.tuitionMax < TUITION_MAX) p.set("tmax", String(f.tuitionMax));
-  if (f.pgwp) p.set("pgwp", "1");
   if (f.sort !== "popularity") p.set("sort", f.sort);
   if (f.page > 1) p.set("page", String(f.page));
   return p.toString();
@@ -93,8 +89,7 @@ export function activeFilterCount(f: FilterState) {
     f.level.length +
     f.field.length +
     f.intake.length +
-    (f.tuitionMin > TUITION_MIN || f.tuitionMax < TUITION_MAX ? 1 : 0) +
-    (f.pgwp ? 1 : 0)
+    (f.tuitionMin > TUITION_MIN || f.tuitionMax < TUITION_MAX ? 1 : 0)
   );
 }
 
@@ -130,7 +125,6 @@ export function filterInstitutions(all: Institution[], f: FilterState) {
       anyOf(f.level, i.levels) &&
       anyOf(f.field, i.fields) &&
       anyOf(f.intake, i.intakes) &&
-      (!f.pgwp || i.hasPgwpEligiblePrograms === true) &&
       tuitionMatches(i.tuitionRangeCad.min, i.tuitionRangeCad.max, f),
   );
   return result.sort((a, b) => {
@@ -160,7 +154,6 @@ export function filterPrograms(all: Program[], f: FilterState) {
       anyOf(f.level, [p.level]) &&
       anyOf(f.field, [p.field]) &&
       anyOf(f.intake, p.intakes) &&
-      (!f.pgwp || p.pgwpEligible === true) &&
       tuitionMatches(p.tuitionPerYearCad, p.tuitionPerYearCad, f)
     );
   });

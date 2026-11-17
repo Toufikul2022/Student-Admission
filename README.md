@@ -61,13 +61,13 @@ Both commands must finish without errors. `npm run build` also tells you which p
 
 | What you want to change | File |
 |---|---|
-| Brand name, domain, phone, email, WhatsApp channel, address, hours, social links, **operator disclosure** | `config/site.ts` |
+| Brand name, domain, phone, email, WhatsApp channel, address, hours, social links | `config/site.ts` |
 | Home page stats, services, study steps, FAQ | `content/home.ts` |
 | "Last reviewed" dates on guide and legal pages | `content/review-dates.ts` |
 | Institutions and programs | `data/institutions.json`, `data/programs.json` (see **`DATA_GUIDE.md`**) |
-| Fees, proof-of-funds amounts, caps, deadlines, official IRCC links | `data/immigration-facts.json` |
+| Official links shown in "Official sources" boxes | `data/official-links.json` |
 | Provinces and fields of study | `data/provinces.json`, `data/fields.json` |
-| Guide page text | `app/study-in-canada/…/page.tsx`, `app/visa-immigration/…/page.tsx` |
+| Guide page text | `app/study-in-canada/…/page.tsx` |
 | Legal pages | `app/disclaimer`, `app/privacy-policy`, `app/terms` |
 | Colours | `app/globals.css` (the `@theme` block at the top) |
 | Hero image | `public/images/hero-illustration.svg` (see `components/home/Hero.tsx`) |
@@ -126,10 +126,10 @@ email. On a static-only host you'd need to point the form at an external form se
 
 ## 10. Content rules
 
-Immigration advice on this site is provided by licensed legal professionals. Keep these rules when editing content:
+This site covers admissions, studying in Canada, institutions and programs. Keep these rules when editing content:
 
-- Never use wording like "guaranteed admission", "guaranteed visa", "100% success rate" or "approved by IRCC".
+- Never use wording like "guaranteed admission" or "100% success rate".
 - Never publish invented testimonials, names or statistics.
-- Put every immigration number in `data/immigration-facts.json` with its `source_url` and `last_verified` date —
-  never type figures directly into page text.
+- Only publish tuition, intakes and requirements you have checked on the institution's official website, and
+  record the `source_url` and `last_verified` date in the data files.
 - Update `content/review-dates.ts` whenever a professional reviews a page.

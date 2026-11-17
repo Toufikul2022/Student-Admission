@@ -1,12 +1,12 @@
 import Link from "next/link";
 import { GuideLayout, STUDY_NAV } from "@/components/guides/GuideLayout";
-import { FactValue, OfficialSources } from "@/components/guides/Sources";
+import { OfficialSources } from "@/components/guides/Sources";
 import { pageMetadata } from "@/lib/seo";
 
 const PATH = "/study-in-canada/costs";
 const TITLE = "How Much Does It Cost to Study in Canada?";
 const DESCRIPTION =
-  "A practical breakdown of tuition, living costs, health insurance, study permit fees and proof of funds for international students in Canada, with a budgeting worksheet.";
+  "A practical breakdown of tuition, living costs, health insurance and application costs for international students in Canada, with a budgeting worksheet.";
 
 export const metadata = pageMetadata({ title: "Cost of Studying in Canada", description: DESCRIPTION, path: PATH, type: "article" });
 
@@ -16,8 +16,8 @@ const faqs = [
     a: "No. International tuition varies by institution, province, level and program. Professional and lab-based programs often cost more. Always check the official fee page for your exact program and year.",
   },
   {
-    q: "Does proof of funds include tuition?",
-    a: "IRCC generally expects you to show your first year's tuition plus a minimum amount for living expenses, and travel costs. Check IRCC's current requirements for the exact rules and amounts.",
+    q: "When do I pay tuition?",
+    a: "Usually a deposit when you accept your offer, then the rest by the institution's fee deadline before each term. Payment schedules differ, so check your offer letter and the institution's fee page.",
   },
 ];
 
@@ -34,8 +34,8 @@ export default function CostsPage() {
         <p>
           Plan for <strong>tuition</strong> (set by each institution), <strong>living costs</strong> (mostly housing,
           which varies sharply by city), <strong>health insurance</strong>, and <strong>one-time fees</strong> such as
-          applications, the study permit and biometrics. For your study permit you must also show enough money for your
-          first year — tuition plus a minimum living-expense amount set by IRCC.
+          applications, language tests and deposits. Build a budget for your whole first year before you accept an
+          offer.
         </p>
       }
     >
@@ -67,20 +67,13 @@ export default function CostsPage() {
         your province and institution before you arrive.
       </p>
 
-      <h2 id="permit-costs">What are the immigration costs?</h2>
-      <table>
-        <thead><tr><th scope="col">Item</th><th scope="col">Current amount</th></tr></thead>
-        <tbody>
-          <tr><td>Study permit application fee</td><td><FactValue k="study_permit_fee" /></td></tr>
-          <tr><td>Biometrics (individual)</td><td><FactValue k="biometrics_fee" /></td></tr>
-          <tr><td>Minimum living-expense funds (single student, outside Québec)</td><td><FactValue k="proof_of_funds_single" /></td></tr>
-          <tr><td>Each additional family member</td><td><FactValue k="proof_of_funds_additional_member" /></td></tr>
-        </tbody>
-      </table>
-      <p>
-        You may also pay for a medical exam, police certificates, translations, and any fees charged by your
-        province for an attestation letter or, in Québec, the Québec Acceptance Certificate (CAQ).
-      </p>
+      <h2 id="application-costs">What does it cost to apply?</h2>
+      <ul>
+        <li><strong>Application fees:</strong> most institutions charge a non-refundable fee for each application.</li>
+        <li><strong>Language tests:</strong> IELTS, TOEFL, PTE and other tests each have their own booking fee.</li>
+        <li><strong>Documents:</strong> official transcripts, certified translations and courier costs.</li>
+        <li><strong>Tuition deposit:</strong> many institutions ask for a deposit when you accept your offer. Check whether it is refundable.</li>
+      </ul>
 
       <h2 id="worksheet">Budget worksheet</h2>
       <p>Use this as a checklist. Fill in figures from official sources for your chosen program and city.</p>
@@ -92,12 +85,12 @@ export default function CostsPage() {
           <tr><td>Housing (12 months)</td><td>Residence office or local listings</td><td>&nbsp;</td></tr>
           <tr><td>Food, transport, phone</td><td>Institution&apos;s international student cost estimate</td><td>&nbsp;</td></tr>
           <tr><td>Health insurance</td><td>Provincial plan or school health plan</td><td>&nbsp;</td></tr>
-          <tr><td>Study permit and biometrics</td><td>IRCC fee list</td><td>&nbsp;</td></tr>
+          <tr><td>Language test</td><td>Test provider&apos;s website</td><td>&nbsp;</td></tr>
           <tr><td>Flights and arrival costs</td><td>Airlines, temporary accommodation</td><td>&nbsp;</td></tr>
         </tbody>
       </table>
 
-      <OfficialSources keys={["fees", "study_permit_documents", "biometrics"]} />
+      <OfficialSources keys={["educanada", "educanada_scholarships"]} />
     </GuideLayout>
   );
 }

@@ -1,93 +1,263 @@
 [
   {
-    "slug": "manitoba", "name": "Manitoba", "code": "MB", "kind": "province",
-    "majorCities": ["Winnipeg", "Brandon", "Steinbach"],
+    "slug": "manitoba",
+    "name": "Manitoba",
+    "code": "MB",
+    "kind": "province",
+    "majorCities": [
+      "Winnipeg",
+      "Brandon",
+      "Steinbach"
+    ],
     "overview": "Manitoba sits at the geographic centre of Canada. Most of its post-secondary institutions are in Winnipeg, a mid-sized city with a strong arts scene and a large French-speaking community in St. Boniface. Brandon offers a smaller-city alternative in the province's southwest.",
-    "highlights": ["A mix of universities, colleges and a polytechnic, concentrated in Winnipeg", "French-language post-secondary study is available in St. Boniface", "Very cold winters and warm summers — budget for proper winter clothing", "The province runs its own nominee program with streams for graduates; check the official site for current criteria"],
-    "officialSite": "https://www.gov.mb.ca/", "specialNote": null
+    "highlights": [
+      "A mix of universities, colleges and a polytechnic, concentrated in Winnipeg",
+      "French-language post-secondary study is available in St. Boniface",
+      "Very cold winters and warm summers — budget for proper winter clothing"
+    ],
+    "officialSite": "https://www.gov.mb.ca/",
+    "specialNote": null
   },
   {
-    "slug": "ontario", "name": "Ontario", "code": "ON", "kind": "province",
-    "majorCities": ["Toronto", "Ottawa", "Hamilton", "London", "Waterloo"],
+    "slug": "ontario",
+    "name": "Ontario",
+    "code": "ON",
+    "kind": "province",
+    "majorCities": [
+      "Toronto",
+      "Ottawa",
+      "Hamilton",
+      "London",
+      "Waterloo"
+    ],
     "overview": "Ontario is Canada's most populous province and home to the largest number of universities and colleges. Options range from large research universities in the Greater Toronto Area to smaller campuses in mid-sized cities, where living costs can be noticeably lower.",
-    "highlights": ["The widest choice of institutions and programs in the country", "Large, diverse international student communities", "Housing costs vary widely between Toronto and smaller cities", "Ottawa offers bilingual (English/French) study options"],
-    "officialSite": "https://www.ontario.ca/", "specialNote": null
+    "highlights": [
+      "The widest choice of institutions and programs in the country",
+      "Large, diverse international student communities",
+      "Housing costs vary widely between Toronto and smaller cities",
+      "Ottawa offers bilingual (English/French) study options"
+    ],
+    "officialSite": "https://www.ontario.ca/",
+    "specialNote": null
   },
   {
-    "slug": "british-columbia", "name": "British Columbia", "code": "BC", "kind": "province",
-    "majorCities": ["Vancouver", "Victoria", "Kelowna", "Surrey"],
+    "slug": "british-columbia",
+    "name": "British Columbia",
+    "code": "BC",
+    "kind": "province",
+    "majorCities": [
+      "Vancouver",
+      "Victoria",
+      "Kelowna",
+      "Surrey"
+    ],
     "overview": "British Columbia combines Pacific coastline and mountains with a well-known university and college system. Metro Vancouver is a major hub for international students, while the Okanagan and Vancouver Island offer smaller-city campus life.",
-    "highlights": ["Milder coastal winters than most of Canada", "Strong technology, film and natural resource sectors", "Housing in Metro Vancouver is among the most expensive in Canada", "Outdoor recreation close to most campuses"],
-    "officialSite": "https://www2.gov.bc.ca/", "specialNote": null
+    "highlights": [
+      "Milder coastal winters than most of Canada",
+      "Strong technology, film and natural resource sectors",
+      "Housing in Metro Vancouver is among the most expensive in Canada",
+      "Outdoor recreation close to most campuses"
+    ],
+    "officialSite": "https://www2.gov.bc.ca/",
+    "specialNote": null
   },
   {
-    "slug": "alberta", "name": "Alberta", "code": "AB", "kind": "province",
-    "majorCities": ["Calgary", "Edmonton", "Lethbridge", "Red Deer"],
+    "slug": "alberta",
+    "name": "Alberta",
+    "code": "AB",
+    "kind": "province",
+    "majorCities": [
+      "Calgary",
+      "Edmonton",
+      "Lethbridge",
+      "Red Deer"
+    ],
     "overview": "Alberta's two largest cities, Calgary and Edmonton, host major universities and polytechnics. The province is known for energy, agriculture and a growing technology sector, and the Rocky Mountains are a short drive from Calgary.",
-    "highlights": ["Polytechnics with strong applied and trades programs", "No provincial sales tax", "Cold, dry winters with sunny days", "Close to Banff and Jasper national parks"],
-    "officialSite": "https://www.alberta.ca/", "specialNote": null
+    "highlights": [
+      "Polytechnics with strong applied and trades programs",
+      "No provincial sales tax",
+      "Cold, dry winters with sunny days",
+      "Close to Banff and Jasper national parks"
+    ],
+    "officialSite": "https://www.alberta.ca/",
+    "specialNote": null
   },
   {
-    "slug": "quebec", "name": "Québec", "code": "QC", "kind": "province",
-    "majorCities": ["Montréal", "Québec City", "Sherbrooke", "Gatineau"],
+    "slug": "quebec",
+    "name": "Québec",
+    "code": "QC",
+    "kind": "province",
+    "majorCities": [
+      "Montréal",
+      "Québec City",
+      "Sherbrooke",
+      "Gatineau"
+    ],
     "overview": "Québec is Canada's predominantly French-speaking province, with both French- and English-language universities and a distinct college system (CEGEPs). Montréal is a lively, multilingual university city.",
-    "highlights": ["French is the official language; some institutions teach in English", "A distinct college (CEGEP) system", "Rich cultural life and festivals", "Québec runs its own selection process for students and immigrants"],
-    "officialSite": "https://www.quebec.ca/en", "specialNote": "Students going to Québec generally need a Québec Acceptance Certificate (CAQ) from the Québec government in addition to a federal study permit. Check the Québec government's current requirements before you apply."
+    "highlights": [
+      "French is the official language; some institutions teach in English",
+      "A distinct college (CEGEP) system",
+      "Rich cultural life and festivals",
+      "Montréal has several English-language universities"
+    ],
+    "officialSite": "https://www.quebec.ca/en",
+    "specialNote": "Most programs in Québec are taught in French, and the college system (CEGEP) works differently from the rest of Canada. Check each institution's language of instruction and admission requirements carefully before you apply."
   },
   {
-    "slug": "saskatchewan", "name": "Saskatchewan", "code": "SK", "kind": "province",
-    "majorCities": ["Saskatoon", "Regina", "Prince Albert"],
+    "slug": "saskatchewan",
+    "name": "Saskatchewan",
+    "code": "SK",
+    "kind": "province",
+    "majorCities": [
+      "Saskatoon",
+      "Regina",
+      "Prince Albert"
+    ],
     "overview": "Saskatchewan offers university and polytechnic study in Saskatoon and Regina, with a lower cost of living than Canada's largest cities. Agriculture, mining and research are important parts of the economy.",
-    "highlights": ["Generally lower housing costs than large metro areas", "Strengths in agriculture and resource-related research", "Very cold winters, sunny climate", "A provincial nominee program with options for graduates"],
-    "officialSite": "https://www.saskatchewan.ca/", "specialNote": null
+    "highlights": [
+      "Generally lower housing costs than large metro areas",
+      "Strengths in agriculture and resource-related research",
+      "Very cold winters, sunny climate"
+    ],
+    "officialSite": "https://www.saskatchewan.ca/",
+    "specialNote": null
   },
   {
-    "slug": "nova-scotia", "name": "Nova Scotia", "code": "NS", "kind": "province",
-    "majorCities": ["Halifax", "Sydney", "Wolfville", "Antigonish"],
+    "slug": "nova-scotia",
+    "name": "Nova Scotia",
+    "code": "NS",
+    "kind": "province",
+    "majorCities": [
+      "Halifax",
+      "Sydney",
+      "Wolfville",
+      "Antigonish"
+    ],
     "overview": "Nova Scotia has a high number of universities for its size, many of them in Halifax. Coastal life, a historic port city and close-knit campus communities are part of the appeal.",
-    "highlights": ["Several universities within one compact city (Halifax)", "Ocean sciences and marine-related programs", "Milder winters than the Prairies, with plenty of snow and wind", "Small-town campus options outside Halifax"],
-    "officialSite": "https://novascotia.ca/", "specialNote": null
+    "highlights": [
+      "Several universities within one compact city (Halifax)",
+      "Ocean sciences and marine-related programs",
+      "Milder winters than the Prairies, with plenty of snow and wind",
+      "Small-town campus options outside Halifax"
+    ],
+    "officialSite": "https://novascotia.ca/",
+    "specialNote": null
   },
   {
-    "slug": "new-brunswick", "name": "New Brunswick", "code": "NB", "kind": "province",
-    "majorCities": ["Moncton", "Fredericton", "Saint John"],
+    "slug": "new-brunswick",
+    "name": "New Brunswick",
+    "code": "NB",
+    "kind": "province",
+    "majorCities": [
+      "Moncton",
+      "Fredericton",
+      "Saint John"
+    ],
     "overview": "New Brunswick is Canada's only officially bilingual province. It offers English- and French-language universities and colleges in small to mid-sized cities with an affordable cost of living.",
-    "highlights": ["Officially bilingual (English and French)", "Smaller class sizes at many institutions", "Lower living costs than large metro areas", "Atlantic coastline and forests"],
-    "officialSite": "https://www2.gnb.ca/", "specialNote": null
+    "highlights": [
+      "Officially bilingual (English and French)",
+      "Smaller class sizes at many institutions",
+      "Lower living costs than large metro areas",
+      "Atlantic coastline and forests"
+    ],
+    "officialSite": "https://www2.gnb.ca/",
+    "specialNote": null
   },
   {
-    "slug": "newfoundland-and-labrador", "name": "Newfoundland and Labrador", "code": "NL", "kind": "province",
-    "majorCities": ["St. John's", "Corner Brook"],
+    "slug": "newfoundland-and-labrador",
+    "name": "Newfoundland and Labrador",
+    "code": "NL",
+    "kind": "province",
+    "majorCities": [
+      "St. John's",
+      "Corner Brook"
+    ],
     "overview": "Canada's most easterly province is known for its rugged coastline, friendly communities and distinctive culture. Post-secondary study is centred in St. John's, with additional campuses elsewhere in the province.",
-    "highlights": ["Strong ocean, fisheries and energy-related programs", "Distinctive local culture and music", "Windy, changeable maritime weather", "Smaller student population and close community feel"],
-    "officialSite": "https://www.gov.nl.ca/", "specialNote": null
+    "highlights": [
+      "Strong ocean, fisheries and energy-related programs",
+      "Distinctive local culture and music",
+      "Windy, changeable maritime weather",
+      "Smaller student population and close community feel"
+    ],
+    "officialSite": "https://www.gov.nl.ca/",
+    "specialNote": null
   },
   {
-    "slug": "prince-edward-island", "name": "Prince Edward Island", "code": "PE", "kind": "province",
-    "majorCities": ["Charlottetown", "Summerside"],
+    "slug": "prince-edward-island",
+    "name": "Prince Edward Island",
+    "code": "PE",
+    "kind": "province",
+    "majorCities": [
+      "Charlottetown",
+      "Summerside"
+    ],
     "overview": "Canada's smallest province offers a quiet, community-oriented study experience, mainly in Charlottetown. It is well known for its beaches, farmland and food.",
-    "highlights": ["Small, walkable capital city", "Programs connected to agriculture, food and island industries", "Seasonal tourism economy", "Short travel distances across the province"],
-    "officialSite": "https://www.princeedwardisland.ca/en", "specialNote": null
+    "highlights": [
+      "Small, walkable capital city",
+      "Programs connected to agriculture, food and island industries",
+      "Seasonal tourism economy",
+      "Short travel distances across the province"
+    ],
+    "officialSite": "https://www.princeedwardisland.ca/en",
+    "specialNote": null
   },
   {
-    "slug": "yukon", "name": "Yukon", "code": "YT", "kind": "territory",
-    "majorCities": ["Whitehorse", "Dawson City"],
+    "slug": "yukon",
+    "name": "Yukon",
+    "code": "YT",
+    "kind": "territory",
+    "majorCities": [
+      "Whitehorse",
+      "Dawson City"
+    ],
     "overview": "Yukon is a northern territory with vast wilderness and a small population. Post-secondary options are limited and centred in Whitehorse, with a focus on northern and applied programs.",
-    "highlights": ["Northern and Indigenous-focused learning", "Long summer daylight, very long winter nights", "Small, close-knit communities", "Higher costs for some goods due to remoteness"],
-    "officialSite": "https://yukon.ca/", "specialNote": null
+    "highlights": [
+      "Northern and Indigenous-focused learning",
+      "Long summer daylight, very long winter nights",
+      "Small, close-knit communities",
+      "Higher costs for some goods due to remoteness"
+    ],
+    "officialSite": "https://yukon.ca/",
+    "specialNote": null
   },
   {
-    "slug": "northwest-territories", "name": "Northwest Territories", "code": "NT", "kind": "territory",
-    "majorCities": ["Yellowknife", "Inuvik", "Hay River"],
+    "slug": "northwest-territories",
+    "name": "Northwest Territories",
+    "code": "NT",
+    "kind": "territory",
+    "majorCities": [
+      "Yellowknife",
+      "Inuvik",
+      "Hay River"
+    ],
     "overview": "The Northwest Territories offers a small number of post-secondary programs, many with a northern or Indigenous focus. Yellowknife is the territorial capital.",
-    "highlights": ["Northern lights viewing for much of the year", "Programs linked to northern communities and resources", "Extreme cold in winter", "Remote location affects travel and living costs"],
-    "officialSite": "https://www.gov.nt.ca/en", "specialNote": null
+    "highlights": [
+      "Northern lights viewing for much of the year",
+      "Programs linked to northern communities and resources",
+      "Extreme cold in winter",
+      "Remote location affects travel and living costs"
+    ],
+    "officialSite": "https://www.gov.nt.ca/en",
+    "specialNote": null
   },
   {
-    "slug": "nunavut", "name": "Nunavut", "code": "NU", "kind": "territory",
-    "majorCities": ["Iqaluit", "Rankin Inlet", "Cambridge Bay"],
+    "slug": "nunavut",
+    "name": "Nunavut",
+    "code": "NU",
+    "kind": "territory",
+    "majorCities": [
+      "Iqaluit",
+      "Rankin Inlet",
+      "Cambridge Bay"
+    ],
     "overview": "Nunavut is Canada's largest and most northern territory. Post-secondary study is limited and closely tied to the needs of Inuit communities.",
-    "highlights": ["Inuit culture and languages", "Community-based learning", "Arctic climate", "Access is mainly by air"],
-    "officialSite": "https://www.gov.nu.ca/en", "specialNote": null
+    "highlights": [
+      "Inuit culture and languages",
+      "Community-based learning",
+      "Arctic climate",
+      "Access is mainly by air"
+    ],
+    "officialSite": "https://www.gov.nu.ca/en",
+    "specialNote": null
   }
 ]

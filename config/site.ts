@@ -14,9 +14,9 @@ export const siteConfig = {
    * Set NEXT_PUBLIC_SITE_URL in your hosting dashboard (see .env.example).
    */
   url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.example.ca").replace(/\/$/, ""),
-  tagline: "Admission and study permit guidance for international students choosing Canada.",
+  tagline: "Admission guidance for international students choosing Canada.",
   description:
-    "Find a Canadian university or college, get help with your application, and prepare your study permit with guidance from licensed immigration professionals.",
+    "Find the right Canadian university, college and program, and get expert help with your admission application.",
   locale: "en_CA",
 
   contact: {
@@ -26,7 +26,7 @@ export const siteConfig = {
     phoneDisplay: "[PHONE]",
     // TODO: replace with the same number in international format, digits only with +, e.g. "+12045550100"
     phoneHref: "+10000000000",
-    /** WhatsApp channel with Canadian immigration news updates */
+    /** WhatsApp channel for news and updates */
     whatsappChannel: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j",
     // TODO: replace with the real office address
     address: {
@@ -46,12 +46,6 @@ export const siteConfig = {
     timeZoneNote: "[Time zone, e.g. Central Time]",
   },
 
-  /**
-   * Disclosure shown in the footer, on the Contact page and on the Disclaimer page.
-   * TODO: confirm exact wording with your regulator before launch.
-   */
-  operatorDisclosure: "Immigration advice at CanEdu Pathway is provided by licensed legal professionals.",
-
   // TODO: replace with real profile URLs, or delete any you don't use
   social: [
     { label: "Facebook", href: "https://www.facebook.com/", icon: "facebook" },
@@ -65,7 +59,7 @@ export const siteConfig = {
     { label: "Home", href: "/" },
     { label: "Study in Canada", href: "/study-in-canada" },
     { label: "Find University", href: "/find-university" },
-    { label: "Visa & Immigration", href: "/visa-immigration" },
+    { label: "Programs", href: "/find-university/programs" },
   ],
 } as const;
 

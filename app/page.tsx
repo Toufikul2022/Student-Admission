@@ -13,7 +13,7 @@ import { siteConfig } from "@/config/site";
 import { absoluteUrl } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: { absolute: `${siteConfig.name} — Study in Canada with expert admission and study permit guidance` },
+  title: { absolute: `${siteConfig.name} — Study in Canada with expert admission guidance` },
   description: siteConfig.description,
   alternates: { canonical: absoluteUrl("/") },
   openGraph: { url: absoluteUrl("/"), title: `${siteConfig.name} — Study in Canada`, description: siteConfig.description },

@@ -12,7 +12,7 @@ import Link from "next/link";
 export const metadata = pageMetadata({
   title: "Find a University or College in Canada",
   description:
-    "Search Canadian universities, colleges and polytechnics by province, city, study level, field, tuition, intake and PGWP eligibility.",
+    "Search Canadian universities, colleges and polytechnics by province, city, study level, field, tuition and intake.",
   path: "/find-university",
 });
 

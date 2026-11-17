@@ -1,19 +1,18 @@
-# Data guide: adding institutions, programs and immigration figures
+# Data guide: adding institutions and programs
 
 All listing data lives in plain JSON files in `/data`. No database is needed. After editing, run
 `npm run build` — the build fails if a file is broken, so you'll know straight away.
 
 > **Golden rule:** only enter information you have checked on an **official source**, and record that source in
 > `source_url` and the date you checked it in `last_verified`. If you don't know a value, use `null` — the site
-> shows "TBC" or "To be confirmed" automatically. Never estimate tuition, DLI numbers or PGWP eligibility.
+> shows "TBC" or "To be confirmed" automatically. Never estimate tuition or DLI numbers.
 
 ## Official sources to use
 
-1. **IRCC Designated Learning Institutions (DLI) list** — confirms an institution can host international students
+1. **Government of Canada Designated Learning Institutions (DLI) list** — confirms an institution can host international students
    and gives its DLI number. Search the official list on canada.ca (the link is stored in
-   `data/immigration-facts.json` under `dli_list`).
+   `data/official-links.json` under `dli_list`).
 2. **The institution's own website** — programs, international tuition, intakes, admission and language requirements.
-3. **IRCC pages** — for PGWP program eligibility and anything immigration-related.
 
 Do not copy data from agent or aggregator websites.
 
@@ -28,14 +27,13 @@ Each institution is one `{ … }` block in the list. Copy an existing block, the
 | `type` | `"University"`, `"College"` or `"Polytechnic"` | `"University"` |
 | `province` | Province slug from `data/provinces.json` | `"manitoba"` |
 | `city` | Main campus city | `"Winnipeg"` |
-| `dliNumber` | DLI number from the IRCC list, as text — or `null` | `"O19…"` |
+| `dliNumber` | DLI number from the official DLI list, as text — or `null` | `"O19…"` |
 | `website` | Official homepage | `"https://umanitoba.ca/"` |
 | `logo` | Path to a logo in `/public` (only with permission) — or `null` to show initials | `"/logos/umanitoba.svg"` |
 | `overview` | 1–3 sentences **in your own words** | |
 | `campusAddress` | Main campus address — or `null` | |
 | `tuitionRangeCad` | Lowest and highest annual international tuition in CAD, as numbers without `$` or commas — or `null` | `{ "min": 20000, "max": 35000 }` |
 | `intakes` | Start months: `"jan"`, `"may"`, `"sep"` (any 3-letter month works) | `["sep", "jan"]` |
-| `hasPgwpEligiblePrograms` | `true`, `false`, or `null` if not yet confirmed | `null` |
 | `fields` | Field slugs from `data/fields.json` | `["business", "computing"]` |
 | `levels` | Any of `"diploma"`, `"bachelor"`, `"postgraduate-certificate"`, `"masters"`, `"phd"` | `["bachelor", "masters"]` |
 | `admissionRequirements` | Short list of general requirements | |
@@ -58,18 +56,12 @@ Each institution is one `{ … }` block in the list. Copy an existing block, the
 | `tuitionPerYearCad` | Annual international tuition in CAD as a number, or `null` |
 | `intakes` | As above |
 | `languageRequirement` | Short text, e.g. `"IELTS Academic 6.5 overall, no band below 6.0"`, or `null` |
-| `pgwpEligible` | `true`, `false` or `null` — confirm against IRCC's current rules |
 | `sample`, `source_url`, `last_verified` | As above |
 
-## `data/immigration-facts.json`
+## `data/official-links.json`
 
-Every immigration figure on the site (fees, proof-of-funds amounts, work-hour limits, caps, deadlines) comes from
-this one file, so you can update them all in one place.
-
-- `facts`: set `value` to the display text exactly as it should appear (e.g. `"$150 CAD"`), and update
-  `last_verified`. While `value` is `null`, pages show "to be confirmed" with a link to the official source.
-- `links`: official IRCC and government links used in "Official sources" boxes. Check each link still works and set
-  `last_verified`.
+Official links shown in the "Official sources" boxes on guide pages. Check each link still works and set
+`last_verified`.
 
 ## Adding a new field of study or province
 

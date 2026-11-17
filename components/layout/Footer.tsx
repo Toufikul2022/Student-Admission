@@ -34,8 +34,8 @@ export function Footer() {
           <div className="lg:col-span-4">
             <Logo invert />
             <p className="mt-4 max-w-sm text-sm leading-relaxed">
-              {siteConfig.name} helps international students choose a Canadian university or college, apply with
-              confidence, and prepare a strong study permit application.
+              {siteConfig.name} helps international students find the right Canadian university, college and program,
+              and apply with confidence.
             </p>
             <ul className="mt-6 flex gap-2" aria-label="Social media">
               {siteConfig.social.map((s) => (
@@ -61,8 +61,8 @@ export function Footer() {
                 { label: "Study in Canada", href: "/study-in-canada" },
                 { label: "Find a University", href: "/find-university" },
                 { label: "Search Programs", href: "/find-university/programs" },
-                { label: "Visa & Immigration", href: "/visa-immigration" },
-                { label: "Study Permit Guide", href: "/visa-immigration/study-permit" },
+                { label: "Scholarships", href: "/study-in-canada/scholarships" },
+                { label: "Intakes", href: "/study-in-canada/intakes" },
                 { label: "Contact Us", href: "/contact" },
               ]}
             />
@@ -105,7 +105,7 @@ export function Footer() {
               <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
                 <SocialIcon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={siteConfig.contact.whatsappChannel} target="_blank" rel="noopener noreferrer" className="inline-block py-2 hover:text-white hover:underline sm:py-0">
-                  Immigration news on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
+                  News & updates on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </li>
             </ul>
@@ -113,10 +113,9 @@ export function Footer() {
         </div>
 
         <div className="mt-12 border-t border-white/15 pt-8">
-          <p className="max-w-4xl text-sm leading-relaxed text-white">{siteConfig.operatorDisclosure}</p>
-          <p className="mt-2 max-w-4xl text-xs leading-relaxed">
-            Information on this website is general in nature and is not legal advice. Admission and visa decisions are
-            made by institutions and by Immigration, Refugees and Citizenship Canada (IRCC), not by us.
+          <p className="max-w-4xl text-xs leading-relaxed">
+            Information on this website is general in nature. Admission decisions are made by each institution, not by
+            us. Always confirm program details, fees and deadlines with the institution.
           </p>
           <div className="mt-6 flex flex-col gap-4 text-xs sm:flex-row sm:items-center sm:justify-between">
             <p>

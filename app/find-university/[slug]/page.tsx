@@ -8,7 +8,6 @@ import { Badge } from "@/components/ui/Badge";
 import { Card } from "@/components/ui/Card";
 import { Button, buttonClasses } from "@/components/ui/Button";
 import { InstitutionLogo } from "@/components/institutions/InstitutionLogo";
-import { PgwpBadge } from "@/components/institutions/PgwpBadge";
 import { LastVerified } from "@/components/institutions/LastVerified";
 import { LeadFormSection } from "@/components/forms/LeadFormSection";
 import { JsonLd } from "@/components/seo/JsonLd";
@@ -75,7 +74,6 @@ export default async function InstitutionPage({ params }: Props) {
               </p>
               <div className="mt-3 flex flex-wrap gap-2">
                 <Badge tone="primary">{inst.type}</Badge>
-                <PgwpBadge value={inst.hasPgwpEligiblePrograms} label="Has PGWP-eligible programs" />
                 {inst.sample && <Badge tone="accent">Sample data</Badge>}
               </div>
             </div>
@@ -109,7 +107,7 @@ export default async function InstitutionPage({ params }: Props) {
               {[
                 ["Institution type", inst.type],
                 ["Location", `${inst.city}, ${provinceName(inst.province)}`],
-                ["DLI number", inst.dliNumber ?? "To be confirmed"],
+                ["Designated learning institution (DLI) number", inst.dliNumber ?? "To be confirmed"],
                 ["Annual tuition (international)", formatTuitionRange(inst.tuitionRangeCad)],
                 ["Intakes", inst.intakes.length ? inst.intakes.map(monthLabel).join(", ") : "To be confirmed"],
                 ["Study levels", inst.levels.map(levelLabel).join(", ")],
@@ -121,9 +119,9 @@ export default async function InstitutionPage({ params }: Props) {
               ))}
             </dl>
             <p className="mt-3 text-sm text-slate">
-              Check any DLI number against the official{" "}
+              A DLI is a school approved to accept international students. Check any DLI number against the official{" "}
               <a href={dli.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-primary-700 underline">
-                IRCC designated learning institutions list<span className="sr-only"> (opens in a new tab)</span>
+                Government of Canada designated learning institutions list<span className="sr-only"> (opens in a new tab)</span>
               </a>
               .
             </p>
@@ -212,7 +210,7 @@ export default async function InstitutionPage({ params }: Props) {
           <Card className="sticky top-24 p-6">
             <p className="text-lg font-bold text-ink">Apply to {inst.name} with our help</p>
             <p className="mt-2 text-sm text-slate">
-              We can help you check your fit, prepare your application and plan your study permit.
+              We can help you check your fit, choose the right program and prepare a strong application.
             </p>
             <a href="#apply" className={buttonClasses("primary", "md", "mt-5 w-full")}>
               <Send aria-hidden="true" className="size-4" />
@@ -233,7 +231,7 @@ export default async function InstitutionPage({ params }: Props) {
       <LeadFormSection
         id="apply"
         title={`Get help applying to ${inst.name}`}
-        description="Send us a few details and an advisor will contact you about this institution and your study permit options."
+        description="Send us a few details and an advisor will contact you about this institution and your program options."
         institution={inst.name}
       />
     </>

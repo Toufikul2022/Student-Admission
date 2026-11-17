@@ -1,0 +1,35 @@
+{
+  "_readme": "Official links shown in the 'Official sources' boxes on guide pages. Check each link still works and set last_verified (YYYY-MM-DD).",
+  "links": [
+    {
+      "key": "dli_list",
+      "label": "Government of Canada: Designated learning institutions list",
+      "url": "https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/study-permit/prepare/designated-learning-institutions-list.html",
+      "last_verified": null
+    },
+    {
+      "key": "educanada_scholarships",
+      "label": "EduCanada: Scholarships for international students",
+      "url": "https://www.educanada.ca/scholarships-bourses/index.aspx?lang=eng",
+      "last_verified": null
+    },
+    {
+      "key": "quebec_study",
+      "label": "Québec government: Studying in Québec",
+      "url": "https://www.quebec.ca/en/education/study-quebec",
+      "last_verified": null
+    },
+    {
+      "key": "educanada",
+      "label": "EduCanada: Study in Canada (official Government of Canada portal)",
+      "url": "https://www.educanada.ca/",
+      "last_verified": null
+    },
+    {
+      "key": "educanada_programs",
+      "label": "EduCanada: Programs and institutions",
+      "url": "https://www.educanada.ca/programs-programmes/index.aspx?lang=eng",
+      "last_verified": null
+    }
+  ]
+}

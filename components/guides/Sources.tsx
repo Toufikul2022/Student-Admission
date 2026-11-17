@@ -1,5 +1,5 @@
 import { ExternalLink, Info } from "lucide-react";
-import { fact, formatDate, link } from "@/lib/data";
+import { link } from "@/lib/data";
 
 /** "Rules change — check official sources" note with a list of official links. */
 export function OfficialSources({ keys, title = "Official sources" }: { keys: string[]; title?: string }) {
@@ -10,8 +10,8 @@ export function OfficialSources({ keys, title = "Official sources" }: { keys: st
         {title}
       </h2>
       <p className="mt-2 text-sm text-slate">
-        Immigration rules, fees and processing times change frequently. This page is general information, not legal
-        advice. Always check the official Government of Canada (IRCC) pages before you apply.
+        Programs, fees, deadlines and admission requirements change from year to year. This page is general
+        information. Always confirm details with each institution and the official sources below before you apply.
       </p>
       <ul className="mt-4 space-y-2">
         {keys.map((k) => {
@@ -28,37 +28,5 @@ export function OfficialSources({ keys, title = "Official sources" }: { keys: st
         })}
       </ul>
     </section>
-  );
-}
-
-/**
- * Shows a figure from data/immigration-facts.json. If it hasn't been verified yet
- * (value is null), shows "to be confirmed" with a link to the official source.
- */
-export function FactValue({ k }: { k: string }) {
-  const f = fact(k);
-  if (!f) return <span>[unknown fact: {k}]</span>;
-  if (f.value == null) {
-    return (
-      <span className="rounded bg-accent-50 px-1.5 py-0.5 font-semibold text-accent-800">
-        [to be confirmed —{" "}
-        <a href={f.source_url} target="_blank" rel="noopener noreferrer" className="text-accent-800! underline">
-          see current figure on the official site<span className="sr-only"> (opens in a new tab)</span>
-        </a>
-        ]
-      </span>
-    );
-  }
-  return (
-    <span>
-      <strong>{f.value}</strong>{" "}
-      <span className="text-sm text-slate">
-        (as of {formatDate(f.last_verified)},{" "}
-        <a href={f.source_url} target="_blank" rel="noopener noreferrer">
-          source
-        </a>
-        )
-      </span>
-    </span>
   );
 }

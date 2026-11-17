@@ -24,20 +24,11 @@ export const STUDY_NAV: SectionNav = {
     { label: "Language tests", href: "/study-in-canada/language-tests" },
     { label: "Scholarships", href: "/study-in-canada/scholarships" },
     { label: "Study in Manitoba", href: "/study-in-canada/provinces/manitoba" },
+    { label: "Find a university", href: "/find-university" },
+    { label: "Search programs", href: "/find-university/programs" },
   ],
 };
 
-export const VISA_NAV: SectionNav = {
-  title: "Visa & Immigration",
-  links: [
-    { label: "Overview", href: "/visa-immigration" },
-    { label: "Study permit", href: "/visa-immigration/study-permit" },
-    { label: "Spousal open work permit", href: "/visa-immigration/spousal-open-work-permit" },
-    { label: "Post-Graduation Work Permit", href: "/visa-immigration/pgwp" },
-    { label: "Study permit refusal", href: "/visa-immigration/study-permit-refusal" },
-    { label: "Pathways to PR", href: "/visa-immigration/pathways-to-pr" },
-  ],
-};
 
 /** "Last reviewed" line, driven by content/review-dates.ts */
 export function ReviewLine({ path }: { path: string }) {
@@ -95,7 +86,7 @@ export function GuideLayout({
           dateModified: r.reviewed ?? r.drafted,
         })}
       />
-      <PageHero crumbs={crumbs} title={title} intro={description} image={image ?? (nav === VISA_NAV ? "visa" : "study-guides")}>
+      <PageHero crumbs={crumbs} title={title} intro={description} image={image ?? "study-guides"}>
         <ReviewLine path={path} />
       </PageHero>
 

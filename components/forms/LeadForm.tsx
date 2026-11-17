@@ -223,7 +223,7 @@ export function LeadForm({
           />
         )}
 
-        <Textarea id={id("message")} name="message" label="Message" hint="Tell us about your plans, questions or any previous refusals." defaultValue={v.message} error={errors.message} wrapperClassName="sm:col-span-2" maxLength={2000} />
+        <Textarea id={id("message")} name="message" label="Message" hint="Tell us about your plans, preferred programs or any questions." defaultValue={v.message} error={errors.message} wrapperClassName="sm:col-span-2" maxLength={2000} />
         </>
         )}
       </div>
@@ -271,7 +271,7 @@ export function LeadForm({
       </div>
 
       <p className="text-xs leading-relaxed text-slate">
-        Submitting this form does not create a lawyer-client or representative-client relationship. Please don&apos;t
+        Submitting this form does not guarantee admission or create a client relationship. Please don&apos;t
         include sensitive documents or ID numbers. See our{" "}
         <Link href="/disclaimer" className="underline">
           Disclaimer

@@ -20,7 +20,6 @@ export function ExplorerLayout({
   cityOptions,
   provinceCounts,
   searchLabel,
-  pgwpDescription,
   page,
   totalPages,
   emptyState,
@@ -32,7 +31,6 @@ export function ExplorerLayout({
   cityOptions: Opt[];
   provinceCounts: Record<string, number>;
   searchLabel: string;
-  pgwpDescription: string;
   page: number;
   totalPages: number;
   emptyState: ReactNode;
@@ -62,7 +60,6 @@ export function ExplorerLayout({
       cityOptions={cityOptions}
       provinceCounts={provinceCounts}
       searchLabel={searchLabel}
-      pgwpDescription={pgwpDescription}
     />
   );
 

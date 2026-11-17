@@ -9,8 +9,16 @@ import { cn } from "@/lib/cn";
 import { buttonClasses } from "@/components/ui/Button";
 import { Logo } from "./Logo";
 
-function isActive(pathname: string, href: string) {
+function matches(pathname: string, href: string) {
   return href === "/" ? pathname === "/" : pathname === href || pathname.startsWith(`${href}/`);
+}
+
+/** Active if it matches and no longer (more specific) nav item also matches. */
+function isActive(pathname: string, href: string) {
+  return (
+    matches(pathname, href) &&
+    !siteConfig.nav.some((n) => n.href.length > href.length && matches(pathname, n.href))
+  );
 }
 
 export function Header() {

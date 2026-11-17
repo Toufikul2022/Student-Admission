@@ -43,7 +43,6 @@ export function ProgramExplorer() {
       cityOptions={cityOptions}
       provinceCounts={provinceCounts}
       searchLabel="Search programs"
-      pgwpDescription="Show only programs confirmed as PGWP-eligible."
       page={current}
       totalPages={totalPages}
       emptyState={<EmptyResults onClear={clear} what="programs" />}
