@@ -4,6 +4,7 @@ import { Container } from "@/components/ui/Container";
 import { PageHero } from "@/components/ui/PageHero";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Card } from "@/components/ui/Card";
+import { OfficeMap } from "@/components/ui/OfficeMap";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
 import { siteConfig } from "@/config/site";
@@ -111,13 +112,7 @@ export default function ContactPage() {
               <WhatsAppChannelCard className="mt-6 flex-wrap" />
             </Card>
 
-            {/* TODO: replace with a map embed (iframe with a descriptive title) of the office location */}
-            <div className="flex aspect-[4/3] items-center justify-center rounded-2xl border border-dashed border-line bg-white text-slate">
-              <p className="text-center">
-                <MapPin aria-hidden="true" className="mx-auto mb-2 size-8 text-primary-200" />
-                Office map placeholder
-              </p>
-            </div>
+            <OfficeMap />
 
           </div>
         </Container>

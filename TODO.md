@@ -41,7 +41,7 @@ Search the code for `TODO` to find each one in context.
 - [ ] Hero image — replace the placeholder illustration (`public/images/hero-illustration.svg`, `components/home/Hero.tsx`)
 - [ ] Logo — replace the placeholder mark (`components/layout/Logo.tsx`, `app/icon.svg`)
 - [ ] Social share image — refresh with the final logo (`app/opengraph-image.tsx`)
-- [ ] Office map embed on the Contact page (`app/contact/page.tsx`)
+- [x] Office map embed on the Contact page
 - [ ] Campus map embeds on institution pages (`app/find-university/[slug]/page.tsx`)
 
 ## F. Technical setup (see `README.md`)
