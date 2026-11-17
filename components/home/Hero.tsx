@@ -42,7 +42,7 @@ export function Hero() {
             <ul className="flex flex-wrap justify-center gap-x-12 gap-y-3 px-4 py-7">
               {quickLinks.map((l) => (
                 <li key={l.href}>
-                  <Link href={l.href} className="inline-flex items-center gap-1.5 font-bold text-primary-700 underline underline-offset-4 hover:text-primary-900">
+                  <Link href={l.href} className="inline-flex items-center gap-1.5 font-bold text-primary-700 hover:text-primary-900 hover:underline hover:underline-offset-4">
                     {l.label}
                     <ChevronRight aria-hidden="true" className="size-4" />
                   </Link>
