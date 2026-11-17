@@ -9,7 +9,7 @@ Search the code for `TODO` to find each one in context.
 - [ ] Public email
 - [x] Social media and WhatsApp channel removed at your request
 - [x] Office address: 1651 Chancellor Dr, Winnipeg, MB R3T 4B8
-- [ ] Business hours (time zone set to Central Time)
+- [x] Business hours: Mon–Fri 11 a.m.–7 p.m., Sat–Sun closed (Central Time)
 - [x] Law firm name — removed from the site at your request
 
 

@@ -32,11 +32,9 @@ export const siteConfig = {
       postalCode: "R3T 4B8",
       country: "Canada",
     },
-    // TODO: confirm business hours and time zone
     hours: [
-      { days: "Monday – Friday", time: "[9:00 a.m. – 5:00 p.m.]" },
-      { days: "Saturday", time: "[By appointment]" },
-      { days: "Sunday & statutory holidays", time: "Closed" },
+      { days: "Monday – Friday", time: "11:00 a.m. – 7:00 p.m." },
+      { days: "Saturday – Sunday", time: "Closed" },
     ],
     timeZoneNote: "Central Time (Winnipeg)",
   },
