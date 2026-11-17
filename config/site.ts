@@ -24,8 +24,6 @@ export const siteConfig = {
     email: "[CONTACT EMAIL]",
     phoneDisplay: "(204) 869-9786",
     phoneHref: "+12048699786",
-    /** WhatsApp channel for news and updates */
-    whatsappChannel: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j",
     address: {
       line1: "1651 Chancellor Dr",
       line2: "",
@@ -42,15 +40,6 @@ export const siteConfig = {
     ],
     timeZoneNote: "Central Time (Winnipeg)",
   },
-
-  // TODO: replace with real profile URLs, or delete any you don't use
-  social: [
-    { label: "Facebook", href: "https://www.facebook.com/", icon: "facebook" },
-    { label: "Instagram", href: "https://www.instagram.com/", icon: "instagram" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/", icon: "linkedin" },
-    { label: "YouTube", href: "https://www.youtube.com/", icon: "youtube" },
-    { label: "WhatsApp channel", href: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j", icon: "whatsapp" },
-  ] as const,
 
   nav: [
     { label: "Home", href: "/" },

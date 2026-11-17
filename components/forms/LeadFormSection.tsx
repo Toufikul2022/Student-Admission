@@ -1,6 +1,6 @@
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { WhatsAppChannelCard } from "@/components/ui/WhatsAppChannel";
+import { EmailCard } from "@/components/ui/EmailCard";
 import { HomePhoto } from "@/components/home/HomePhoto";
 import { LeadForm } from "./LeadForm";
 
@@ -32,7 +32,7 @@ export function LeadFormSection({
         <div className="lg:col-span-6 lg:pl-8">
           {/* To change this photo, replace public/images/home/form-*.webp */}
           <HomePhoto slot="form" className="mx-auto hidden max-w-md px-4 lg:block" />
-          <WhatsAppChannelCard className="mx-auto mt-8 max-w-md" />
+          <EmailCard className="mx-auto mt-8 max-w-md" />
         </div>
       </Container>
     </section>

@@ -1,8 +1,7 @@
-import { CalendarCheck } from "lucide-react";
+import { CalendarCheck, Mail } from "lucide-react";
 import { Button } from "./Button";
 import { Container } from "./Container";
 import { siteConfig } from "@/config/site";
-import { SocialIcon } from "@/components/layout/SocialIcon";
 
 /** Full-width call-to-action band used at the bottom of most pages. */
 export function CtaBand({
@@ -10,13 +9,13 @@ export function CtaBand({
   description = "Book a free consultation. We'll talk through your goals, budget and timeline, and explain your options in plain language.",
   primaryLabel = "Book a Free Consultation",
   primaryHref = "/contact",
-  showWhatsapp = true,
+  showEmail = true,
 }: {
   title?: string;
   description?: string;
   primaryLabel?: string;
   primaryHref?: string;
-  showWhatsapp?: boolean;
+  showEmail?: boolean;
 }) {
   return (
     <section aria-labelledby="cta-band-title" className="py-16 sm:py-20">
@@ -36,11 +35,10 @@ export function CtaBand({
                 <CalendarCheck aria-hidden="true" className="size-5" />
                 {primaryLabel}
               </Button>
-              {showWhatsapp && (
-                <Button href={siteConfig.contact.whatsappChannel} variant="white" size="lg">
-                  <SocialIcon name="whatsapp" className="size-5" />
-                  WhatsApp news channel
-                  <span className="sr-only"> (opens in a new tab)</span>
+              {showEmail && (
+                <Button href={`mailto:${siteConfig.contact.email}?subject=${encodeURIComponent("Question about studying in Canada")}`} variant="white" size="lg">
+                  <Mail aria-hidden="true" className="size-5" />
+                  Send us an email
                 </Button>
               )}
             </div>

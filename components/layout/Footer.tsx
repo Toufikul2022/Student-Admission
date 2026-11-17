@@ -3,7 +3,6 @@ import { Mail, MapPin, Phone } from "lucide-react";
 import { siteConfig } from "@/config/site";
 import { STUDY_LEVELS, provinces } from "@/lib/data";
 import { Logo } from "./Logo";
-import { SocialIcon } from "./SocialIcon";
 import { CurrentYear } from "./CurrentYear";
 
 const POPULAR_PROVINCES = ["manitoba", "ontario", "british-columbia", "alberta", "quebec", "nova-scotia"];
@@ -37,21 +36,6 @@ export function Footer() {
               {siteConfig.name} helps international students find the right Canadian university, college and program,
               and apply with confidence.
             </p>
-            <ul className="mt-6 flex gap-2" aria-label="Social media">
-              {siteConfig.social.map((s) => (
-                <li key={s.label}>
-                  <a
-                    href={s.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex size-11 items-center justify-center rounded-full bg-white/10 text-white transition-colors hover:bg-white/20"
-                  >
-                    <SocialIcon name={s.icon} className="size-5" />
-                    <span className="sr-only">{s.label} (opens in a new tab)</span>
-                  </a>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div className="grid grid-cols-2 gap-x-6 gap-y-8 lg:col-span-5 lg:grid-cols-3">
@@ -100,12 +84,6 @@ export function Footer() {
                 <Mail aria-hidden="true" className="mt-0.5 size-4 shrink-0 text-white" />
                 <a href={`mailto:${c.email}`} className="break-all hover:text-white hover:underline">
                   {c.email}
-                </a>
-              </li>
-              <li className="flex items-center gap-3 py-1.5 sm:items-start sm:py-0">
-                <SocialIcon name="whatsapp" className="mt-0.5 size-4 shrink-0 text-white" />
-                <a href={siteConfig.contact.whatsappChannel} target="_blank" rel="noopener noreferrer" className="inline-block py-2 hover:text-white hover:underline sm:py-0">
-                  News & updates on WhatsApp<span className="sr-only"> (opens in a new tab)</span>
                 </a>
               </li>
             </ul>

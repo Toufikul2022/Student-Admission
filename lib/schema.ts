@@ -24,7 +24,6 @@ export function organizationSchema() {
       postalCode: a.postalCode,
       addressCountry: "CA",
     },
-    sameAs: siteConfig.social.map((s) => s.href),
   };
 }
 

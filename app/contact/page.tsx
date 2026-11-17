@@ -8,7 +8,7 @@ import { OfficeMap } from "@/components/ui/OfficeMap";
 import { LeadForm } from "@/components/forms/LeadForm";
 import { LeadFormFromUrl } from "@/components/forms/LeadFormFromUrl";
 import { siteConfig } from "@/config/site";
-import { WhatsAppChannelCard } from "@/components/ui/WhatsAppChannel";
+import { EmailCard } from "@/components/ui/EmailCard";
 import { institutions } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
@@ -109,7 +109,7 @@ export default function ContactPage() {
                   </div>
                 </li>
               </ul>
-              <WhatsAppChannelCard className="mt-6 flex-wrap" />
+              <EmailCard className="mt-6" />
             </Card>
 
             <OfficeMap />
