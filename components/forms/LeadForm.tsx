@@ -180,6 +180,19 @@ export function LeadForm({
         )}
         <Select id={id("studyLevel")} name="studyLevel" label="Preferred study level" options={LEVEL_OPTIONS} placeholder={compact ? "Select" : "Select a level"} required defaultValue={v.studyLevel ?? ""} error={errors.studyLevel} />
         <Select id={id("intake")} name="intake" label={compact ? "When would you like to start?" : "Preferred intake"} options={INTAKE_OPTIONS} placeholder={compact ? "Select" : "Select an intake"} required defaultValue={v.intake ?? ""} error={errors.intake} />
+        {compact && (
+          <Input
+            id={id("field")}
+            name="field"
+            label="Field of interest"
+            placeholder="e.g. Computer Science, Nursing, Business"
+            required
+            maxLength={120}
+            defaultValue={v.field}
+            error={errors.field}
+            wrapperClassName="sm:col-span-2"
+          />
+        )}
         {!compact && (
         <>
         <Select id={id("field")} name="field" label="Field of interest" options={FIELD_OPTIONS} placeholder="Select a field" required defaultValue={v.field ?? ""} error={errors.field} wrapperClassName="sm:col-span-2" />

@@ -4,7 +4,6 @@ import { headers } from "next/headers";
 import { Resend } from "resend";
 import { siteConfig } from "@/config/site";
 import {
-  EDUCATION_OPTIONS,
   FIELD_OPTIONS,
   INTAKE_OPTIONS,
   LEVEL_OPTIONS,
@@ -27,15 +26,11 @@ function buildEmail(d: LeadInput) {
     ["Name", `${d.firstName} ${d.lastName}`],
     ["Email", d.email],
     ["Phone", `${dialFromOption(d.phoneCode)} ${d.phone}${d.phoneCode.includes(" ") ? ` (${d.phoneCode.slice(d.phoneCode.indexOf(" ") + 1)})` : ""}`],
-    ["Form", d.formVariant === "compact" ? "Quick enquiry" : "Full enquiry (Contact page)"],
-    ["Country of residence", d.country || "—"],
     ["Preferred study level", label(LEVEL_OPTIONS, d.studyLevel)],
     ["Preferred intake", label(INTAKE_OPTIONS, d.intake)],
     ["Field of interest", label(FIELD_OPTIONS, d.field)],
-    ["Highest education completed", label(EDUCATION_OPTIONS, d.education)],
-    ["English test taken", d.englishTest === "yes" ? `Yes — ${d.englishScore}` : d.englishTest === "no" ? "No" : "—"],
-    ["Institution of interest", d.institution || "—"],
-    ["Message", d.message || "—"],
+    // Only shown when the visitor came from an institution's "Get help applying" button
+    ...(d.institution ? ([["Institution of interest", d.institution]] as [string, string][]) : []),
     ["Agreed to Terms & Privacy Policy", "Yes"],
     ["Consent to be contacted", "Yes"],
     ["Marketing consent", d.consentMarketing === "on" ? "Yes" : "No"],

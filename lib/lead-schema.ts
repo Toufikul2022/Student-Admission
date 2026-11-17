@@ -48,7 +48,7 @@ const contactFields = {
 export const compactLeadSchema = z.object({
   ...contactFields,
   country: z.string().optional().default(""),
-  field: z.string().optional().default(""),
+  field: z.string().trim().min(2, "Please tell us what you would like to study.").max(120, "Please keep this under 120 characters."),
   education: z.string().optional().default(""),
   englishTest: z.string().optional().default(""),
   englishScore: z.string().optional().default(""),
