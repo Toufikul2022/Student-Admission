@@ -81,7 +81,7 @@ export function LeadForm({
     return (
       <div className={cn("rounded-2xl border border-success-50 bg-success-50 p-8 text-center", className)} role="status">
         <CheckCircle2 aria-hidden="true" className="mx-auto size-12 text-success-700" />
-        <h3 ref={successRef} tabIndex={-1} className="mt-4 text-2xl font-bold text-ink">
+        <h3 ref={successRef} tabIndex={-1} className="mt-4 text-2xl font-bold text-ink outline-none focus-visible:outline-none">
           Enquiry received
         </h3>
         <p className="mx-auto mt-2 max-w-md text-slate">{state.message}</p>
