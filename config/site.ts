@@ -22,19 +22,16 @@ export const siteConfig = {
   contact: {
     // TODO: replace with the inbox shown publicly on the site
     email: "[CONTACT EMAIL]",
-    // TODO: replace with the public phone number (display format)
-    phoneDisplay: "[PHONE]",
-    // TODO: replace with the same number in international format, digits only with +, e.g. "+12045550100"
-    phoneHref: "+10000000000",
+    phoneDisplay: "(204) 869-9786",
+    phoneHref: "+12048699786",
     /** WhatsApp channel for news and updates */
     whatsappChannel: "https://whatsapp.com/channel/0029VaxucYA47Xe341Nwg60j",
-    // TODO: replace with the real office address
     address: {
-      line1: "[ADDRESS LINE 1]",
-      line2: "[ADDRESS LINE 2]",
-      city: "[CITY]",
-      province: "[PROVINCE]",
-      postalCode: "[POSTAL CODE]",
+      line1: "1651 Chancellor Dr",
+      line2: "",
+      city: "Winnipeg",
+      province: "MB",
+      postalCode: "R3T 4B8",
       country: "Canada",
     },
     // TODO: confirm business hours and time zone
@@ -43,7 +40,7 @@ export const siteConfig = {
       { days: "Saturday", time: "[By appointment]" },
       { days: "Sunday & statutory holidays", time: "Closed" },
     ],
-    timeZoneNote: "[Time zone, e.g. Central Time]",
+    timeZoneNote: "Central Time (Winnipeg)",
   },
 
   // TODO: replace with real profile URLs, or delete any you don't use

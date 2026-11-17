@@ -5,10 +5,11 @@ Search the code for `TODO` to find each one in context.
 ## A. Brand and contact details — `config/site.ts`
 - [x] Brand name: CanEdu Pathway
 - [ ] Domain (`domain`) and `NEXT_PUBLIC_SITE_URL` in your hosting settings
-- [ ] Public email, phone (display format + international `phoneHref`)
+- [x] Phone: (204) 869-9786
+- [ ] Public email
 - [x] WhatsApp channel link (set in `contact.whatsappChannel`)
-- [ ] Office address
-- [ ] Business hours and time zone
+- [x] Office address: 1651 Chancellor Dr, Winnipeg, MB R3T 4B8
+- [ ] Business hours (time zone set to Central Time)
 - [x] Law firm name — removed from the site at your request
 - [ ] Social media profile URLs (or remove unused ones)
 
