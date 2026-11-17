@@ -144,7 +144,7 @@ export function LeadForm({
           <legend className="mb-1.5 text-sm font-semibold text-ink">
             {compact ? "Mobile number" : "Phone (with country code)"}<span className="text-danger-700" aria-hidden="true"> *</span>
           </legend>
-          <div className="grid grid-cols-[minmax(0,9rem)_1fr] gap-3">
+          <div className="grid grid-cols-[minmax(0,10rem)_1fr] gap-3 sm:grid-cols-[minmax(0,13rem)_1fr]">
             <Select
               id={id("phoneCode")}
               name="phoneCode"

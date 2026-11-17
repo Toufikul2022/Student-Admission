@@ -27,7 +27,7 @@ const contactFields = {
   firstName: z.string().trim().min(1, "Please enter your first name.").max(80, "First name is too long."),
   lastName: z.string().trim().min(1, "Please enter your last name.").max(80, "Last name is too long."),
   email: z.string().trim().email("Please enter a valid email address, like name@example.com."),
-  phoneCode: z.string().trim().regex(/^\+\d{1,4}$/, "Please choose a country code."),
+  phoneCode: z.string().trim().regex(/^\+\d{1,4}( .+)?$/, "Please choose a country code."),
   phone: z
     .string()
     .trim()

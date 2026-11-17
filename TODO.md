@@ -33,7 +33,7 @@ Search the code for `TODO` to find each one in context.
 - [ ] Replace the 20 sample programs with verified programs
 - [ ] Add institution logos (with permission) to `public/logos/`, named after each slug — see README.txt there
 - [ ] Remove the "Sample data" notice once everything is verified (`components/institutions/ListingIntro.tsx`)
-- [ ] Optional: add more countries to the form's country list (`lib/countries.ts`)
+- [x] Country list: all countries, Canada and US first
 
 ## E. Real content and images
 - [ ] Home stats — replace the four `[#]` placeholders with real, verifiable numbers or remove tiles (`content/home.ts`)

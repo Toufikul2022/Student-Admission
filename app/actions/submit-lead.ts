@@ -15,6 +15,7 @@ import {
   type LeadState,
 } from "@/lib/lead-schema";
 import { rateLimit } from "@/lib/rate-limit";
+import { dialFromOption } from "@/lib/countries";
 
 const label = (opts: { value: string; label: string }[], v: string) => (v ? (opts.find((o) => o.value === v)?.label ?? v) : "—");
 
@@ -25,7 +26,7 @@ function buildEmail(d: LeadInput) {
   const rows: [string, string][] = [
     ["Name", `${d.firstName} ${d.lastName}`],
     ["Email", d.email],
-    ["Phone", `${d.phoneCode} ${d.phone}`],
+    ["Phone", `${dialFromOption(d.phoneCode)} ${d.phone}${d.phoneCode.includes(" ") ? ` (${d.phoneCode.slice(d.phoneCode.indexOf(" ") + 1)})` : ""}`],
     ["Form", d.formVariant === "compact" ? "Quick enquiry" : "Full enquiry (Contact page)"],
     ["Country of residence", d.country || "—"],
     ["Preferred study level", label(LEVEL_OPTIONS, d.studyLevel)],
