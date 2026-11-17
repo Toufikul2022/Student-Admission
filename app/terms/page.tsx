@@ -60,8 +60,8 @@ export default function TermsPage() {
 
       <h2>8. Governing law</h2>
       <p>
-        These terms are governed by the laws of the Province of [PROVINCE] and the federal laws of Canada that apply
-        there. {/* TODO: confirm province with legal */}
+        These terms are governed by the laws of the Province of Manitoba and the federal laws of Canada that apply
+        there.
       </p>
 
       <h2>9. Changes</h2>

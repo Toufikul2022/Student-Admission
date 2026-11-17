@@ -103,7 +103,6 @@ export function Footer() {
               <li><Link href="/privacy-policy" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Privacy Policy</Link></li>
               <li><Link href="/terms" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Terms of Use</Link></li>
               <li><Link href="/disclaimer" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Disclaimer</Link></li>
-              <li><Link href="/sitemap.xml" className="inline-block py-2 hover:text-white hover:underline sm:py-0">Sitemap</Link></li>
             </ul>
           </div>
         </div>

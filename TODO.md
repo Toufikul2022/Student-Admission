@@ -6,7 +6,7 @@ Search the code for `TODO` to find each one in context.
 - [x] Brand name: CanEdu Pathway
 - [x] Domain: canedup.ca (also set `NEXT_PUBLIC_SITE_URL=https://canedup.ca` in Vercel)
 - [x] Phone: (204) 869-9786
-- [ ] Public email
+- [x] Public email: info@canedup.ca
 - [x] Social media and WhatsApp channel removed at your request
 - [x] Office address: 1651 Chancellor Dr, Winnipeg, MB R3T 4B8
 - [x] Business hours: Mon–Fri 11 a.m.–7 p.m., Sat–Sun closed (Central Time)
@@ -16,7 +16,7 @@ Search the code for `TODO` to find each one in context.
 ## B. Legal and compliance review
 - [ ] **Disclaimer** page (`app/disclaimer/page.tsx`)
 - [ ] **Privacy Policy** (`app/privacy-policy/page.tsx`): applicable provincial privacy law and regulatory obligations; name a Privacy Officer and privacy email; list actual service providers and where they store data (e.g. Resend, Vercel); confirm retention periods (placeholder: 24 months)
-- [ ] **Terms of Use** (`app/terms/page.tsx`): governing province
+- [x] **Terms of Use**: domain canedup.ca, governing province Manitoba
 - [ ] Remove the "DRAFT — requires legal review" banner after approval (`components/guides/LegalLayout.tsx`, pass `draft={false}`)
 - [ ] Professional review of every guide page, then set `reviewed` dates in `content/review-dates.ts`
 - [ ] Confirm the "free first consultation" offer (`content/home.ts`, `components/forms/LeadFormSection.tsx`, `app/contact/page.tsx`, home FAQ)

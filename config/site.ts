@@ -19,8 +19,7 @@ export const siteConfig = {
   locale: "en_CA",
 
   contact: {
-    // TODO: replace with the inbox shown publicly on the site
-    email: "[CONTACT EMAIL]",
+    email: "info@canedup.ca",
     phoneDisplay: "(204) 869-9786",
     phoneHref: "+12048699786",
     address: {
