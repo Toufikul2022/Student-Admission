@@ -4,7 +4,7 @@ Search the code for `TODO` to find each one in context.
 
 ## A. Brand and contact details — `config/site.ts`
 - [x] Brand name: CanEdu Pathway
-- [x] Domain: canedup.ca (also set `NEXT_PUBLIC_SITE_URL=https://canedup.ca` in Vercel)
+- [x] Domain: canedup.ca (main address www.canedup.ca; `NEXT_PUBLIC_SITE_URL` set in Vercel)
 - [x] Phone: (204) 869-9786
 - [x] Public email: info@canedup.ca
 - [x] Social media and WhatsApp channel removed at your request

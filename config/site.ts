@@ -12,7 +12,7 @@ export const siteConfig = {
    * Full public URL, used for canonical links, sitemap and social previews.
    * Set NEXT_PUBLIC_SITE_URL in your hosting dashboard (see .env.example).
    */
-  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://canedup.ca").replace(/\/$/, ""),
+  url: (process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.canedup.ca").replace(/\/$/, ""),
   tagline: "Admission guidance for international students choosing Canada.",
   description:
     "Find the right Canadian university, college and program, and get expert help with your admission application.",
