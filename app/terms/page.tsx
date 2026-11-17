@@ -13,8 +13,7 @@ export default function TermsPage() {
   return (
     <LegalLayout title="Terms of Use" path="/terms">
       <p>
-        These terms apply to your use of the {siteConfig.name} website at {siteConfig.domain}, operated by{" "}
-        {siteConfig.operator.legalName} (&quot;we&quot;, &quot;us&quot;). By using the website, you agree to these
+        These terms apply to your use of the {siteConfig.name} website at {siteConfig.domain} (&quot;we&quot;, &quot;us&quot;). By using the website, you agree to these
         terms. If you do not agree, please do not use the website.
       </p>
 

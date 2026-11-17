@@ -46,18 +46,11 @@ export const siteConfig = {
     timeZoneNote: "[Time zone, e.g. Central Time]",
   },
 
-  operator: {
-    // TODO: replace after legal review
-    legalName: "[LAW FIRM LEGAL NAME]",
-    city: "[CITY]",
-  },
-
   /**
-   * Required operator disclosure. Shown in the footer and on the Contact page.
-   * TODO: confirm exact wording with the law firm / regulator before launch.
+   * Disclosure shown in the footer, on the Contact page and on the Disclaimer page.
+   * TODO: confirm exact wording with your regulator before launch.
    */
-  operatorDisclosure:
-    "CanEdu Pathway is operated by [LAW FIRM LEGAL NAME], [CITY], Canada. Immigration advice is provided by licensed legal professionals.",
+  operatorDisclosure: "Immigration advice at CanEdu Pathway is provided by licensed legal professionals.",
 
   // TODO: replace with real profile URLs, or delete any you don't use
   social: [

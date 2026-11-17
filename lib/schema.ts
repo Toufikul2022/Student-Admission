@@ -24,7 +24,6 @@ export function organizationSchema() {
       postalCode: a.postalCode,
       addressCountry: "CA",
     },
-    parentOrganization: { "@type": "LegalService", name: siteConfig.operator.legalName },
     sameAs: siteConfig.social.map((s) => s.href),
   };
 }

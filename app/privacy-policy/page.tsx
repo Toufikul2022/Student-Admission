@@ -13,7 +13,7 @@ export default function PrivacyPage() {
   return (
     <LegalLayout title="Privacy Policy" path="/privacy-policy">
       <p>
-        {siteConfig.name} (&quot;we&quot;, &quot;us&quot;) is operated by {siteConfig.operator.legalName}. We are
+        {siteConfig.name} (&quot;we&quot;, &quot;us&quot;) is
         committed to protecting your personal information and handling it in line with Canada&apos;s{" "}
         <em>Personal Information Protection and Electronic Documents Act</em> (PIPEDA) and applicable provincial law.
         {/* TODO: legal to confirm applicable provincial privacy law and professional regulatory obligations */}

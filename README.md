@@ -126,7 +126,7 @@ email. On a static-only host you'd need to point the form at an external form se
 
 ## 10. Content rules
 
-This site is operated by a licensed immigration law firm. Keep these rules when editing content:
+Immigration advice on this site is provided by licensed legal professionals. Keep these rules when editing content:
 
 - Never use wording like "guaranteed admission", "guaranteed visa", "100% success rate" or "approved by IRCC".
 - Never publish invented testimonials, names or statistics.

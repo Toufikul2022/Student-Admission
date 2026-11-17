@@ -9,11 +9,11 @@ Search the code for `TODO` to find each one in context.
 - [x] WhatsApp channel link (set in `contact.whatsappChannel`)
 - [ ] Office address
 - [ ] Business hours and time zone
-- [ ] Law firm legal name and city (`operator`)
+- [x] Law firm name — removed from the site at your request
 - [ ] Social media profile URLs (or remove unused ones)
 
 ## B. Legal and compliance review
-- [ ] **Operator disclosure wording** (`config/site.ts` → `operatorDisclosure`) — confirm with the law firm / regulator
+- [ ] **Disclosure wording** (`config/site.ts` → `operatorDisclosure`) — confirm with your regulator
 - [ ] **Disclaimer** page (`app/disclaimer/page.tsx`)
 - [ ] **Privacy Policy** (`app/privacy-policy/page.tsx`): applicable provincial privacy law and regulatory obligations; name a Privacy Officer and privacy email; list actual service providers and where they store data (e.g. Resend, Vercel); confirm retention periods (placeholder: 24 months)
 - [ ] **Terms of Use** (`app/terms/page.tsx`): governing province
