@@ -29,7 +29,7 @@ Each institution is one `{ … }` block in the list. Copy an existing block, the
 | `city` | Main campus city | `"Winnipeg"` |
 | `dliNumber` | DLI number from the official DLI list, as text — or `null` | `"O19…"` |
 | `website` | Official homepage | `"https://umanitoba.ca/"` |
-| `logo` | Path to a logo in `/public` (only with permission) — or `null` to show initials | `"/logos/umanitoba.svg"` |
+| `logo` | Usually leave as `null`: just upload the logo to `public/logos/` named after the slug (see README.txt there) | `null` |
 | `overview` | 1–3 sentences **in your own words** | |
 | `campusAddress` | Main campus address — or `null` | |
 | `tuitionRangeCad` | Lowest and highest annual international tuition in CAD, as numbers without `$` or commas — or `null` | `{ "min": 20000, "max": 35000 }` |

@@ -3,7 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "predev": "node scripts/find-logos.mjs",
     "dev": "next dev",
+    "prebuild": "node scripts/find-logos.mjs",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

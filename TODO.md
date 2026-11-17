@@ -31,7 +31,7 @@ Search the code for `TODO` to find each one in context.
 - [ ] For each of the 10 Manitoba sample institutions: verify DLI number, tuition, intakes, levels, fields and admission requirements; rewrite the overview (currently shows "Sample profile — TODO" on the site); set `sample: false` and `last_verified`
 - [ ] Confirm Assiniboine College's current official name
 - [ ] Replace the 20 sample programs with verified programs
-- [ ] Add institution logos (only with permission) to `/public/logos`
+- [ ] Add institution logos (with permission) to `public/logos/`, named after each slug — see README.txt there
 - [ ] Remove the "Sample data" notice once everything is verified (`components/institutions/ListingIntro.tsx`)
 - [ ] Optional: add more countries to the form's country list (`lib/countries.ts`)
 
