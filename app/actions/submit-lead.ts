@@ -102,7 +102,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
 
   try {
     const resend = new Resend(apiKey);
-    const { error } = await resend.emails.send({
+    const { data: sent, error } = await resend.emails.send({
       from,
       to: to.split(",").map((s) => s.trim()),
       replyTo: data.email,
@@ -111,6 +111,7 @@ export async function submitLead(_prev: LeadState, formData: FormData): Promise<
       html,
     });
     if (error) throw new Error(error.message);
+    console.info(`[lead form] Email sent to ${to} (Resend id: ${sent?.id ?? "unknown"})`);
   } catch (err) {
     console.error("[lead form] Email send failed", err);
     return {
