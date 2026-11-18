@@ -31,7 +31,7 @@ export const heroSlides = [
   {
     title: "Your path to studying in Canada starts here",
     body: "Find the right university, college and program for you, and apply with confidence — with expert admission guidance at every step.",
-    cta: { label: "Book a Free Consultation", href: "/contact" },
+    cta: { label: "Speak to an Advisor", href: "/contact" },
   },
   {
     title: "Find the right program for your future",

@@ -128,7 +128,7 @@ export function GuideLayout({
               <p className="mt-3 text-lg font-bold">Have a question about your situation?</p>
               <p className="mt-2 text-sm text-primary-100">Every application is different. Talk to us before you apply.</p>
               <Link href="/contact" className={buttonClasses("accent", "md", "mt-5 w-full")}>
-                Book a free consultation
+                Speak to an advisor
               </Link>
             </div>
           </div>

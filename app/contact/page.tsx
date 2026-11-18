@@ -13,8 +13,8 @@ import { institutions } from "@/lib/data";
 import { pageMetadata } from "@/lib/seo";
 
 export const metadata = pageMetadata({
-  title: "Contact Us — Book a Free Consultation",
-  description: `Talk to ${siteConfig.name} about studying in Canada. Book a free consultation by form, phone or email.`,
+  title: "Contact Us — Speak to an Advisor",
+  description: `Talk to ${siteConfig.name} about studying in Canada. Speak to an advisor by form, phone or email.`,
   path: "/contact",
 });
 
@@ -44,7 +44,7 @@ export default function ContactPage() {
               title="Speak to an advisor today"
               description={
                 <span className="text-base sm:text-lg">
-                  Thinking about studying at a Canadian college or university? Book a free consultation. We&apos;ll help
+                  Thinking about studying at a Canadian college or university? Speak to an advisor. We&apos;ll help
                   at every stage, from choosing a program to accepting your offer.
                 </span>
               }

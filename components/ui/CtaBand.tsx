@@ -6,8 +6,8 @@ import { siteConfig } from "@/config/site";
 /** Full-width call-to-action band used at the bottom of most pages. */
 export function CtaBand({
   title = "Not sure where to start?",
-  description = "Book a free consultation. We'll talk through your goals, budget and timeline, and explain your options in plain language.",
-  primaryLabel = "Book a Free Consultation",
+  description = "Speak to an advisor. We'll talk through your goals, budget and timeline, and explain your options in plain language.",
+  primaryLabel = "Speak to an Advisor",
   primaryHref = "/contact",
   showEmail = true,
 }: {
