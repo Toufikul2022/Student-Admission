@@ -23,8 +23,7 @@ export const homeStats = [
   { icon: "badge", value: "Personal", label: "one-to-one guidance matched to your goals and budget" },
   { icon: "school", value: "Every step", label: "support from your shortlist to your first day on campus" },
   { icon: "map", value: "Canada-wide", label: "guidance on universities and colleges across Canada" },
-  // TODO: confirm the free-consultation offer
-  { icon: "users", value: "FREE", label: "first consultation for students & parents" },
+  { icon: "users", value: "Clear advice", label: "honest, plain-language guidance for students & parents" },
 ];
 
 export const heroSlides = [
@@ -124,10 +123,6 @@ export const homeFaqs = [
     a: "No. Admission decisions are made by each institution. Anyone who promises guaranteed admission should be treated with caution. What we offer is careful preparation and honest advice about your chances.",
   },
   {
-    q: "Is the first consultation really free?",
-    a: "Yes. The first consultation is an introductory conversation about your goals and options. If you decide to work with us, we will explain any fees in writing before work begins.",
-  },
-  {
     q: "When should I start preparing to study in Canada?",
     a: "Ideally 12 to 18 months before your intended start date. That leaves time to research programs, take a language test, prepare documents and apply before deadlines.",
   },
@@ -147,6 +142,6 @@ export const homeFaqs = [
     q: "Can you help me find scholarships?",
     a: "Yes. We help you identify entrance and merit awards you may qualify for and plan your applications around their deadlines. Most scholarships are competitive, so applying early helps.",
   },
-  // TODO: consider adding an FAQ that explains your fee model (what is free, what is paid,
+  // TODO: consider adding an FAQ that explains your fee model (which services are paid,
   // and whether you receive commissions from institutions).
 ];

@@ -294,7 +294,7 @@ export function LeadForm({
 
       <Button type="submit" size="lg" disabled={pending} className="w-full">
         {pending ? <Loader2 aria-hidden="true" className="size-5 animate-spin" /> : <Send aria-hidden="true" className="size-5" />}
-        {pending ? "Sending…" : compact ? "Get Started Free" : "Send my enquiry"}
+        {pending ? "Sending…" : compact ? "Get Started" : "Send my enquiry"}
       </Button>
     </form>
   );

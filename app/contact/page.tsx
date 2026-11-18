@@ -29,8 +29,7 @@ export default function ContactPage() {
         title="Talk to an advisor"
         intro={
           <>
-            Tell us about your study plans and we&apos;ll get back to you with clear next steps. The first consultation
-            is free. {/* TODO: confirm free-consultation offer */}
+            Tell us about your study plans and we&apos;ll get back to you with clear next steps.
           </>
         }
         image="contact"
