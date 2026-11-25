@@ -1,13 +1,10 @@
-import Link from "next/link";
-import { ChevronRight, GraduationCap, HeartHandshake, MapPinned, Users } from "lucide-react";
 import { Container } from "@/components/ui/Container";
-import { homeStats, quickLinks } from "@/content/home";
+import { heroSlider } from "@/content/home";
+import { ImageSlider } from "./ImageSlider";
 import { HomePhoto } from "./HomePhoto";
 import { HeroText } from "./HeroText";
 
-const statIcons = { school: GraduationCap, users: Users, map: MapPinned, badge: HeartHandshake };
-
-/** Hero banner with slides + overlapping highlights card and quick-links bar. */
+/** Hero banner + overlapping auto image slider. */
 export function Hero() {
   return (
     <section aria-labelledby="hero-title" className="relative pb-16 sm:pb-20">
@@ -21,36 +18,8 @@ export function Hero() {
         </Container>
       </div>
 
-      <Container className="relative -mt-24 sm:-mt-24 lg:px-36">
-        <div className="overflow-hidden rounded-2xl bg-white shadow-card-hover">
-          <ul aria-label="Why students choose us" className="grid grid-cols-2 py-2 lg:grid-cols-4 lg:py-8">
-            {homeStats.map((s, i) => {
-              const Icon = statIcons[s.icon as keyof typeof statIcons];
-              return (
-                <li
-                  key={s.label}
-                  className={`flex flex-col items-center px-5 py-6 text-center lg:py-0 ${i > 0 ? "lg:border-l lg:border-line" : ""} ${i % 2 === 1 ? "border-l border-line" : ""} ${i >= 2 ? "border-t border-line lg:border-t-0" : ""}`}
-                >
-                  <Icon aria-hidden="true" className="size-14 text-primary-600" strokeWidth={1.5} />
-                  <p className="mt-5 text-xl font-bold text-primary-700">{s.value}</p>
-                  <p className="mt-4 max-w-[15rem] text-ink">{s.label}</p>
-                </li>
-              );
-            })}
-          </ul>
-          <nav aria-label="Quick links" className="border-t border-line bg-primary-50">
-            <ul className="flex flex-wrap justify-center gap-x-12 gap-y-3 px-4 py-7">
-              {quickLinks.map((l) => (
-                <li key={l.href}>
-                  <Link href={l.href} className="inline-flex items-center gap-1.5 font-bold text-primary-700 hover:text-primary-900 hover:underline hover:underline-offset-4">
-                    {l.label}
-                    <ChevronRight aria-hidden="true" className="size-4" />
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        </div>
+      <Container className="relative -mt-24 lg:px-24">
+        <ImageSlider slides={heroSlider} label="Study in Canada to PR: roadmap and province data" />
       </Container>
     </section>
   );
