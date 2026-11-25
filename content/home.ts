@@ -26,18 +26,11 @@ export const homeStats = [
   { icon: "users", value: "Clear advice", label: "honest, plain-language guidance for students & parents" },
 ];
 
-export const heroSlides = [
-  {
-    title: "Your path to studying in Canada starts here",
-    body: "Find the right university, college and program for you, and apply with confidence — with expert admission guidance at every step.",
-    cta: { label: "Speak to an Advisor", href: "/contact" },
-  },
-  {
-    title: "Find the right program for your future",
-    body: "Compare universities, colleges and courses across Canada by field, level, intake and budget — then let us help you build a strong shortlist.",
-    cta: { label: "Search programs", href: "/find-university/programs" },
-  },
-];
+/** Home page hero: one heading and one button (no paragraph, no slides). */
+export const hero = {
+  title: "We help you build a study plan for Canadian PR with real data",
+  cta: { label: "Speak to an Advisor", href: "/contact" },
+};
 
 export const services = [
   {

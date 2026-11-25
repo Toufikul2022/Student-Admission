@@ -38,8 +38,8 @@ export function Header() {
       <div className="flex h-16 w-full items-center gap-2 px-3 sm:gap-4 sm:px-4 sm:px-6 lg:h-[5.5rem] lg:px-8">
         <Logo />
 
-        <nav aria-label="Main" className="ml-10 hidden lg:block">
-          <ul className="flex items-center gap-1">
+        <nav aria-label="Main" className="ml-6 hidden xl:block 2xl:ml-10">
+          <ul className="flex items-center gap-0.5 2xl:gap-1">
             {siteConfig.nav.map((item) => {
               const active = isActive(pathname, item.href);
               return (
@@ -48,7 +48,7 @@ export function Header() {
                     href={item.href}
                     aria-current={active ? "page" : undefined}
                     className={cn(
-                      "relative rounded-full px-4 py-2 text-[0.95rem] font-medium transition-colors",
+                      "relative rounded-full px-3 py-2 text-[0.95rem] font-medium whitespace-nowrap transition-colors 2xl:px-4",
                       active ? "text-primary-700 underline decoration-2 underline-offset-8" : "text-ink hover:text-primary-700",
                     )}
                   >
@@ -66,7 +66,7 @@ export function Header() {
           </Link>
           <button
             type="button"
-            className="rounded-full p-2 text-ink hover:bg-mist lg:hidden"
+            className="rounded-full p-2 text-ink hover:bg-mist xl:hidden"
             aria-expanded={open}
             aria-controls="mobile-menu"
             onClick={() => setOpen((v) => !v)}
@@ -81,7 +81,7 @@ export function Header() {
         id="mobile-menu"
         aria-label="Main (mobile)"
         hidden={!open}
-        className="border-t border-line bg-white lg:hidden"
+        className="border-t border-line bg-white xl:hidden"
       >
         <ul className="mx-auto flex max-w-7xl flex-col px-4 py-3 sm:px-6">
           {siteConfig.nav.map((item) => {

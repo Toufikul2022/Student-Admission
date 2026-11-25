@@ -39,9 +39,10 @@ export const siteConfig = {
 
   nav: [
     { label: "Home", href: "/" },
-    { label: "Study in Canada", href: "/study-in-canada" },
-    { label: "Find University", href: "/find-university" },
-    { label: "Programs", href: "/find-university/programs" },
+    { label: "Admission in Canada", href: "/study-in-canada" },
+    { label: "PR Targeted Study Program", href: "/pr-targeted-study-program" },
+    { label: "Best Province for Student PR", href: "/best-province-for-student-pr" },
+    { label: "Our Team", href: "/our-team" },
   ],
 } as const;
 
