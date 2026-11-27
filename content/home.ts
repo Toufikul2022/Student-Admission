@@ -25,21 +25,21 @@ export const popularFields = [
  */
 export const heroSlider = [
   {
-    src: "/images/home/slide-roadmap-08dd77da.webp",
-    width: 989,
-    height: 495,
-    alt: "University to PR roadmap: choose your university and program, explore scholarships and funding, prepare for a language test, apply for admission, apply for a study permit, begin your studies, apply for a PGWP after graduation, apply for permanent residency, and receive residency.",
-  },
-  {
-    src: "/images/home/slide-map-c402c5bc.webp",
-    width: 1365,
-    height: 915,
+    src: "/images/home/slide-map-e249a2d4.webp",
+    width: 1600,
+    height: 934,
     alt: "Map of Canada showing each province's share: Ontario 40%, British Columbia 20%, Québec 17%, Alberta 10%, Manitoba 3%, Nova Scotia 3%, Saskatchewan 2%, New Brunswick 2%, Newfoundland and Labrador 1%, Prince Edward Island 1%, Yukon 0.05%.",
   },
   {
-    src: "/images/home/slide-pnp-table-4cd088b9.webp",
-    width: 1425,
-    height: 860,
+    src: "/images/home/slide-roadmap-6ac27386.webp",
+    width: 1549,
+    height: 818,
+    alt: "University to PR roadmap: choose your university and program, explore scholarships and funding, prepare for a language test, apply for admission, apply for a study permit, begin your studies, apply for a PGWP after graduation, apply for permanent residency, and receive residency.",
+  },
+  {
+    src: "/images/home/slide-pnp-table-b2e969f2.webp",
+    width: 1600,
+    height: 943,
     alt: "Table comparing study permit holders with Provincial Nominee Program allocations by province: British Columbia 54,035 and 6,254 (12%); Alberta 25,905 and 6,603 (25%); Saskatchewan 5,960 and 5,261 (88%); Manitoba 9,225 and 8,000 (87%); Ontario 106,435 and 14,119 (13%); New Brunswick 6,370 and 4,899 (77%); Nova Scotia 7,175 and 5,709 (79%); Prince Edward Island 1,325 and 1,791 (135%); Newfoundland and Labrador 2,645 and 2,854 (108%). Note: students may consider universities in provinces that offer better opportunities for permanent residence.",
   },
 ];

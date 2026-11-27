@@ -56,7 +56,7 @@ export function ImageSlider({ slides, label }: { slides: Slide[]; label: string 
           <span className="sr-only">Previous slide</span>
         </button>
 
-        <div className="relative aspect-[16/10] w-full sm:aspect-[16/8]">
+        <div className="relative aspect-[16/9] w-full">
           {slides.map((s, i) => (
             <div
               key={s.src}
